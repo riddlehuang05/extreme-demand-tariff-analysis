@@ -30,7 +30,7 @@ def main():
         "abs_q99_relative_error": "q0.99 error",
         "abs_mean_relative_error": "mean error",
         "abs_stoploss_relative_error": "stop-loss error",
-        "mode_value_margin_ratio": "mode-value / margin",
+        "mode_value_gap_ratio": "mode-value / gap",
     }
     rows = []
     for col, label in diag_cols.items():

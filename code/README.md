@@ -1,10 +1,17 @@
-# Public analysis scripts
+# Public verification scripts
 
-This directory contains only non-core, manuscript-facing statistical summaries.
+This directory contains the scripts that recompute and verify the manuscript-facing
+numerical summaries distributed in `../data/`.
 
-- `run_public_analysis.py` recomputes selected summary statistics from the derived
-  public analysis files in `../data/`.
-- `check_release.py` checks row counts and a small set of frozen headline quantities.
+- `run_public_analysis.py` — regenerates the public summary tables (q0.99-error summaries,
+  TAIL-minus-baseline regret by oracle region, and Spearman associations between each
+  diagnostic and full-action regret).
+- `check_release.py` — verifies row counts and a set of frozen headline quantities against
+  the values reported in the article.
+- `recompute_roc_auc.py` — recomputes the tariff-mode-error ROC curves and point AUC values
+  from `../data/mechanism_decision_rows_5400.csv`, writing
+  `results/diagnostic_auc_recomputed.csv` and `results/roc_curves_recomputed.csv`.
 
-These scripts do **not** implement the synthetic demand generator, distribution-fitting
-routines, tariff optimizer, Monte Carlo orchestration, or external-data fitting pipeline.
+All scripts run on the derived files in `../data/` and require only the dependencies in
+`../requirements.txt`. They do not require the research pipeline that produced the raw
+experiments.

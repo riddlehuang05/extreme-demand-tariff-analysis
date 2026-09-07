@@ -1,4 +1,4 @@
-replication_id,method,regret_cny_per_month,abs_q99_relative_error,abs_mean_relative_error,abs_stoploss_relative_error,mode_value_margin_ratio
+replication_id,method,regret_cny_per_month,abs_q99_relative_error,abs_mean_relative_error,abs_stoploss_relative_error,mode_value_gap_ratio
 0,EMP,10944.378384675623,0.0692035894194134,0.0139673800631221,0.2043955441538293,15.112931358264213
 0,KDE,5832.254663819447,0.0242731508193681,0.0113268391559071,0.0096898682951483,5.603905040740236
 0,TAIL,3579.118245585408,0.0750165167149684,0.0056737876625643,0.1238158742487066,8.319425911488338
