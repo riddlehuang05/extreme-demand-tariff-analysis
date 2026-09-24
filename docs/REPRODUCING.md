@@ -1,14 +1,21 @@
-# Reproducing the analyses
+# Running the analyses
 
-Run all commands from the repository root using Python 3.12.
-Install dependencies with `python -m pip install -r requirements.txt`.
-The pinned versions were used in a previously successful smoke check; they are
-not a verified freeze of every original production run.
+Run the commands below from the repository root with Python 3.12.
+The included [source data](../data/README.md) and [summary tables](../tables/README.md)
+can be read directly if you do not need to regenerate results.
 
-The final packaging and directory cleanup did not rerun simulations, fitting,
-or production analyses.
+## Environment
 
-## Primary controlled experiment
+```bash
+python -m pip install -r requirements.txt
+```
+
+The dependency versions record an environment in which the primary smoke run
+succeeded. The complete set of original production environments was not
+recorded, so these pins do not establish byte-for-byte reproducibility for
+every full experiment.
+
+## Primary simulation and frequency sensitivity
 
 ```bash
 python scripts/run_revision_experiment.py --mode smoke
@@ -19,22 +26,22 @@ python scripts/analyze_capacity_leave_one_cell_out.py
 python scripts/analyze_spearman_history_bootstrap.py
 ```
 
-The smoke run is required by the production runner's checks. The primary and
-frequency runs write to `outputs/full/` and `outputs/frequency/`.
-The analysis scripts read those generated outputs and write summaries to
-`tables/` and `reports/`. They may overwrite the included aggregate tables;
-commit or copy any results you wish to retain before regenerating them.
+The full and frequency runs require a successful smoke run with the same
+source signature. They write results to `outputs/full/` and
+`outputs/frequency/`. The analysis scripts read those outputs and write to
+`tables/` and `reports/`; running them replaces the corresponding summary
+tables. Use a separate checkout to retain the supplied tables for comparison.
 
-The two historical R1 comparison tables are optional. To generate them, supply
-all three original files under `reference_inputs/r1/`:
+Two optional historical comparison tables require all three files below in
+`reference_inputs/r1/`:
 
 - `01_mechanism_cell_design.csv`
 - `02_mechanism_results_full.csv`
 - `05_exact_dgp_recovery_full.csv`
 
-Those files are not distributed. Their absence does not prevent generation of
-the current primary and frequency summaries. The analysis report records
-`legacy_r1_comparison_included`.
+These inputs are not included. The analysis script skips these comparisons
+when they are absent and records `legacy_r1_comparison_included` in its report.
+The primary and frequency summaries use the generated outputs above.
 
 ## Tariff geometry and diagnostics
 
@@ -47,25 +54,25 @@ python scripts/run_diagnostic_adjustment_analysis.py
 python scripts/audit_replication_convergence.py
 ```
 
-After the frequency run, optional numerical auditing is available through
-`python scripts/audit_tail_quadrature.py`.
+After the frequency run, `python scripts/audit_tail_quadrature.py` provides
+an additional numerical integration check.
 
-## Regime-shift sensitivity
+## Operating-regime sensitivity
 
 ```bash
 python scripts/run_regime_shift_sensitivity.py --mode smoke
 python scripts/run_regime_shift_sensitivity.py --mode full
 ```
 
-Results are written under `ablations/ASMBI_REGIME_SHIFT_V1/`.
-The configuration is `configs/regime_shift_sensitivity.yaml`.
+Results are written to `ablations/ASMBI_REGIME_SHIFT_V1/`, using the settings
+in `configs/regime_shift_sensitivity.yaml`.
 
 ## External manufacturing loads
 
-Obtain [Figshare v9](https://doi.org/10.6084/m9.figshare.14822256.v9).
-Place its original `Factories/*.csv` and
-`DR_information/Industy DR Information.xlsx` under
-`inputs/korean_source/`, preserving their names.
+Download [Figshare Version 9](https://doi.org/10.6084/m9.figshare.14822256.v9).
+Place `Factories/*.csv` and `DR_information/Industy DR Information.xlsx`
+under `inputs/korean_source/`, retaining the source filenames, including
+the spelling of `Industy`.
 
 ```bash
 python scripts/prepare_external_inputs.py
@@ -74,17 +81,24 @@ python scripts/run_external_rolling_validation.py --variant all_observations
 python scripts/summarize_external_variant_sensitivity.py
 ```
 
-Use `--source-root PATH` with the preprocessing script when the source dataset
-is stored elsewhere. The primary and sensitivity outputs are generated under
+If the dataset is stored elsewhere, pass `--source-root PATH` to
+`prepare_external_inputs.py`. Prediction outputs are written to
 `outputs/external_rolling_cv/` and
 `outputs/external_rolling_cv_all_observations/`.
-The optional continuity audit is `python scripts/audit_kblock_continuity.py`.
+Use `python scripts/audit_kblock_continuity.py` for the optional K-BLOCK
+continuity check.
 
-## Seeds and verification
+## Seeds and output sizes
 
-See `configs/seed_manifest.yaml` and the experiment YAML files for seeds.
-[Frozen output targets](FROZEN_OUTPUT_TARGETS.md) documents expected result
-counts and hashes. Source signatures depend on repository paths and therefore
-change with the directory cleanup; they are distinct from result-file hashes.
-Compare regenerated results with the frozen targets before treating a new run
-as reproducing the published numerical results.
+Random seeds are listed in [configs/seed_manifest.yaml](../configs/seed_manifest.yaml)
+and the experiment configuration files. The primary full run produces 45,000
+decision records; frequency sensitivity produces 28,000; crossed tariff
+geometry produces 380,000; and operating-regime sensitivity produces 36,000.
+The primary external analysis produces 224 prediction-score records.
+
+The [data index](../data/SUPPLEMENTARY_DATA_INDEX.csv) describes the included
+scientific data. See [Workflow coverage](RELEASE_SCOPE.md) for supplementary
+analyses whose result data are available but whose complete original run
+workflows are not included. Full experiments have not been rerun from the
+reorganized public repository; the recorded smoke result predates that
+reorganization.

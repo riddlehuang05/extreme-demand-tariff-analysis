@@ -1,73 +1,89 @@
 # Extreme-demand tariff analysis
 
-Code accompanying **Decision-Relevant Modelling of Extreme Demand for Industrial
-Electricity Tariffs**, by Mingyu Huang, Jiangweixi Wang, Zheng Gao, Yihang Yuan,
-Zhengjun Yang, and Huiqiong Li.
+Simulation, model fitting, and source data for **Decision-Relevant Modelling of
+Extreme Demand for Industrial Electricity Tariffs**, by Mingyu Huang,
+Jiangweixi Wang, Zheng Gao, Yihang Yuan, Zhengjun Yang, and Huiqiong Li.
 
-This repository provides the V1.1 computational pipeline used in the V1.4
-manuscript: simulation, distribution fitting, tariff decisions, stress
-experiments, external predictive evaluation, and random seeds. The primary
-design uses **1,000 training histories, five methods, and 45,000 decisions**.
-The frozen source data underlying the main and supplementary results are
-available in [data/](data/README.md), alongside five convenient aggregate tables.
+This study examines how models of extreme electricity demand affect tariff
+choices and expected costs. It connects errors in demand forecasts to decision
+regret, compares five predictive methods in controlled simulations, and
+evaluates predictive performance on manufacturing electricity loads.
 
-The manuscript snapshot is tagged
-[`v1.4-manuscript`](https://github.com/riddlehuang05/extreme-demand-tariff-analysis/tree/v1.4-manuscript).
-Its data index contains 58 result files, including the source records and
-panel mappings for Supplementary Figures S4–S6.
+The primary experiment uses **1,000 simulated training histories, five methods,
+and nine tariff settings**, yielding **45,000 tariff decisions**. The methods
+include an event-level tail model (TAIL), an event-level empirical model
+(EVENT-EMP), and GEV, kernel density (KDE), and empirical (EMP) models of
+monthly maxima. Additional analyses vary event frequency, tariff geometry,
+and operating regimes.
 
-## Repository layout
+## Explore the results
 
-```text
-configs/                 Experiment settings and seed_manifest.yaml
-data/                    Frozen result data, figure mappings, and checksums
-docs/                    Design, reproduction guide, and release scope
-scripts/                 Runnable experiments, summaries, and checks
-src/extreme_demand/       Shared models, estimators, and tariff calculations
-tables/                  Five published aggregate result tables
-requirements.txt         Python dependencies
-SHA256SUMS.csv            Release file hashes
-LICENSE                  MIT license
-```
+- [Summary tables](tables/README.md): model fidelity, tariff decisions,
+  paired regret contrasts, and sensitivity analyses.
+- [Source data](data/README.md): 58 indexed files covering simulation results,
+  external prediction scores, and supplementary figure data.
+- [Experiment design](docs/DESIGN.md): estimation, tariff settings,
+  uncertainty calculations, and sensitivity analyses.
 
-## Getting started
+The result files can be used without running the experiments. The
+[data index](data/SUPPLEMENTARY_DATA_INDEX.csv) describes each file, and the
+[figure map](data/FIGURE_SOURCE_MAP.csv) identifies the fields and display
+transformations for Supplementary Figures S4–S6.
 
-Use Python 3.12 and run commands from the repository root:
+## Run the analyses
+
+Use Python 3.12. From the repository root, install the dependencies:
 
 ```bash
 python -m pip install -r requirements.txt
-python scripts/check_public_tables.py
 ```
 
-The table check verifies presence and nonempty content; it does not rerun the
-experiments or independently validate their numerical results.
+Start the primary workflow with its small simulation run:
 
-For simulation and model fitting, follow the ordered commands in
-[Reproducing the analyses](docs/REPRODUCING.md). Full experiments require
-substantial computation.
+```bash
+python scripts/run_revision_experiment.py --mode smoke
+```
 
-## Data and results
+The [reproduction guide](docs/REPRODUCING.md) gives the commands, required
+inputs, and output locations for each analysis. Full experiments require
+substantial computation. Experiment settings and random seeds are supplied
+in [configs/](configs/), with a [seed index](configs/seed_manifest.yaml).
+See [workflow coverage](docs/RELEASE_SCOPE.md) for the available code and the
+supplementary experiments supplied as result data without a complete run workflow.
 
-The five files in [tables/](tables/README.md) contain the final primary
-performance summaries, paired contrasts, and sensitivity summaries.
-The [source-data index](data/SUPPLEMENTARY_DATA_INDEX.csv) links to frozen
-synthetic history-level records, formal summaries, external derived scores,
-and figure-source data. File paths in that index are relative to `data/`.
-Synthetic histories can also be regenerated from the supplied code and seeds.
+For the external analysis, download the original manufacturing load data from
+[Figshare Version 9](https://doi.org/10.6084/m9.figshare.14822256.v9).
+The guide describes preprocessing with `scripts/prepare_external_inputs.py`.
 
-The external load data must be obtained from the cited
-[Figshare Version 9 release](https://doi.org/10.6084/m9.figshare.14822256.v9).
-The preprocessing entry point is `scripts/prepare_external_inputs.py`.
-The original dataset is not redistributed here.
+## Repository structure
 
-## Documentation
+```text
+configs/                 Experiment settings and random seeds
+data/                    Source data, file index, and figure mappings
+docs/                    Study design and instructions for running analyses
+scripts/                 Experiment runners and result summaries
+src/extreme_demand/       Demand models, estimators, and tariff calculations
+tables/                  Selected manuscript result tables
+requirements.txt         Python dependencies
+LICENSE                  MIT license
+```
 
-- [Experiment design](docs/DESIGN.md)
-- [Reproduction commands and dependencies](docs/REPRODUCING.md)
-- [Included analyses and limitations](docs/RELEASE_SCOPE.md)
-- [Expected output sizes and frozen hashes](docs/FROZEN_OUTPUT_TARGETS.md)
-- [Random seeds](configs/seed_manifest.yaml)
+## Version and citation
 
-The earlier public companion is preserved under the
-[`v1.0-companion` tag](https://github.com/riddlehuang05/extreme-demand-tariff-analysis/tree/v1.0-companion).
-Use the current release for the 1,000-history manuscript.
+The manuscript cites the fixed snapshot
+[`v1.4-manuscript`](https://github.com/riddlehuang05/extreme-demand-tariff-analysis/tree/v1.4-manuscript)
+for the analysis code and numerical results. Subsequent commits
+update the author information and documentation; the analysis code,
+numerical results, parameter values, and random seeds remain the same.
+Use the tagged snapshot when referring to the version cited in the manuscript.
+
+When using this work, cite the manuscript by its title and authors above
+and identify the repository version used.
+
+## License and contact
+
+The repository is distributed under the [MIT license](LICENSE). The external
+manufacturing dataset has its own terms at the linked source.
+
+Corresponding author: Professor Huiqiong Li, Yunnan University
+([lihuiqiong@ynu.edu.cn](mailto:lihuiqiong@ynu.edu.cn)).

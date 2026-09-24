@@ -1,5 +1,5 @@
 release: ASMBI_full_code_20260924
-purpose: reproducibility metadata for the V1.1 code and aggregate tables
+purpose: random seeds and stream namespaces for the manuscript analyses
 seed_roots:
   primary_and_frequency: 20260915
   crossed_tariff_reuses_primary: 20260915
@@ -14,5 +14,6 @@ namespace:
   external: [seed_root, 61, factory_index, origin_index, method_index, stream]
   leave_one_cell_out: single_rng_seeded_with_2026092401_for_5000_history_resamples
 scope_note: >-
-  These values document the frozen analyses. The release includes the
-  generator and fitting pipeline, but omits raw inputs and row-level outputs.
+  Synthetic history-level results and derived external records are in data/.
+  Raw external time series must be downloaded from the cited source.
+  See docs/RELEASE_SCOPE.md for supplementary experiment workflow coverage.

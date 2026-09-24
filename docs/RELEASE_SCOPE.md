@@ -1,49 +1,57 @@
-# Release scope
+# Workflow coverage
 
-The release is based on the V1.1 authoritative implementation used for the V1.4
-manuscript. It contains the computational pipeline, five aggregate tables,
-and the frozen source-data supplement for the main and supplementary results.
+This repository accompanies the manuscript's simulation and external
+prediction studies. The table below identifies the available analysis entry
+points and result data. Follow [Running the analyses](REPRODUCING.md) for
+command order and input preparation.
 
-## Included
+## Available workflows
 
-| Analysis | Entry point or material |
+| Analysis | Entry point |
 | --- | --- |
-| Primary simulation and five predictive constructions | `scripts/run_revision_experiment.py` |
-| Tail-frequency stress | The same runner with `--mode frequency` |
+| Primary simulation and five predictive methods | `scripts/run_revision_experiment.py --mode full` |
+| Event-frequency sensitivity | `scripts/run_revision_experiment.py --mode frequency` |
 | Crossed tariff geometry | `scripts/run_gap_crossed_experiment.py` |
-| Regime shifts | `scripts/run_regime_shift_sensitivity.py` |
-| External preprocessing and rolling prediction | `scripts/prepare_external_inputs.py`, `scripts/run_external_rolling_validation.py` |
-| Paired summaries, cell deletion, and Spearman intervals | `scripts/analyze_*.py` |
-| Secondary diagnostic analysis | `scripts/run_diagnostic_adjustment_analysis.py` |
-| Shared estimation and tariff implementations | `src/extreme_demand/` |
-| Frozen parameters and seeds | `configs/` |
-| Selected final aggregate results | `tables/` |
-| Frozen source data and figure mappings | `data/` |
+| Operating-regime sensitivity | `scripts/run_regime_shift_sensitivity.py --mode full` |
+| External data preprocessing | `scripts/prepare_external_inputs.py` |
+| External rolling prediction | `scripts/run_external_rolling_validation.py` |
+| Paired result summaries | `scripts/analyze_revision_results.py` |
+| Cell-deletion sensitivity | `scripts/analyze_capacity_leave_one_cell_out.py` |
+| Within-method correlation intervals | `scripts/analyze_spearman_history_bootstrap.py` |
+| Decision diagnostics | `scripts/run_diagnostic_adjustment_analysis.py` |
 
-The repeated estimator copies in the original project were byte-equivalent
-and have been consolidated into one source package. Packaging changes include
-portable paths, the descriptive package name, optional historical comparison
-inputs, and organized documentation. They do not intentionally alter the
-scientific algorithms or parameter settings.
+Shared estimators and tariff calculations are in `src/extreme_demand/`.
+Experiment parameters and random seeds are in `configs/`.
 
-## Scope limits
+## Data supplied
 
-- External source data must be downloaded from its cited release.
-- Frozen synthetic per-history results and derived external records are in
-  `data/`. Raw factory time series remain at their cited public source.
-  Manuscript drafts and reviewer correspondence are outside this repository.
-- Historical recovery, clipping, and furnace-misspecification experiments
-  described in the supplementary material are distinct from the current
-  V1.1 primary/stress/rolling pipeline. Supporting generator and simulation
-  modules are retained in the source, but this release does not supply their
-  complete original run configurations and standalone reproduction workflow.
-  The optional R1 recovery comparison additionally requires the three inputs
-  listed in [the reproduction guide](REPRODUCING.md).
-- Production experiments were not rerun during this release preparation or
-  directory cleanup. A previously recorded primary smoke check matched its
-  frozen result hash; that check predates the directory cleanup.
-- Dependency pins record the earlier smoke environment, not every original
-  production environment.
+The [data directory](../data/README.md) contains 58 indexed files, including
+synthetic history-level results, aggregate summaries, derived external scores,
+and source records for Supplementary Figures S4–S6. Five selected manuscript
+tables are also available in [tables/](../tables/README.md).
 
-The earlier public release and its previously published data remain accessible
-in Git history under `v1.0-companion`.
+The raw manufacturing time series must be downloaded from the
+[cited Figshare release](https://doi.org/10.6084/m9.figshare.14822256.v9).
+The external records included here contain derived results and anonymized
+factory identifiers.
+
+## Supplementary experiment coverage
+
+Parameter recovery, clipping sensitivity, and furnace misspecification
+(Figures S4–S6) are supplied as result data with panel mappings. Supporting
+generator and simulation modules are present, but the complete original run
+configurations and standalone workflows for these experiments are not included.
+The result files support inspection and plotting of the reported outcomes;
+they do not provide a complete workflow for regenerating those experiments.
+
+The optional historical comparisons in `analyze_revision_results.py` also
+require three inputs that are not distributed. Their filenames and the
+script's skip behavior are described in the [reproduction guide](REPRODUCING.md).
+
+## Computing environment
+
+Dependency pins come from a successful primary smoke run. Full experiments
+have not been rerun from the reorganized public repository, and an exact
+environment record for every original production run is unavailable.
+Use the supplied source data and summary tables when comparing new runs
+with the manuscript results.
