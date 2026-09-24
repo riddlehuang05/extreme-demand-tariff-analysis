@@ -10,6 +10,7 @@ venv/
 /results/
 /reference_inputs/
 /tables/*
+!/tables/README.md
 !/tables/capacity_leave_one_cell_out.csv
 !/tables/cell_decision_summary.csv
 !/tables/diagnostic_spearman_history_bootstrap.csv

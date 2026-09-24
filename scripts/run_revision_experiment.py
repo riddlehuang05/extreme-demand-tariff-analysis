@@ -21,12 +21,12 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "vendor"))
-from track_a.estimators.pot_process import fit_process_tail  # noqa: E402
+sys.path.insert(0, str(ROOT / "src"))
+from extreme_demand.estimators.pot_process import fit_process_tail  # noqa: E402
 
 
 CONFIG_PATH = ROOT / "configs" / "revision.yaml"
-DESIGN_PATH = ROOT / "DESIGN.md"
+DESIGN_PATH = ROOT / "docs" / "DESIGN.md"
 CAPACITY = "capacity"
 ACTUAL = "actual_maximum_demand"
 CONTRACT = "contracted_maximum_demand"
@@ -886,7 +886,7 @@ def run_replication(
 def signature() -> str:
     digest = hashlib.sha256()
     files = [Path(__file__), CONFIG_PATH, DESIGN_PATH]
-    files.extend(sorted((ROOT / "vendor").rglob("*.py")))
+    files.extend(sorted((ROOT / "src" / "extreme_demand").rglob("*.py")))
     for path in files:
         digest.update(path.relative_to(ROOT).as_posix().encode("utf-8"))
         digest.update(b"\0")

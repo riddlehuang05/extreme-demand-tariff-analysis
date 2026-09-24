@@ -10,10 +10,10 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-from track_a.decision import decision_from_draws
-from track_a.estimators import fit_empirical, fit_gev, fit_kde, fit_point, fit_process_tail
-from track_a.metrics import paired_result_row
-from track_a.policy import PolicyConfig, capacity_fee
+from extreme_demand.decision import decision_from_draws
+from extreme_demand.estimators import fit_empirical, fit_gev, fit_kde, fit_point, fit_process_tail
+from extreme_demand.metrics import paired_result_row
+from extreme_demand.policy import PolicyConfig, capacity_fee
 
 
 ROBUSTNESS_METHODS = (

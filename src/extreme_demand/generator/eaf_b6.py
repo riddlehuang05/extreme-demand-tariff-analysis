@@ -8,7 +8,7 @@ import numpy as np
 import yaml
 from scipy import signal
 
-from track_a.aggregation import fixed_nonoverlapping_average, sliding_average
+from extreme_demand.aggregation import fixed_nonoverlapping_average, sliding_average
 
 
 @dataclass(frozen=True)

@@ -13,9 +13,9 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 import yaml
 
-from track_a.generator.eaf_b6 import GeneratorConfig, simulate_month
-from track_a.io import read_json, sha256_file, write_json
-from track_a.rng import make_seed_streams
+from extreme_demand.generator.eaf_b6 import GeneratorConfig, simulate_month
+from extreme_demand.io import read_json, sha256_file, write_json
+from extreme_demand.rng import make_seed_streams
 
 
 PHYSICAL_MONTH_SCHEMA = pa.schema(

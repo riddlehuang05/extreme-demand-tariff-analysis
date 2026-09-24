@@ -30,7 +30,7 @@ def sha256(path: Path) -> str:
 def signature() -> str:
     digest = hashlib.sha256()
     paths = [Path(__file__), CONFIG, base.CONFIG_PATH, base.DESIGN_PATH, Path(base.__file__)]
-    paths.extend(sorted((ROOT / "vendor").rglob("*.py")))
+    paths.extend(sorted((ROOT / "src" / "extreme_demand").rglob("*.py")))
     for path in paths:
         digest.update(path.relative_to(ROOT).as_posix().encode("utf-8"))
         digest.update(b"\0")

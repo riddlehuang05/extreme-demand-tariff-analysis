@@ -9,8 +9,8 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-from track_a.estimators.base import FitResult
-from track_a.external.scoring import kde_negative_log_score
+from extreme_demand.estimators.base import FitResult
+from extreme_demand.external.scoring import kde_negative_log_score
 
 
 @dataclass(frozen=True)

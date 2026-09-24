@@ -11,13 +11,13 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
-from track_a.decision import (
+from extreme_demand.decision import (
     EstimatedDecision,
     decision_from_draws,
     patent_history_decision,
     tai_margin_decision,
 )
-from track_a.estimators import (
+from extreme_demand.estimators import (
     FitResult,
     fit_empirical,
     fit_gev,
@@ -25,11 +25,11 @@ from track_a.estimators import (
     fit_point,
     fit_process_tail,
 )
-from track_a.io import read_json, sha256_file, write_csv, write_json
-from track_a.metrics import paired_result_row
-from track_a.policy import PolicyConfig, capacity_fee
-from track_a.rng import make_seed_streams
-from track_a.simulation.precision import precision_rows
+from extreme_demand.io import read_json, sha256_file, write_csv, write_json
+from extreme_demand.metrics import paired_result_row
+from extreme_demand.policy import PolicyConfig, capacity_fee
+from extreme_demand.rng import make_seed_streams
+from extreme_demand.simulation.precision import precision_rows
 
 
 CORE_METHODS = (

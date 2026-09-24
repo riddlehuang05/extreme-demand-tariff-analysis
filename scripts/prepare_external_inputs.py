@@ -12,9 +12,9 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "vendor_track_a"))
+sys.path.insert(0, str(ROOT / "src"))
 
-from track_a.external.korea import (  # noqa: E402
+from extreme_demand.external.korea import (  # noqa: E402
     load_dr_intervals,
     monthly_eligibility,
     reconstruct_factory,

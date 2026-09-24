@@ -1,4 +1,4 @@
-"""Track A reproducible pilot."""
+"""Extreme-demand models and industrial tariff decisions."""
 
 from .policy import (
     ContractDecision,

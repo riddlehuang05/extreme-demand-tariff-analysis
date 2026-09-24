@@ -18,11 +18,11 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "vendor_track_a"))
+sys.path.insert(0, str(ROOT / "src"))
 
-from track_a.estimators import FitResult, fit_empirical, fit_gev, fit_kde, fit_point  # noqa: E402
-from track_a.external.scoring import empirical_crps, kde_negative_log_score  # noqa: E402
-from track_a.external.tail import (  # noqa: E402
+from extreme_demand.estimators import FitResult, fit_empirical, fit_gev, fit_kde, fit_point  # noqa: E402
+from extreme_demand.external.scoring import empirical_crps, kde_negative_log_score  # noqa: E402
+from extreme_demand.external.tail import (  # noqa: E402
     RunsCandidate,
     _monthly_reconstruction,
     _parametric_bootstrap,
