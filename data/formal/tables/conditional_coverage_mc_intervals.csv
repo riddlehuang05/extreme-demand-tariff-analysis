@@ -1,0 +1,7 @@
+training_months,parameter,covered,replications,conditional_coverage,clopper_pearson_mc_ci95_low,clopper_pearson_mc_ci95_high,coverage_scope
+12,xi,182,200,0.91,0.8614917915261778,0.9457857455439036,conditional_on_selected_threshold
+12,sigma,190,200,0.95,0.9099724622986487,0.9757658345278915,conditional_on_selected_threshold
+24,xi,185,200,0.925,0.8793157746003387,0.9574171962629073,conditional_on_selected_threshold
+24,sigma,182,200,0.91,0.8614917915261778,0.9457857455439036,conditional_on_selected_threshold
+60,xi,190,200,0.95,0.9099724622986487,0.9757658345278915,conditional_on_selected_threshold
+60,sigma,191,200,0.955,0.916297311924146,0.9792195777729956,conditional_on_selected_threshold

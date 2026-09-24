@@ -1,1 +1,3 @@
 * text=auto eol=lf
+# Preserve frozen data bytes and their published checksums.
+/data/** -text whitespace=cr-at-eol

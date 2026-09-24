@@ -1,8 +1,8 @@
 # Release scope
 
 The release is based on the V1.1 authoritative implementation used for the V1.4
-manuscript. It is a code release with selected aggregate results, not a copy
-of the full research archive.
+manuscript. It contains the computational pipeline, five aggregate tables,
+and the frozen source-data supplement for the main and supplementary results.
 
 ## Included
 
@@ -18,6 +18,7 @@ of the full research archive.
 | Shared estimation and tariff implementations | `src/extreme_demand/` |
 | Frozen parameters and seeds | `configs/` |
 | Selected final aggregate results | `tables/` |
+| Frozen source data and figure mappings | `data/` |
 
 The repeated estimator copies in the original project were byte-equivalent
 and have been consolidated into one source package. Packaging changes include
@@ -28,8 +29,9 @@ scientific algorithms or parameter settings.
 ## Scope limits
 
 - External source data must be downloaded from its cited release.
-- Per-history results, raw factory records, manuscript drafts, and reviewer
-  correspondence are not distributed.
+- Frozen synthetic per-history results and derived external records are in
+  `data/`. Raw factory time series remain at their cited public source.
+  Manuscript drafts and reviewer correspondence are outside this repository.
 - Historical recovery, clipping, and furnace-misspecification experiments
   described in the supplementary material are distinct from the current
   V1.1 primary/stress/rolling pipeline. Supporting generator and simulation

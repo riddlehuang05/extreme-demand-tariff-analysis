@@ -1,8 +1,11 @@
 # Frozen output targets
 
 These values come from the authoritative V1.1 output summaries in the private
-archive. They identify what a production rerun should be checked against;
-the row-level outputs themselves are not in this release.
+archive. They identify what a production rerun should be checked against.
+The paths below refer to original runner outputs. The public [source-data
+supplement](../data/README.md) contains frozen result records and summaries
+under its own indexed paths; reshaped or compressed files have their own
+checksums in `data/SUPPLEMENTARY_DATA_INDEX.csv`.
 
 | Output relative to package root | Expected rows | Frozen SHA-256 |
 | --- | ---: | --- |

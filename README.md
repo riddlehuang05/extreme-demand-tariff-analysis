@@ -8,12 +8,19 @@ This repository provides the V1.1 computational pipeline used in the V1.4
 manuscript: simulation, distribution fitting, tariff decisions, stress
 experiments, external predictive evaluation, and random seeds. The primary
 design uses **1,000 training histories, five methods, and 45,000 decisions**.
-Five selected aggregate result tables are included.
+The frozen source data underlying the main and supplementary results are
+available in [data/](data/README.md), alongside five convenient aggregate tables.
+
+The manuscript snapshot is tagged
+[`v1.4-manuscript`](https://github.com/riddlehuang05/extreme-demand-tariff-analysis/tree/v1.4-manuscript).
+Its data index contains 58 result files, including the source records and
+panel mappings for Supplementary Figures S4–S6.
 
 ## Repository layout
 
 ```text
 configs/                 Experiment settings and seed_manifest.yaml
+data/                    Frozen result data, figure mappings, and checksums
 docs/                    Design, reproduction guide, and release scope
 scripts/                 Runnable experiments, summaries, and checks
 src/extreme_demand/       Shared models, estimators, and tariff calculations
@@ -43,8 +50,10 @@ substantial computation.
 
 The five files in [tables/](tables/README.md) contain the final primary
 performance summaries, paired contrasts, and sensitivity summaries.
-Synthetic histories can be regenerated from the supplied code and seeds.
-Row-level simulation outputs are not included.
+The [source-data index](data/SUPPLEMENTARY_DATA_INDEX.csv) links to frozen
+synthetic history-level records, formal summaries, external derived scores,
+and figure-source data. File paths in that index are relative to `data/`.
+Synthetic histories can also be regenerated from the supplied code and seeds.
 
 The external load data must be obtained from the cited
 [Figshare Version 9 release](https://doi.org/10.6084/m9.figshare.14822256.v9).

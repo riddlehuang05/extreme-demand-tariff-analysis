@@ -1,0 +1,5 @@
+certified,correct,count,denominator
+True,True,4746,4746
+True,False,0,4746
+False,True,23734,40254
+False,False,16520,40254

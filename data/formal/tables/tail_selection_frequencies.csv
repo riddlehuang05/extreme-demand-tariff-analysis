@@ -1,0 +1,9 @@
+fit_status,selected_threshold_quantile,count_model,finite_variance_flag,replications
+PASS,0.9,negative_binomial,True,64
+PASS,0.9,poisson,True,229
+PASS,0.925,negative_binomial,True,47
+PASS,0.925,poisson,True,158
+PASS,0.95,negative_binomial,True,60
+PASS,0.95,poisson,True,191
+PASS,0.975,negative_binomial,True,56
+PASS,0.975,poisson,True,195

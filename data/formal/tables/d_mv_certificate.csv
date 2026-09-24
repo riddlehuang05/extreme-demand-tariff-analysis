@@ -1,0 +1,2 @@
+rows,mode_errors,safe_rows_d_mv_below_one,safe_fraction,safe_zone_mode_errors,sensitivity_of_d_mv_ge_one_for_mode_error,ppv_of_d_mv_ge_one_for_mode_error,specificity_of_d_mv_below_one
+45000,16520,4746,0.10546666666666667,0,1.0,0.41039399811198884,0.16664325842696628
