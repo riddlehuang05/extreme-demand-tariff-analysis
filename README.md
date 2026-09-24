@@ -2,7 +2,7 @@
 
 Code accompanying **Decision-Relevant Modelling of Extreme Demand for Industrial
 Electricity Tariffs**, by Mingyu Huang, Jiangweixi Wang, Zheng Gao, Yihang Yuan,
-and Zhengjun Yang.
+Zhengjun Yang, and Huiqiong Li.
 
 This repository provides the V1.1 computational pipeline used in the V1.4
 manuscript: simulation, distribution fitting, tariff decisions, stress
