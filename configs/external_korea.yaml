@@ -1,0 +1,31 @@
+external_korea:
+  source_root_relative: inputs/korean_source
+  factory_subdirectory: Factories
+  dr_workbook: DR_information/Industy DR Information.xlsx
+  factories: [Cement_1, Cement_2, Forge_1, Forge_2, Metal_1, Metal_2, Metal_3, Paper, Steel_1, Steel_2]
+  start: '2019-03-01 00:00'
+  end: '2019-09-30 23:59'
+  timezone: Asia/Seoul
+  main_window_minutes: 15
+  main_window_completeness_minutes: 15
+  month_eligibility_main: 0.95
+  month_eligibility_robustness: 0.90
+  dr_rebound_buffer_minutes: 60
+  variants: [natural_tail, all_observations]
+  smoke_factories: [Cement_1]
+  factory_name_map:
+    Metal1: Metal_1
+    Metal2: Metal_2
+    Metal3: Metal_3
+    Forging1: Forge_1
+    Forging2: Forge_2
+    Steel1: Steel_1
+    Steel2: Steel_2
+    Cement1: Cement_1
+    Cement2: Cement_2
+    Paper1: Paper
+  anomaly_policy:
+    objective_invalid: [unparseable_timestamp, duplicate_timestamp_after_first, nonnumeric_load, negative_load]
+    exploratory_only: provider_script_iqr_upper_fence
+    automatic_three_sigma_deletion: false
+  source_boundary: External Korean predictive analysis only; not tariff-bill validation

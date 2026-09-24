@@ -1,0 +1,29 @@
+regime_shift_sensitivity:
+  task_id: ASMBI_REGIME_SHIFT_V1
+  seed_root: 20260917
+  workers: 8
+  training_months: 24
+  early_months: 12
+  replications:
+    smoke: 2
+    full: 200
+  chunk_replications:
+    smoke: 1
+    full: 10
+  inference_bootstrap_replicates: 5000
+  scenarios:
+    - id: STATIONARY_TARGET
+      description: All 24 training months follow the target DGP.
+      early_changes: {}
+    - id: RATE_SHIFT_5_TO_30
+      description: The first 12 months have lambda=5; the final 12 months and target have lambda=30.
+      early_changes:
+        tail_rate: 5.0
+    - id: SCALE_SHIFT_8000_TO_12000
+      description: The first 12 months have GPD scale 8000; the final 12 months and target have scale 12000.
+      early_changes:
+        sigma_kw: 8000.0
+    - id: SHAPE_SHIFT_005_TO_015
+      description: The first 12 months have GPD shape 0.05; the final 12 months and target have shape 0.15.
+      early_changes:
+        xi: 0.05

@@ -1,0 +1,18 @@
+release: ASMBI_full_code_20260924
+purpose: reproducibility metadata for the V1.1 code and aggregate tables
+seed_roots:
+  primary_and_frequency: 20260915
+  crossed_tariff_reuses_primary: 20260915
+  external_and_residual_audits: 20260916
+  regime_shift: 20260917
+  primary_summary_bootstrap: 2026091501
+  leave_one_cell_out_bootstrap: 2026092401
+  spearman_history_bootstrap: 2026092402
+namespace:
+  controlled_experiment: [seed_root, mode_code, rate_index, replication, stream]
+  regime_shift: [seed_root, 71, replication, stream]
+  external: [seed_root, 61, factory_index, origin_index, method_index, stream]
+  leave_one_cell_out: single_rng_seeded_with_2026092401_for_5000_history_resamples
+scope_note: >-
+  These values document the frozen analyses. The release includes the
+  generator and fitting pipeline, but omits raw inputs and row-level outputs.

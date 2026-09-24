@@ -1,0 +1,21 @@
+residual_experiments:
+  seed_root: 20260916
+  convergence_prefixes: [100, 200, 400, 600, 800, 1000]
+  convergence_bootstrap_replicates: 5000
+  crossed_tariff:
+    reuse_full_seed_root: true
+    replications: 1000
+    chunk_replications: 10
+    workers: 8
+    alphas: [1.05, 1.10, 1.15, 1.20]
+    utilization_start: 0.40
+    utilization_stop: 0.76
+    utilization_step: 0.02
+    kappa: 2.0
+  external:
+    draws: 50000
+    block_length_windows: 96
+    quantile_score_start: 0.90
+    quantile_score_stop: 0.995
+    quantile_score_step: 0.005
+    factory_bootstrap_replicates: 5000

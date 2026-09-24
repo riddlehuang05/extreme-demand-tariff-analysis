@@ -1,0 +1,20 @@
+external_rolling_validation:
+  seed_root: 20260916
+  workers: 8
+  prediction_draws: 50000
+  selection_draws: 2000
+  formal_bootstrap_replicates: 500
+  factory_bootstrap_replicates: 5000
+  threshold_quantiles: [0.90, 0.925, 0.95, 0.975]
+  run_lengths_minutes: [30, 60, 120]
+  minimum_clusters_gated: 50
+  shape_ci_width_gate: 0.8
+  parametric_ks_pvalue_gate: 0.05
+  endpoint_upper_normalized: 10.0
+  block_length_windows: 96
+  quantile_score_grid: [0.900, 0.905, 0.910, 0.915, 0.920, 0.925, 0.930, 0.935, 0.940, 0.945, 0.950, 0.955, 0.960, 0.965, 0.970, 0.975, 0.980, 0.985, 0.990, 0.995]
+  rolling_origins:
+    - {origin_id: O1_MAR_MAY_TO_JUN, train_months: [2019-03, 2019-04, 2019-05], test_month: 2019-06}
+    - {origin_id: O2_MAR_JUN_TO_JUL, train_months: [2019-03, 2019-04, 2019-05, 2019-06], test_month: 2019-07}
+    - {origin_id: O3_MAR_JUL_TO_AUG, train_months: [2019-03, 2019-04, 2019-05, 2019-06, 2019-07], test_month: 2019-08}
+    - {origin_id: O4_MAR_AUG_TO_SEP, train_months: [2019-03, 2019-04, 2019-05, 2019-06, 2019-07, 2019-08], test_month: 2019-09}

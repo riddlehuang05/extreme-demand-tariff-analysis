@@ -1,79 +1,101 @@
-# Decision-Relevant Modelling of Extreme Demand for Industrial Electricity Tariffs
+# Extreme-demand tariff analysis: code and reproducibility
 
-Data and verification code accompanying the manuscript by Mingyu Huang, Jiangweixi
-Wang, Zheng Gao, Yihang Yuan, and Zhengjun Yang.
+This release contains the V1.1 simulation and model-fitting source for the V1.4
+manuscript, including the analytic oracle, TAIL selection and fallback, other
+predictive methods, external rolling validation, sensitivity analyses, and
+seed-bearing configurations. Five aggregate tables are included. The cited
+external load dataset and row-level Monte Carlo outputs are not redistributed.
+The prior public companion remains available in the Git history at
+`650db19b0632ecfc7f6222b1dd218774582afd8b` (tag `v1.0-companion`).
 
-This repository is a focused release of the derived numerical outputs behind the
-manuscript's reported results, together with small scripts that recompute and verify
-them. It is the data-and-verification companion of the manuscript; the manuscript has
-not yet been published.
+## Layout and provenance
 
-## What this repository gives you
+- `scripts/` contains simulation, fitting, analysis, and audit entry points.
+  `vendor/` and `vendor_track_a/` contain the model and decision modules.
+  Archive-specific handoff verification and PDF repair scripts are omitted;
+  three sensitivity scripts have portable root paths.
+- `configs/revision.yaml`, `configs/residual_experiments.yaml`,
+  `configs/regime_shift_sensitivity.yaml`, and
+  `configs/external_rolling_validation.yaml` are the frozen V1.1 configurations.
+- `DESIGN.md` records the frozen experiment design.
+- `configs/external_korea.yaml` and `scripts/prepare_external_inputs.py` provide
+  a portable entry point to reconstruct the external input from the cited
+  Figshare v9 release. This entry point is adapted from the original Gate 6A
+  reconstruction code. A source-data check matched the frozen
+  `fixed15.parquet` (410,880 rows), eligibility table (280 rows), and input
+  manifest (11 rows).
+- `seed_manifest.yaml` records root seeds and later sensitivity seeds.
+- `FROZEN_OUTPUT_TARGETS.md` lists expected row counts and hashes without
+  distributing row-level outputs.
+- `tables/` contains five selected aggregate tables from the frozen results.
+  Run `python code/check_public_tables.py` to check that they are present
+  and nonempty.
+- `SHA256SUMS.csv` gives SHA-256 hashes for the release files.
 
-- `python code/check_release.py` — re-checks the headline quantities reported in the
-  manuscript (unique q0.99-error predictions, paired regional regret differences,
-  diagnostic-unit structure, and the strongest regret association);
-- `python code/run_public_analysis.py` — regenerates the public summary tables
-  (q0.99-error summaries, TAIL-minus-baseline regret by oracle region, Spearman
-  associations) into a local `results/` directory;
-- `python code/recompute_roc_auc.py` — recomputes the tariff-mode-error ROC curves and
-  point AUC values from the 5,400-row decision table.
+No original review documents, manuscript drafts, personal filesystem paths,
+raw load files, or row-level outputs are distributed here. The source code and
+configurations disclose the complete synthetic generator and fitted methods.
 
-The derived CSV files in `data/` mirror the corresponding results sections of the
-manuscript, so the reported numbers can be traced to these files and reproduced with
-the scripts above.
+## Environment
 
-## Repository layout
+Python 3.12.10 was recorded by the original external-data reconstruction.
+`requirements.txt` lists versions used in a subsequent successful smoke check;
+it is not a verified freeze of every original production run. Install with
+`python -m pip install -r requirements.txt`.
+
+## Reproduction sequence
+
+Run commands from this directory. The controlled synthetic analyses do not
+need external data:
 
 ```text
-code/
-  run_public_analysis.py   Regenerate the public summary tables
-  check_release.py         Verify row counts and headline quantities
-  recompute_roc_auc.py     Recompute tariff-mode-error ROC curves and point AUC values
-  README.md
-
-data/
-  q99_errors.csv                     600 replication--method q0.99 errors
-  regret_differences.csv             Paired TAIL-minus-baseline regret, by region
-  diagnostic_units.csv               600 replication--method diagnostic units
-  mechanism_decision_rows_5400.csv   All 5,400 replication--method--cell decision rows
-  confirmatory_regret_summary.csv    Confirmatory contrasts with bootstrap intervals
-  diagnostic_summary.csv             Diagnostic AUC and regret-association summary
-  clipping_summary.csv               Physical-clipping robustness cells
-  misspecification_summary.csv       T4--T6 misspecification robustness cells
-  external_crps.csv                  External Korean-factory CRPS values by variant
+python scripts/run_revision_experiment.py --mode smoke
+python scripts/run_revision_experiment.py --mode full
+python scripts/run_revision_experiment.py --mode frequency
+python scripts/run_gap_crossed_experiment.py
+python scripts/run_regime_shift_sensitivity.py --mode smoke
+python scripts/run_regime_shift_sensitivity.py --mode full
+python scripts/analyze_revision_results.py
+python scripts/analyze_capacity_leave_one_cell_out.py
+python scripts/analyze_spearman_history_bootstrap.py
 ```
 
-## Requirements
+The full experiment is computationally substantial. Seed roots and parameters
+are in `configs/` and `seed_manifest.yaml`; full outputs are created under
+`outputs/`, `ablations/`, `tables/`, and `reports/`. The `full` and `frequency`
+runs should be completed before downstream summaries. For the two historical
+R1 comparison tables, place `01_mechanism_cell_design.csv`,
+`02_mechanism_results_full.csv`, and `05_exact_dgp_recovery_full.csv` under
+`reference_inputs/r1/`. The current V1.1 summaries do not require those files.
 
-- Python >= 3.10
-- See `requirements.txt`
+A standalone 4-history smoke run passed all five built-in checks and produced
+the frozen smoke-result SHA-256
+`70a7aa30cd1341e01d4c445c2f7dc3ac8e9f74e8a86ef816802eb020a6838c39`.
+The 1,000-history production run was not repeated for this release preparation.
 
-```bash
-pip install -r requirements.txt
+For the external analysis, obtain the dataset cited in the manuscript
+(Figshare v9, DOI 10.6084/m9.figshare.14822256.v9), place the original
+`Factories/*.csv` and `DR_information/Industy DR Information.xlsx` under
+`inputs/korean_source/`, then run:
+
+```text
+python scripts/prepare_external_inputs.py
+python scripts/run_external_rolling_validation.py --variant natural_tail
+python scripts/run_external_rolling_validation.py --variant all_observations
 ```
 
-## Reproducing the summaries
+The original input files are deliberately excluded. Use `--source-root` if the
+Figshare files are outside `inputs/korean_source/`. The reconstruction script
+uses the original inclusion and demand-response rules from the archived Gate
+6A implementation. The external path must be checked against the frozen input
+manifest and the 8-factory/32-origin/224-score design before publication.
 
-```bash
-python code/check_release.py
-python code/run_public_analysis.py
-```
+## Scope and remaining dependencies
 
-`recompute_roc_auc.py` writes `results/diagnostic_auc_recomputed.csv` and
-`results/roc_curves_recomputed.csv`.
-
-## Data provenance and scope
-
-The CSV files are derived, manuscript-facing analysis outputs. The original South Korean
-manufacturing-load dataset is publicly available from the data source cited in the
-manuscript and is not redistributed here.
-
-The full research pipeline that generated the underlying Monte Carlo and external
-outputs — the synthetic demand generator, the TAIL/KDE/EMP fitting internals, the
-tariff-action optimization engine, and the external-data fitting pipeline — is outside
-the scope of this release.
-
-## License
-
-See `LICENSE`.
+The controlled generator and model-fitting pipeline are included. The original
+external data must be obtained from its cited release. The three historical R1
+comparison inputs are not distributed. A fresh source download, exact original
+production dependency versions, and a new full-scale run were outside the
+release-preparation check. Compare regenerated outputs with
+`FROZEN_OUTPUT_TARGETS.md` and the manuscript before using them as a new
+source of published numerical results.
