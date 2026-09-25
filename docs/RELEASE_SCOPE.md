@@ -18,6 +18,8 @@ command order and input preparation.
 | Paired result summaries | `scripts/analyze_revision_results.py` |
 | Cell-deletion sensitivity | `scripts/analyze_capacity_leave_one_cell_out.py` |
 | Within-method correlation intervals | `scripts/analyze_spearman_history_bootstrap.py` |
+| Functional fidelity and paired correlation differences | `scripts/analyze_decision_functionals.py` |
+| Gaussian reference and contract-objective comparisons | `scripts/run_gaussian_comparison.py` |
 | Decision diagnostics | `scripts/run_diagnostic_adjustment_analysis.py` |
 
 Shared estimators and tariff calculations are in `src/extreme_demand/`.
@@ -25,7 +27,7 @@ Experiment parameters and random seeds are in `configs/`.
 
 ## Data supplied
 
-The [data directory](../data/README.md) contains 58 indexed files, including
+The [data directory](../data/README.md) contains 67 indexed files, including
 synthetic history-level results, aggregate summaries, derived external scores,
 and source records for Supplementary Figures S4–S6. Five selected manuscript
 tables are also available in [tables/](../tables/README.md).
@@ -50,8 +52,8 @@ script's skip behavior are described in the [reproduction guide](REPRODUCING.md)
 
 ## Computing environment
 
-Dependency pins come from a successful primary smoke run. Full experiments
-have not been rerun from the reorganized public repository, and an exact
-environment record for every original production run is unavailable.
-Use the supplied source data and summary tables when comparing new runs
-with the manuscript results.
+Python dependencies are listed in `requirements.txt`. The functional analyses
+and the complete 1,000-history Gaussian comparison were run from this repository.
+The original five-method production results are included; their complete
+production environment records are unavailable. The pinned environment
+also supports the primary smoke workflow.

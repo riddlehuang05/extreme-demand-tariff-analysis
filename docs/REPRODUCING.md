@@ -43,6 +43,19 @@ These inputs are not included. The analysis script skips these comparisons
 when they are absent and records `legacy_r1_comparison_included` in its report.
 The primary and frequency summaries use the generated outputs above.
 
+## Functional analyses and Gaussian reference
+
+These commands use the supplied primary data and original history seeds:
+
+```bash
+python scripts/analyze_decision_functionals.py
+python scripts/run_gaussian_comparison.py
+```
+
+They write the files described in [Functional analyses](FUNCTIONAL_ANALYSES.md)
+to `data/extensions/`. The Gaussian comparison adds 9,000 decisions; the
+contract-objective comparisons cover 1,863 cases.
+
 ## Tariff geometry and diagnostics
 
 After the primary full run:
@@ -99,6 +112,4 @@ The primary external analysis produces 224 prediction-score records.
 The [data index](../data/SUPPLEMENTARY_DATA_INDEX.csv) describes the included
 scientific data. See [Workflow coverage](RELEASE_SCOPE.md) for supplementary
 analyses whose result data are available but whose complete original run
-workflows are not included. Full experiments have not been rerun from the
-reorganized public repository; the recorded smoke result predates that
-reorganization.
+workflows are not included.

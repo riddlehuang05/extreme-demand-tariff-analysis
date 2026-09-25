@@ -14,14 +14,17 @@ and nine tariff settings**, yielding **45,000 tariff decisions**. The methods
 include an event-level tail model (TAIL), an event-level empirical model
 (EVENT-EMP), and GEV, kernel density (KDE), and empirical (EMP) models of
 monthly maxima. Additional analyses vary event frequency, tariff geometry,
-and operating regimes.
+and operating regimes. A Gaussian reference and paired functional-error
+analyses connect the forecast comparison to the tariff cost functionals.
 
 ## Explore the results
 
 - [Summary tables](tables/README.md): model fidelity, tariff decisions,
   paired regret contrasts, and sensitivity analyses.
-- [Source data](data/README.md): 58 indexed files covering simulation results,
+- [Source data](data/README.md): 67 indexed files covering simulation results,
   external prediction scores, and supplementary figure data.
+- [Functional analyses](docs/FUNCTIONAL_ANALYSES.md): paired associations,
+  a Gaussian reference, and independent contract-objective comparisons.
 - [Experiment design](docs/DESIGN.md): estimation, tariff settings,
   uncertainty calculations, and sensitivity analyses.
 

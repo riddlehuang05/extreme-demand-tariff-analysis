@@ -57,3 +57,12 @@ formal/tables/diagnostic_spearman_history_bootstrap.csv,History-cluster bootstra
 supplementary/figure_s4_parameter_recovery.csv,Figure S4 plotting source,synthetic_history,600,5,Panel definitions and display transformations: FIGURE_SOURCE_MAP.csv
 supplementary/figure_s5_clipping_sensitivity.csv,Figure S5 plotting source,synthetic_history,3200,5,Panel definitions and display transformations: FIGURE_SOURCE_MAP.csv
 supplementary/figure_s6_physical_misspecification.csv,Figure S6 plotting source,synthetic_history,5200,5,Panel definitions and display transformations: FIGURE_SOURCE_MAP.csv
+extensions/contract_solver_comparison.csv,Functional and decision analysis,controlled_extension,1863,10,"Independent contract-objective comparisons, CNY/month"
+extensions/functional_correlation_contrasts.csv,Functional and decision analysis,controlled_extension,10,10,Paired history-bootstrap correlation differences; pointwise intervals
+extensions/functional_fidelity.csv,Functional and decision analysis,controlled_extension,15,5,Absolute relative errors as percentages; stop-loss errors averaged within history
+extensions/functional_history_summary.csv,Functional and decision analysis,controlled_extension,5000,6,Nine-cell mean errors and regret for each history and method
+extensions/gaussian_decisions.csv.gz,Functional and decision analysis,controlled_extension,9000,13,"Nonnegative Gaussian reference on the original 1,000 histories"
+extensions/gaussian_fidelity.csv,Functional and decision analysis,controlled_extension,2,4,Absolute relative errors as proportions
+extensions/gaussian_regional_contrasts.csv,Functional and decision analysis,controlled_extension,15,8,Gaussian minus comparator; CNY/month; pointwise paired intervals
+extensions/mode_stability_radii.csv,Functional and decision analysis,controlled_extension,9,8,Oracle-based sufficient Wasserstein radii in kW
+extensions/worked_tariff_example.csv,Functional and decision analysis,controlled_extension,27,10,First history; predicted and oracle mode costs and contract levels

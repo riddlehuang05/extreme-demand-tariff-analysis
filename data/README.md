@@ -1,8 +1,8 @@
 # Source data
 
-This directory contains 58 scientific data files accompanying the manuscript:
-32 analysis outputs, 23 derived files, and three supplementary figure-source
-files. [SUPPLEMENTARY_DATA_INDEX.csv](SUPPLEMENTARY_DATA_INDEX.csv) lists each
+This directory contains 67 scientific data files accompanying the manuscript:
+32 analysis outputs, 23 derived files, three supplementary figure-source
+files, and nine functional-analysis files. [SUPPLEMENTARY_DATA_INDEX.csv](SUPPLEMENTARY_DATA_INDEX.csv) lists each
 file's purpose, dimensions, and explanatory notes. File paths
 in the index are relative to this directory.
 
@@ -12,6 +12,7 @@ in the index are relative to this directory.
 | --- | --- |
 | `formal/` | Analysis summaries, convergence records, external prediction scores and fitting diagnostics, crossed-tariff design, and correlation intervals |
 | `derived/` | Plotting data, synthetic history-level records, regional contrasts, and external summaries |
+| `extensions/` | Functional-error associations, Gaussian decisions, stability radii, and contract-objective comparisons |
 | `supplementary/` | Source records for Figures S4–S6 |
 | `FIGURE_SOURCE_MAP.csv` | Fields, filters, series labels, and display transformations for the 23 panels of Figures S4–S6 |
 
@@ -60,8 +61,8 @@ code and the original configurations that are not included for these experiments
 
 ## File formats
 
-CSV files use UTF-8. `primary_rows.csv.gz` is a gzip-compressed CSV.
+CSV files use UTF-8. `primary_rows.csv.gz` and `extensions/gaussian_decisions.csv.gz` are gzip-compressed CSV files.
 Paths in the figure map are relative to this directory.
 
 This README, the data index, and the figure map are documentation files in
-addition to the 58 scientific data files.
+addition to the 67 scientific data files.
