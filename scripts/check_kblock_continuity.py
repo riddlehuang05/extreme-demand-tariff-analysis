@@ -1,4 +1,4 @@
-"""Audit the frozen K-BLOCK windows against actual timestamp spacing."""
+"""Check K-BLOCK window continuity against the recorded timestamps."""
 
 import json
 from pathlib import Path
@@ -49,8 +49,8 @@ def main() -> None:
             "recorded_count_matches": old_count == recorded_count,
         })
     report = {
-        "source": "frozen external_rolling_cv fit_diagnostics.csv and fixed15.parquet",
-        "script": "audit_kblock_continuity.py",
+        "source": "external_rolling_cv fit_diagnostics.csv and fixed15.parquet",
+        "script": "check_kblock_continuity.py",
         "unit_count": len(units),
         "valid_blocks_total": sum(unit["valid_blocks"] for unit in units),
         "nonconsecutive_blocks_total": sum(unit["nonconsecutive_blocks"] for unit in units),

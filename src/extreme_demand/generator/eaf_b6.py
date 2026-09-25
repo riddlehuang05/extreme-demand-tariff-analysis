@@ -140,7 +140,7 @@ class GeneratorConfig:
         if not (0.0 < self.heat_energy_lower < self.heat_energy_mean < self.heat_energy_upper):
             raise ValueError("invalid heat-energy truncation parameters")
         if self.active_power_max_mw <= 0.0 or self.rare_power_cap_mw != self.active_power_max_mw:
-            raise ValueError("rare-event cap must equal the frozen furnace active-power cap")
+            raise ValueError("rare-event cap must equal the configured furnace active-power cap")
         if not (0.0 <= self.background_lower < self.background_mean < self.background_upper):
             raise ValueError("invalid background bounds")
         if not 0.0 <= self.consecutive_heat_probability <= 1.0:

@@ -1,4 +1,4 @@
-"""Capacity-region leave-one-cell-out sensitivity using frozen primary rows.
+"""Capacity-region leave-one-cell-out sensitivity using the supplied primary results.
 
 This is a post hoc summary analysis only: it does not refit predictive
 models, regenerate histories, or alter the formal primary experiment.

@@ -54,6 +54,6 @@ script's skip behavior are described in the [reproduction guide](REPRODUCING.md)
 
 Python dependencies are listed in `requirements.txt`. The functional analyses
 and the complete 1,000-history Gaussian comparison were run from this repository.
-The original five-method production results are included; their complete
-production environment records are unavailable. The pinned environment
+The original five-method results are included; their complete
+computing-environment records are unavailable. The pinned environment
 also supports the primary smoke workflow.

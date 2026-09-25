@@ -10,10 +10,10 @@ can be read directly if you do not need to regenerate results.
 python -m pip install -r requirements.txt
 ```
 
-The dependency versions record an environment in which the primary smoke run
-succeeded. The complete set of original production environments was not
-recorded, so these pins do not establish byte-for-byte reproducibility for
-every full experiment.
+The pinned dependencies support the primary smoke workflow and the additional
+functional and Gaussian analyses. Complete environment records for the original
+five-method runs are unavailable; numerical agreement across other environments
+should be assessed against the supplied results.
 
 ## Primary simulation and frequency sensitivity
 
@@ -40,7 +40,7 @@ Two optional historical comparison tables require all three files below in
 - `05_exact_dgp_recovery_full.csv`
 
 These inputs are not included. The analysis script skips these comparisons
-when they are absent and records `legacy_r1_comparison_included` in its report.
+when they are absent and reports whether they were included.
 The primary and frequency summaries use the generated outputs above.
 
 ## Functional analyses and Gaussian reference
@@ -64,10 +64,10 @@ After the primary full run:
 python scripts/run_gap_crossed_experiment.py
 python scripts/summarize_gap_crossed_experiment.py
 python scripts/run_diagnostic_adjustment_analysis.py
-python scripts/audit_replication_convergence.py
+python scripts/check_replication_convergence.py
 ```
 
-After the frequency run, `python scripts/audit_tail_quadrature.py` provides
+After the frequency run, `python scripts/check_tail_quadrature.py` provides
 an additional numerical integration check.
 
 ## Operating-regime sensitivity
@@ -98,7 +98,7 @@ If the dataset is stored elsewhere, pass `--source-root PATH` to
 `prepare_external_inputs.py`. Prediction outputs are written to
 `outputs/external_rolling_cv/` and
 `outputs/external_rolling_cv_all_observations/`.
-Use `python scripts/audit_kblock_continuity.py` for the optional K-BLOCK
+Use `python scripts/check_kblock_continuity.py` for the optional K-BLOCK
 continuity check.
 
 ## Seeds and output sizes
