@@ -68,17 +68,12 @@ requirements.txt         Python dependencies
 LICENSE                  MIT license
 ```
 
-## Version and citation
+## Citation
 
-The manuscript cites the fixed snapshot
-[`v1.4-manuscript`](https://github.com/riddlehuang05/extreme-demand-tariff-analysis/tree/v1.4-manuscript)
-for the analysis code and numerical results. Subsequent commits
-update the author information and documentation; the analysis code,
-numerical results, parameter values, and random seeds remain the same.
-Use the tagged snapshot when referring to the version cited in the manuscript.
-
-When using this work, cite the manuscript by its title and authors above
-and identify the repository version used.
+When using this work, cite the accompanying manuscript by its title and
+authors above, and include the repository URL. The [data index](data/README.md)
+and [seed manifest](configs/seed_manifest.yaml) identify the supplied results
+and random-number streams.
 
 ## License and contact
 
