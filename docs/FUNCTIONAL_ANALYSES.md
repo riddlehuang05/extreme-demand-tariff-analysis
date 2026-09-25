@@ -16,7 +16,8 @@ are evaluated at each cell's oracle contract threshold.
 
 Spearman correlations are calculated separately for each method. The mean-
 and stop-loss-error correlations with regret are compared with the quantile-
-error correlation using the same outcome. Each of 5,000 bootstrap draws
+error correlation using the same outcome. Contrasts subtract signed Spearman
+coefficients, rather than their absolute magnitudes. Each of 5,000 bootstrap draws
 resamples complete histories, preserving all variables and methods. Ranks are
 recomputed in every resample. The seed is 2026092501; intervals are pointwise
 95% percentile intervals.
