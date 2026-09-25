@@ -4,13 +4,15 @@ Simulation, model fitting, and source data for **Decision-Relevant Modelling of
 Extreme Demand for Industrial Electricity Tariffs**, by Mingyu Huang,
 Jiangweixi Wang, Zheng Gao, Yihang Yuan, Zhengjun Yang, and Huiqiong Li.
 
-This study examines how models of extreme electricity demand affect tariff
-choices and expected costs. It connects errors in demand forecasts to decision
-regret, compares five predictive methods in controlled simulations, and
-evaluates predictive performance on manufacturing electricity loads.
+This study connects errors in demand distributions to the costs and stability
+of industrial tariff decisions. The framework identifies the mean and stop-loss
+functionals used by competing tariffs, establishes a sufficient condition for
+mode stability, and bounds full-action regret. Paired simulations examine these
+relationships; manufacturing-load forecasts provide an external assessment of
+predictive performance.
 
 The primary experiment uses **1,000 simulated training histories, five methods,
-and nine tariff settings**, yielding **45,000 tariff decisions**. The methods
+and nine tariff settings**, producing **45,000 tariff decisions**. The methods
 include an event-level tail model (TAIL), an event-level empirical model
 (EVENT-EMP), and GEV, kernel density (KDE), and empirical (EMP) models of
 monthly maxima. Additional analyses vary event frequency, tariff geometry,
