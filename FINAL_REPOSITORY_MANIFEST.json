@@ -1,6 +1,6 @@
 {
   "scope": "Article companion repository for machine-readable supplementary tables, analysis data, code, and reproducibility documentation; manuscript and Supporting Information are supplied through journal submission materials.",
-  "file_count_excluding_manifests": 547,
+  "file_count_excluding_manifests": 546,
   "self_hash_exclusions": [
     "FINAL_REPOSITORY_MANIFEST.json",
     "FINAL_REPOSITORY_SHA256.csv"
@@ -21,8 +21,8 @@
     },
     {
       "relative_path": ".gitignore",
-      "size": 67,
-      "sha256": "7b4ee89f98978bdad41446dd94faac84150eb92d98c959062fe4f72911664849",
+      "size": 46,
+      "sha256": "938b992d07025a65b8e964ee20715cf6e578848a94b2bde75331461489b7edfb",
       "role": "repository configuration",
       "scientific_ownership_version": "article materials"
     },
@@ -35,8 +35,8 @@
     },
     {
       "relative_path": "README.md",
-      "size": 3378,
-      "sha256": "78a5d33595ed7209972c0ffbd9423322b9ade4efc53cd7f22cd5b136de6bf751",
+      "size": 2986,
+      "sha256": "9447e1d4b68b70bdcc100b7d0fcd614fa52a9d6bbf34643e64fada22018c6a55",
       "role": "documentation",
       "scientific_ownership_version": "article materials"
     },
@@ -51,13 +51,6 @@
       "relative_path": "code/build_contrast_stability_package.py",
       "size": 24673,
       "sha256": "0c95bbca523ff1127b8ac451ee4142e8c8165f522570fdc67ec2680f70d895aa",
-      "role": "analysis code",
-      "scientific_ownership_version": "article materials"
-    },
-    {
-      "relative_path": "code/plot_main_figure3.py",
-      "size": 8904,
-      "sha256": "f32d1c89e5f579e29715acb439dd7a24dfc3cc50ea7a4cfe8673109902605e7c",
       "role": "analysis code",
       "scientific_ownership_version": "article materials"
     },
@@ -3521,8 +3514,8 @@
     },
     {
       "relative_path": "docs/REPRODUCING.md",
-      "size": 2820,
-      "sha256": "378d7237a62d699ccb37d070440267b918046c94d90bca7db8c362567acef91d",
+      "size": 2320,
+      "sha256": "58afbc3caacbb32844863c138aaec7e41246f12bc115f55d952921226eb40a5b",
       "role": "documentation",
       "scientific_ownership_version": "article materials"
     },

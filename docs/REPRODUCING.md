@@ -9,12 +9,6 @@ python -m pip install -r requirements.txt
 python code/build_contrast_stability_package.py
 ```
 
-To render main Figure 3 from the supplied analysis records, run:
-
-```bash
-python code/plot_main_figure3.py
-```
-
 ## What the command does
 
 The script uses saved analysis records to reproduce the deterministic audit of tariff-contrast stability. It reads:
@@ -36,10 +30,6 @@ data/derived_publication/tariff_contrast_wasserstein/
 This is deterministic post-processing of saved records. It generates no histories, refits no predictive distributions, and reruns no primary tariff decisions. It therefore reproduces the stated stability audit, not the complete simulation and fitting pipeline for every result in the article.
 
 The solver allowance is reported as a numerical objective-suboptimality bound. Its floating-point evaluation is not certified using directed rounding or interval arithmetic; the audit must not be interpreted as a machine-certified bound.
-
-## Main Figure 3
-
-`code/plot_main_figure3.py` reads the primary method-by-cell summary, the nine-cell oracle table, and the two supplied conditional-regret tables. It renders the four-panel main Figure 3 without rerunning the controlled experiment. The files are written to `data/derived_publication/main_figure3/` by default; an alternate directory can be supplied with `--output-dir`.
 
 ## Data and checksums
 
