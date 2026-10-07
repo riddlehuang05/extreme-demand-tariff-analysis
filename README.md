@@ -4,7 +4,7 @@ This repository accompanies the article with machine-readable supplementary tabl
 
 ## Study at a glance
 
-The controlled study uses 10,000 paired 24-month histories, five predictive methods, and nine tariff settings, for 450,000 method–history–cell decisions. It examines how distributional features used by industrial electricity tariffs affect tariff choice and economic regret. An external rolling-forecast analysis covers eight eligible manufacturing facilities and compares predictive scores and hypothetical charges; it does not estimate savings from observed tariff bills.
+The controlled study uses 10,000 paired 24-month histories, five predictive methods, and nine tariff settings, for 450,000 method–history–cell decisions. The theory expresses contract-demand optimization through a constrained Expected Shortfall, separates mode-selection loss from residual contract-level loss, and derives direct Wasserstein bounds for competing tariff-cost contrasts. An external rolling-forecast analysis covers eight eligible manufacturing facilities and compares predictive scores and hypothetical charges; it does not estimate savings from observed tariff bills.
 
 ## Repository contents
 
@@ -25,7 +25,7 @@ python -m pip install -r requirements.txt
 python code/build_contrast_stability_package.py
 ```
 
-The script reads the supplied analysis records and writes audit tables and Figure S3 outputs in PNG, SVG, EPS, and TIFF formats under `data/derived_publication/tariff_contrast_wasserstein/`. It checks decision rows, computes analytic tariff radii and numerical coverage summaries, and runs deterministic smoke and Expected-Shortfall identity checks. This command reproduces the stability audit; it does not regenerate the simulation histories, refit predictive distributions, or rerun the primary tariff decisions. The solver allowance is a numerical bound, not an interval-arithmetic certificate. See [`docs/REPRODUCING.md`](docs/REPRODUCING.md) for the command's inputs and outputs.
+The script reads the supplied analysis records and writes audit tables and Figure S3 outputs in PNG, SVG, EPS, and TIFF formats under `data/derived_publication/tariff_contrast_wasserstein/`. It checks decision rows, computes analytic tariff radii and numerical coverage summaries, and runs deterministic smoke and Expected Shortfall identity checks. This command reproduces the stability audit; it does not regenerate the simulation histories, refit predictive distributions, or rerun the primary tariff decisions. The solver allowance is a numerical bound, not an interval-arithmetic certificate. See [`docs/REPRODUCING.md`](docs/REPRODUCING.md) for the command's inputs and outputs.
 
 ## Data and integrity
 

@@ -17,7 +17,7 @@ The script uses saved analysis records to reproduce the deterministic audit of t
 - the saved primary decision and competitor-level numerical-audit records;
 - the saved Wasserstein, primitive-perturbation, and support-sensitivity summaries.
 
-It verifies the expected primary design dimensions, calculates the analytic tariff radii and numerical sufficient-condition coverage, writes the competitor-pair summary, and runs smoke checks for contrast bounds and the constrained Expected-Shortfall identity. It also regenerates the Figure S3 plotting outputs from the supplied source tables. The inputs used and their SHA256 values are recorded in `data/derived_publication/tariff_contrast_wasserstein/source_input_hashes.csv`.
+It verifies the expected primary design dimensions, calculates the analytic tariff radii and numerical sufficient-condition coverage, writes the competitor-pair summary, and runs smoke checks for contrast bounds and the constrained Expected Shortfall identity. It also regenerates the Figure S3 plotting outputs from the supplied source tables. The inputs used and their SHA256 values are recorded in `data/derived_publication/tariff_contrast_wasserstein/source_input_hashes.csv`.
 
 The generated audit tables and figure files are written under:
 

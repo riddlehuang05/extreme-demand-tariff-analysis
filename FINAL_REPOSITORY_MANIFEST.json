@@ -35,8 +35,8 @@
     },
     {
       "relative_path": "README.md",
-      "size": 2911,
-      "sha256": "72ccf17546332d8b229e86aad913decfa44921035a8b1ecd1b8ac4f568a60656",
+      "size": 2986,
+      "sha256": "9447e1d4b68b70bdcc100b7d0fcd614fa52a9d6bbf34643e64fada22018c6a55",
       "role": "documentation",
       "scientific_ownership_version": "article materials"
     },
@@ -3515,7 +3515,7 @@
     {
       "relative_path": "docs/REPRODUCING.md",
       "size": 2320,
-      "sha256": "5f8635b576d15fd7b2627273afacf83898a957a1010a4560c7b927e29207169c",
+      "sha256": "58afbc3caacbb32844863c138aaec7e41246f12bc115f55d952921226eb40a5b",
       "role": "documentation",
       "scientific_ownership_version": "article materials"
     },
