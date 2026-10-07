@@ -346,7 +346,7 @@ def save_figure_s3(root: Path, out: Path, coverage: pd.DataFrame):
         "font.family": "DejaVu Serif", "font.size": 8, "axes.titlesize": 9,
         "axes.labelsize": 8, "xtick.labelsize": 7.4, "ytick.labelsize": 7.4,
         "legend.fontsize": 7.2, "axes.spines.top": False, "axes.spines.right": False,
-        "axes.linewidth": .65, "lines.linewidth": 1.15, "pdf.fonttype": 42,
+        "axes.linewidth": .65, "lines.linewidth": 1.15,
         "ps.fonttype": 42, "svg.fonttype": "path", "savefig.facecolor": "white",
         "figure.facecolor": "white", "mathtext.fontset": "dejavuserif",
         "axes.unicode_minus": True,
@@ -413,7 +413,7 @@ def save_figure_s3(root: Path, out: Path, coverage: pd.DataFrame):
                                                           "Training B × 20", "Training B × 50"])],
                loc="lower center", bbox_to_anchor=(.52, .012), ncol=4, frameon=False, columnspacing=1.)
     base = out / "FigureS3"
-    for ext in ("pdf", "svg", "eps", "png"):
+    for ext in ("svg", "eps", "png"):
         fig.savefig(base.with_suffix("."+ext), format=ext, dpi=600 if ext == "png" else 160)
     with Image.open(base.with_suffix(".png")) as im:
         im.convert("RGB").save(base.with_suffix(".tiff"), format="TIFF",
