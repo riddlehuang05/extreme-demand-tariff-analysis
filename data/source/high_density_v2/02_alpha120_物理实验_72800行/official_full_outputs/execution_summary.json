@@ -1,0 +1,227 @@
+{
+  "status": "PASS_EXECUTION",
+  "mode": "full",
+  "started_at_utc": "2026-10-03T13:26:32.834598+00:00",
+  "duration_seconds": 28.005560900084674,
+  "run_signature": "97367e5ecca01815752ec54996d952c2be045c76e8a6c46550cc4bfa53a840ff",
+  "config_hash": "3051f539ba5f69235e3545990633ec497d5075ab0d7c395f3d23cd308505b6cd",
+  "target_replications_per_tail": 200,
+  "task_count": 30,
+  "completed_tasks": 30,
+  "failures": [],
+  "task_results": [
+    {
+      "physical_scenario_id": "T4_HIGH_AMP",
+      "start": 0,
+      "end": 20,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T4_HIGH_AMP",
+      "start": 20,
+      "end": 40,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T4_HIGH_AMP",
+      "start": 40,
+      "end": 60,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T4_HIGH_AMP",
+      "start": 60,
+      "end": 80,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T4_HIGH_AMP",
+      "start": 80,
+      "end": 100,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T4_HIGH_AMP",
+      "start": 100,
+      "end": 120,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T4_HIGH_AMP",
+      "start": 120,
+      "end": 140,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T4_HIGH_AMP",
+      "start": 140,
+      "end": 160,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T4_HIGH_AMP",
+      "start": 160,
+      "end": 180,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T4_HIGH_AMP",
+      "start": 180,
+      "end": 200,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T5_HIGH_FREQ",
+      "start": 0,
+      "end": 20,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T5_HIGH_FREQ",
+      "start": 20,
+      "end": 40,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T5_HIGH_FREQ",
+      "start": 40,
+      "end": 60,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T5_HIGH_FREQ",
+      "start": 60,
+      "end": 80,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T5_HIGH_FREQ",
+      "start": 80,
+      "end": 100,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T5_HIGH_FREQ",
+      "start": 100,
+      "end": 120,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T5_HIGH_FREQ",
+      "start": 120,
+      "end": 140,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T5_HIGH_FREQ",
+      "start": 140,
+      "end": 160,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T5_HIGH_FREQ",
+      "start": 160,
+      "end": 180,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T5_HIGH_FREQ",
+      "start": 180,
+      "end": 200,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T6_CLUSTERED",
+      "start": 0,
+      "end": 20,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T6_CLUSTERED",
+      "start": 20,
+      "end": 40,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T6_CLUSTERED",
+      "start": 40,
+      "end": 60,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T6_CLUSTERED",
+      "start": 60,
+      "end": 80,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T6_CLUSTERED",
+      "start": 80,
+      "end": 100,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T6_CLUSTERED",
+      "start": 100,
+      "end": 120,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T6_CLUSTERED",
+      "start": 120,
+      "end": 140,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T6_CLUSTERED",
+      "start": 140,
+      "end": 160,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T6_CLUSTERED",
+      "start": 160,
+      "end": 180,
+      "resumed": true,
+      "duration_seconds": 0.0
+    },
+    {
+      "physical_scenario_id": "T6_CLUSTERED",
+      "start": 180,
+      "end": 200,
+      "resumed": true,
+      "duration_seconds": 0.0
+    }
+  ],
+  "outcomes_summarized": false,
+  "runtime_workers": 15,
+  "runtime_optimizer_sha256": "10af341191a68be68bfcc248237fef011c96bfa5e16f8835745853cf9a1d4e24"
+}

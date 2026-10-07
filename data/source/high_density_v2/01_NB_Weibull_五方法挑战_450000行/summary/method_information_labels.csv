@@ -1,0 +1,6 @@
+method_id,information_group,input_detail
+TAIL,event_level_information,event records with month identifiers; fits threshold excesses and monthly exceedance counts
+EVENT-EMP,event_level_information,pooled event records; empirical distribution
+GEV,monthly_maxima_only,monthly maxima only
+KDE,monthly_maxima_only,monthly maxima only
+EMP,monthly_maxima_only,monthly maxima only

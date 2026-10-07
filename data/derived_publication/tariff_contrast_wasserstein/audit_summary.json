@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "primary_decisions": 450000,
+  "histories": 10000,
+  "methods": 5,
+  "primary_cells": 9,
+  "radii_order": "rho_contrast >= rho_modewise_pair >= rho_uniform; 9/9",
+  "coverage": [
+    {
+      "condition": "Primitive numerical check",
+      "total_rows": 450000,
+      "passing_rows": 26975,
+      "coverage_percent": 5.9944444444444445,
+      "observed_mode_selection_violations": 0,
+      "solver_zeta_status": "NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED"
+    },
+    {
+      "condition": "Contrast-Wasserstein numerical check",
+      "total_rows": 450000,
+      "passing_rows": 57501,
+      "coverage_percent": 12.778,
+      "observed_mode_selection_violations": 0,
+      "solver_zeta_status": "NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED"
+    },
+    {
+      "condition": "Mode-wise pairwise-Wasserstein numerical check",
+      "total_rows": 450000,
+      "passing_rows": 26393,
+      "coverage_percent": 5.865111111111111,
+      "observed_mode_selection_violations": 0,
+      "solver_zeta_status": "NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED"
+    },
+    {
+      "condition": "Uniform-Wasserstein numerical check",
+      "total_rows": 450000,
+      "passing_rows": 5329,
+      "coverage_percent": 1.1842222222222223,
+      "observed_mode_selection_violations": 0,
+      "solver_zeta_status": "NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED"
+    },
+    {
+      "condition": "Distributional envelope",
+      "total_rows": 450000,
+      "passing_rows": 0,
+      "coverage_percent": 0.0,
+      "observed_mode_selection_violations": 0,
+      "solver_zeta_status": "NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED"
+    }
+  ],
+  "smoke": {
+    "status": "PASS",
+    "contrast_checks": 252,
+    "radius_checks": 83,
+    "random_numbers_generated": 0
+  },
+  "ES_audit": {
+    "cases": 6,
+    "identity_pass": true,
+    "ordinary_ES_equalities": 4
+  },
+  "solver_zeta_status": "NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED",
+  "histories_generated": 0,
+  "predictive_laws_refit": 0,
+  "primary_decisions_rerun": 0
+}

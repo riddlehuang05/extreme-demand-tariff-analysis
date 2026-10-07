@@ -1,0 +1,7 @@
+oracle_mode,competitor_mode,rows,direct_pass,modewise_pass
+actual_maximum_demand,capacity,150000,99821,99821
+actual_maximum_demand,contracted_maximum_demand,150000,80657,13690
+capacity,actual_maximum_demand,150000,48165,48165
+capacity,contracted_maximum_demand,150000,54339,54339
+contracted_maximum_demand,actual_maximum_demand,150000,1144,0
+contracted_maximum_demand,capacity,150000,49516,49516

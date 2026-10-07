@@ -1,0 +1,37 @@
+\begingroup
+\fontsize{8.5}{10.5}\selectfont\setlength{\tabcolsep}{3.0pt}\renewcommand{\arraystretch}{1.23}
+\begin{table}[tbp]\centering
+\caption{Physical-mechanism stress tests at alpha 1.20.}\label{tab:si-s6-updated}
+\begin{tabular}{@{}llllllll@{}}\toprule
+Scenario & Months & Method & Regret & MCSE & Mode & Within & Error (\%)\\\midrule
+High amplitude & 12 & GATE & 2.114 & 0.236 & 0.110 & 2.005 & 0.107\\
+High amplitude & 12 & EMP-JOINT & 2.512 & 0.248 & 0.000 & 2.512 & 0.000\\
+High amplitude & 12 & KDE-MC-JOINT & 1.783 & 0.200 & 0.046 & 1.737 & 0.036\\
+High amplitude & 12 & TAIL-JOINT & 5.740 & 0.653 & 1.267 & 4.473 & 1.000\\
+High amplitude & 24 & GATE & 0.997 & 0.090 & 0.000 & 0.997 & 0.000\\
+High amplitude & 24 & EMP-JOINT & 1.283 & 0.117 & 0.000 & 1.283 & 0.000\\
+High amplitude & 24 & KDE-MC-JOINT & 0.842 & 0.079 & 0.000 & 0.842 & 0.000\\
+High amplitude & 24 & TAIL-JOINT & 4.451 & 0.534 & 1.204 & 3.247 & 0.929\\
+High frequency & 12 & GATE & 2.589 & 0.277 & 0.253 & 2.336 & 0.286\\
+High frequency & 12 & EMP-JOINT & 2.731 & 0.274 & 0.063 & 2.668 & 0.071\\
+High frequency & 12 & KDE-MC-JOINT & 1.784 & 0.185 & 0.032 & 1.752 & 0.036\\
+High frequency & 12 & TAIL-JOINT & 5.937 & 0.621 & 1.472 & 4.464 & 1.214\\
+High frequency & 24 & GATE & 0.947 & 0.090 & 0.000 & 0.947 & 0.000\\
+High frequency & 24 & EMP-JOINT & 1.286 & 0.116 & 0.000 & 1.286 & 0.000\\
+High frequency & 24 & KDE-MC-JOINT & 0.948 & 0.095 & 0.000 & 0.948 & 0.000\\
+High frequency & 24 & TAIL-JOINT & 4.311 & 0.544 & 1.297 & 3.014 & 1.000\\
+Clustered events & 12 & GATE & 2.151 & 0.264 & 0.158 & 1.993 & 0.179\\
+Clustered events & 12 & EMP-JOINT & 3.135 & 0.315 & 0.127 & 3.009 & 0.143\\
+Clustered events & 12 & KDE-MC-JOINT & 1.855 & 0.217 & 0.032 & 1.823 & 0.036\\
+Clustered events & 12 & TAIL-JOINT & 5.303 & 0.582 & 1.502 & 3.801 & 1.214\\
+Clustered events & 12 & TAIL-NODECLUSTER & 5.380 & 0.595 & 1.548 & 3.832 & 1.250\\
+Clustered events & 24 & GATE & 0.936 & 0.093 & 0.000 & 0.936 & 0.000\\
+Clustered events & 24 & EMP-JOINT & 1.572 & 0.145 & 0.000 & 1.572 & 0.000\\
+Clustered events & 24 & KDE-MC-JOINT & 1.020 & 0.105 & 0.000 & 1.020 & 0.000\\
+Clustered events & 24 & TAIL-JOINT & 3.782 & 0.513 & 1.205 & 2.577 & 0.929\\
+Clustered events & 24 & TAIL-NODECLUSTER & 3.768 & 0.510 & 1.205 & 2.563 & 0.929\\
+\bottomrule
+\end{tabular}
+\par\smallskip\noindent\begin{minipage}{\linewidth}\footnotesize Each scenario-by-training-length summary uses 200 independent histories, each evaluated at 14 equally weighted tariff cells (2,800 decision rows). GATE denotes DIAGNOSTIC-GATE. Losses are in $10^3$ CNY/month. MCSE is calculated after averaging cells within history. The oracle is a fixed independent synthetic test pool.\end{minipage}
+\end{table}
+\endgroup

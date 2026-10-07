@@ -1,0 +1,1620 @@
+\providecommand{\reserveinserts}[1]{} % compatibility with the Wiley NJD v5 class
+\makeatletter
+\def\input@path{{wiley_template/}}
+\makeatother
+
+\documentclass[AMA,Times1COL]{WileyNJDv5}
+\hypersetup{hidelinks}
+
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{placeins}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[mathlines]{lineno}
+\renewcommand\linenumberfont{\normalfont\scriptsize\sffamily}
+\setlength\linenumbersep{10pt}
+
+\graphicspath{{./}{figures/}{figures/si/}}
+
+\setlist[itemize]{leftmargin=1.5em,itemsep=2pt,topsep=3pt}
+\setlength{\parskip}{2.5pt}
+\raggedbottom
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+
+\begin{document}
+
+% ==================================================================
+% TITLE PAGE
+% ==================================================================
+
+\begin{center}
+\vspace*{0.12\textheight}
+
+{\fontsize{11}{14}\selectfont\bfseries
+Supporting Information for\par}
+
+\vspace{8pt}
+
+{\fontsize{18}{22}\selectfont\bfseries
+Decision-Relevant Modelling of Extreme Demand for
+Industrial Electricity Tariffs\par}
+
+\vspace{14pt}
+
+{\fontsize{10}{13}\selectfont
+Mingyu Huang, Jiangweixi Wang, Zheng Gao, Yihang Yuan, Zhengjun Yang, and Huiqiong Li\par}
+
+\vspace{4pt}
+
+{\fontsize{9}{12}\selectfont
+Department of Statistics and Data Science, School of Mathematics and Statistics, Yunnan University, Kunming 650500, China\par}
+
+\vspace{10pt}
+
+{\fontsize{9}{12}\selectfont
+Applied Stochastic Models in Business and Industry\par}
+
+{\fontsize{9}{12}\selectfont Correspondence: Huiqiong Li; \texttt{lihuiqiong@ynu.edu.cn}\par}
+
+\end{center}
+
+\vfill
+\clearpage
+\resetlinenumber[1]\linenumbers
+
+
+% ==================================================================
+% APPENDIX S1
+% ==================================================================
+
+\section*{Appendix S1. Supplementary methods, derivations, and analyses}
+
+This Supporting Information provides technical derivations,
+implementation details, complete supplementary summaries, robustness
+analyses, and external predictive analyses referenced in the main
+article. The primary controlled experiment compares five predictive
+constructions. TAIL and EVENT-EMP use event-level histories, whereas
+GEV, KDE, and EMP use the corresponding monthly maxima. The primary controlled
+experiment contains 10,000 independent 24-month histories and nine
+prespecified tariff cells, giving 450,000
+history--method--cell decisions. Supplementary recovery, stress,
+physical-clipping, and physical-misspecification experiments are
+separate experiments and retain their own stated analysis units.
+
+Throughout, \(M\geq0\) denotes monthly maximum demand,
+\(F\) its distribution,
+\[
+\mu_F=\mathbb E_F[M],
+\qquad
+H_F(t)=\mathbb E_F[(M-t)_+].
+\]
+The reference capacity is \(S\), the contract level is \(D\),
+the contract-threshold multiplier is \(\alpha\), the lower contract
+fraction is \(\delta\), and the exceedance-charge multiplier is
+\(\kappa\). Optimized mode values are denoted by \(V_F(m)\),
+the oracle value by \(V_F^\ast\), oracle mode separation by
+\(\gamma_F\), and the maximum mode-value perturbation by \(e_V\).
+The retrospective stability ratio is
+\[
+d_{MV}=\frac{2e_V}{\gamma_F}.
+\]
+For a selected full action \(\widehat a\), regret is
+\[
+R_F(\widehat a)
+=
+C_F(\widehat a)-V_F^\ast.
+\]
+
+
+% ==================================================================
+% S1.1
+% ==================================================================
+
+\subsection*{S1.1 Supplementary tariff identities and decision-stability details}
+
+The main article gives the tariff functionals and the principal
+decision-stability results. This subsection records only the
+atom-aware and boundary details used by the implementation.
+
+For the contract objective
+\[
+\phi_F(D)
+=
+D+\kappa H_F(\alpha D),
+\qquad
+D\in[\delta S,S],
+\]
+the stop-loss functional has one-sided derivatives
+\[
+H'_{F,+}(t)
+=
+-\Pr_F(M>t),
+\qquad
+H'_{F,-}(t)
+=
+-\Pr_F(M\geq t).
+\]
+Consequently,
+\[
+\partial\phi_F(D)
+=
+\left[
+1-\kappa\alpha\Pr_F(M\geq\alpha D),
+\;
+1-\kappa\alpha\Pr_F(M>\alpha D)
+\right].
+\]
+For an interior optimizer this gives
+\[
+\Pr_F(M>\alpha D^\ast)
+\leq
+\frac{1}{\kappa\alpha}
+\leq
+\Pr_F(M\geq\alpha D^\ast).
+\]
+Writing
+\[
+p^\ast
+=
+1-\frac{1}{\kappa\alpha},
+\]
+\(\alpha D^\ast\) is therefore a generalized \(p^\ast\)-quantile.
+The feasible-boundary cases are handled by restricting the generalized
+quantile solution to
+\[
+D\in[\delta S,S].
+\]
+
+\paragraph*{Mode stability and demand-scale radii.}
+For a unique oracle tariff mode $m_F^\ast$, define, for each
+$m\neq m_F^\ast$,
+\[
+\gamma_{F,m}=V_F(m)-V_F(m_F^\ast),
+\]
+and, for every $j\in\mathcal M$,
+\[
+e_j=\left|V_{\widehat F}(j)-V_F(j)\right|.
+\]
+The pairwise sufficient condition is
+\[
+e_m+e_{m_F^\ast}<\gamma_{F,m}
+\qquad
+\text{for every }m\neq m_F^\ast.
+\]
+With
+\[
+e_V=\max_{j\in\mathcal M}e_j,
+\qquad
+\gamma_F=\min_{m\neq m_F^\ast}\gamma_{F,m},
+\]
+the scalar condition
+\[
+d_{MV}=\frac{2e_V}{\gamma_F}<1
+\]
+is a simpler conservative sufficient certificate. Both conditions
+use oracle quantities and are retrospective diagnostics in the
+controlled experiment.
+
+For the Wasserstein representation, let
+\[
+L_{\mathrm{cap}}=0,\qquad
+L_{\mathrm{act}}=r_d,\qquad
+L_{\mathrm{con}}=r_d\kappa.
+\]
+The corresponding analytic demand-scale radii are
+\[
+\rho_F^{\mathrm{pair}}
+=\min_{m\neq m_F^\ast}
+\frac{\gamma_{F,m}}{L_m+L_{m_F^\ast}},
+\qquad
+\rho_F=\frac{\gamma_F}{2L},
+\qquad
+L=r_d\max\{1,\kappa\}.
+\]
+Table~\ref{tab:analytic-demand-radii} reports the primary tariff
+geometry and these oracle-dependent radii. They contain neither a
+numerical integration allowance nor a solver allowance.
+
+\paragraph*{Full-action loss.}
+The exact regret decomposition separates mode-selection loss from
+within-mode excess. The latter is identically zero for actual demand
+and capacity. Only contract demand can have nonzero within-mode
+excess. If contract demand is both oracle optimal and selected, and
+$\widehat D$ exactly minimizes the fitted contract objective, then
+\[
+R_F\!\left(a_{\mathrm{con}}(\widehat D)\right)
+\leq
+2r_d\kappa\,\Delta_H(F,\widehat F),
+\]
+where
+\[
+\Delta_H(F,\widehat F)
+=\sup_{D\in\mathcal D_S}
+\left|H_{\widehat F}(\alpha D)-H_F(\alpha D)\right|.
+\]
+
+As an implementation check, the exact regret decomposition was
+verified on all $450{,}000$ primary decision rows, with no
+failures; the maximum absolute residual was
+$7.45\times10^{-9}$ CNY/month.
+
+
+% ==================================================================
+% S1.2
+% ==================================================================
+
+\subsection*{S1.2 Analytic oracle and deterministic numerical evaluation}
+
+The controlled data-generating mechanism admits an analytic
+monthly-maximum distribution. In each month, 200 bounded bulk events
+are generated as
+\[
+X^{(b)}
+=
+45{,}000+35{,}000\,B,
+\qquad
+B\sim\operatorname{Beta}(8,2),
+\]
+and an independent number
+\[
+N\sim\operatorname{Poisson}(30)
+\]
+of tail events is generated as
+\[
+X^{(t)}
+=
+80{,}000+Y,
+\qquad
+Y\sim\operatorname{GPD}(\xi=0.15,\sigma=12{,}000).
+\]
+The monthly maximum \(M\) is the maximum over the bulk and tail
+events.
+
+Let
+\[
+L=45{,}000,
+\qquad
+u_0=80{,}000,
+\qquad
+\lambda=30,
+\]
+and let \(F_B\) denote the
+\(\operatorname{Beta}(8,2)\) distribution function. The exact
+monthly-maximum CDF is
+\[
+F_M(x)
+=
+\begin{cases}
+0,
+&
+x<L,
+\\[4pt]
+\exp(-\lambda)
+\left[
+F_B\!\left(
+\dfrac{x-L}{u_0-L}
+\right)
+\right]^{200},
+&
+L\leq x<u_0,
+\\[10pt]
+\displaystyle
+\exp\left[
+-\lambda
+\left\{
+1+\xi\frac{x-u_0}{\sigma}
+\right\}^{-1/\xi}
+\right],
+&
+x\geq u_0.
+\end{cases}
+\]
+
+The resulting oracle quantities are
+\[
+\mu_F
+=
+148{,}235.371489\ {\rm kW},
+\]
+\[
+q_{0.99}
+=
+265{,}663.010007\ {\rm kW},
+\]
+and
+\[
+q_{0.999}
+=
+375{,}513.529996\ {\rm kW}.
+\]
+
+The oracle mean and stop-loss functionals are evaluated from
+\[
+\mu_F
+=
+\int_0^\infty
+\{1-F_M(x)\}\,dx
+\]
+and
+\[
+H_F(t)
+=
+\int_t^\infty
+\{1-F_M(x)\}\,dx.
+\]
+High quantiles are obtained from the analytic distribution. The same
+oracle law therefore determines the reference capacity
+\[
+S=\frac{\mu_F}{u},
+\]
+the tariff-mode values, the optimized contract level, the unique
+oracle mode where applicable, and the oracle mode separation
+\(\gamma_F\).
+
+Final fitted-law evaluation likewise avoids a common predictive
+Monte Carlo layer between \(\widehat F\) and the tariff functionals.
+Finite discrete distributions use exact sums. The nonnegative
+Gaussian KDE uses analytic Gaussian-mixture expressions for its mean
+and stop-loss function. The fitted tail-process and
+nonnegative-conditioned GEV constructions use deterministic
+one-dimensional integration where required, and continuous quantiles
+are obtained by direct inversion or deterministic bracketed root
+finding.
+
+The deterministic numerical layer was independently checked in
+55 numerical comparisons. The maximum relative discrepancy was
+approximately
+\[
+1.283\times10^{-11}.
+\]
+No Monte Carlo approximation to the oracle is used in the reported
+controlled experiment.
+
+
+% ==================================================================
+% S1.3
+% ==================================================================
+
+\subsection*{S1.3 Predictive-construction implementation}
+
+The five primary predictive constructions are organized by their
+information source. TAIL and EVENT-EMP use event-level observations.
+GEV, KDE, and EMP use the 24 observed monthly maxima. This distinction
+is retained because comparisons across the two groups combine
+differences in information resolution and distributional construction,
+whereas TAIL versus EVENT-EMP and comparisons within
+GEV/KDE/EMP provide same-broad-information contrasts.
+
+
+\subsubsection*{Event-level constructions}
+
+\paragraph*{TAIL.}
+
+TAIL receives event-level maxima with month identifiers. Specification
+selection uses the first 19 months for candidate fitting and the final
+five months for internal predictive validation. Candidate thresholds
+are the empirical event-level quantiles
+\[
+0.90,\qquad
+0.925,\qquad
+0.95,\qquad
+0.975.
+\]
+For a candidate numerical threshold \(u\), exceedances are strict:
+only observations \(Z>u\) enter the excess sample
+\[
+Y=Z-u.
+\]
+The excess law is fitted by GPD maximum likelihood with location fixed
+at zero.
+
+Monthly exceedance counts are formed over all fitting months,
+including months with zero exceedances. If \(\bar N\) and \(s_N^2\)
+denote the empirical monthly count mean and variance, the count law is
+Poisson when the variance-to-mean ratio is at most 1.2 or when the
+empirical mean is nonpositive. Otherwise the negative-binomial
+method-of-moments parameters are
+\[
+r
+=
+\frac{\bar N^2}{s_N^2-\bar N},
+\qquad
+p
+=
+\frac{r}{r+\bar N}.
+\]
+The corresponding probability-generating functions are
+\[
+P_N(z)
+=
+\exp\{\lambda(z-1)\}
+\]
+for the Poisson case and
+\[
+P_N(z)
+=
+\left[
+\frac{p}{1-(1-p)z}
+\right]^r
+\]
+for the negative-binomial case.
+
+Candidate screening requires at least 100 strict exceedances.
+Shape stability is assessed from 50 nonparametric excess-sample
+bootstrap fits, with at least 40 successful fits required and the
+resulting 95\% shape-interval width not exceeding 0.8. The
+success requirement is 80\% of the configured replicate count,
+with at least 40 fits in the primary experiment. The
+probability-transformed fitted tail must satisfy a
+Kolmogorov--Smirnov \(p\)-value threshold of 0.01. For a negative-shape
+candidate, the natural finite endpoint
+\[
+e_u
+=
+u-\frac{\widehat\sigma_u}{\widehat\xi}
+\]
+must satisfy
+\[
+e_u\geq \max_i X_i-10^{-9},
+\]
+where \(X_i\) are the fitting-period event maxima in kW. Candidate
+fits must have a finite validation score and satisfy
+\[
+\widehat\xi<1,
+\]
+which ensures a finite first moment.
+
+For each fitted candidate, we simulate \(m=2{,}000\) monthly maxima
+\(Z_1,\ldots,Z_m\) on the fitted candidate's natural support, without
+artificial upper clipping, and estimate their density with a Gaussian
+kernel:
+\[
+\widehat f_m(y)=\frac{1}{mh}\sum_{j=1}^{m}
+\phi\!\left(\frac{y-Z_j}{h}\right),
+\qquad h=s_Zm^{-1/5},
+\]
+where \(\phi\) is the standard normal density and \(s_Z\) is the
+sample standard deviation with denominator \(m-1\). This is Scott's
+bandwidth as implemented by \texttt{scipy.stats.gaussian\_kde}.
+For the five held-out monthly maxima \(Y_1,\ldots,Y_5\), the score is
+\[
+\ell_{\rm val}=\frac{1}{5}\sum_{t=1}^{5}
+\log\!\left\{\max\bigl(\widehat f_m(Y_t),\epsilon_{\rm tiny}\bigr)\right\},
+\qquad \epsilon_{\rm tiny}=2.2250738585072014\times10^{-308}.
+\]
+A numerically constant predictive sample has an undefined score and
+is excluded. If \(\mathcal P\) denotes the candidates that pass the
+screening and finite-mean conditions, the selection score is
+\[
+\ell_{\rm val}
+-
+0.10
+\left|
+\widehat\xi
+-
+\operatorname{median}_{j\in\mathcal P}
+(\widehat\xi_j)
+\right|.
+\]
+An exact tie is resolved toward the lower threshold quantile.
+
+The 19/5 split is used only for specification selection. After the
+numerical threshold is selected, that threshold is held fixed and the
+GPD parameters, exceedance-count law, and empirical subthreshold
+component are reconstructed using all 24 months.
+
+If no admissible finite-mean primary candidate is available but an
+eligible threshold has at least 50 exceedances, the procedure uses an
+exponential-tail fallback with
+\[
+\xi=0
+\]
+and scale equal to the corresponding mean excess. If no such threshold
+is available, the monthly-maxima empirical distribution is used.
+An invalid all-history GPD refit likewise invokes the prescribed
+fallback branch.
+
+For a final primary TAIL fit, let \(F_0\) denote the empirical CDF of
+the subthreshold monthly-maximum component, let \(G_u\) denote the
+fitted GPD excess CDF, and let \(P_N\) denote the fitted exceedance-count
+probability-generating function. The monthly-maximum CDF is
+\[
+\widehat F_{\rm TAIL}(x)
+=
+\begin{cases}
+F_0(x)P_N(0),
+&
+x<u,
+\\[4pt]
+P_N\!\left\{G_u(x-u)\right\},
+&
+x\geq u.
+\end{cases}
+\]
+The final mean is evaluated as
+\[
+\mu_{\widehat F_{\rm TAIL}}
+=
+H_{\widehat F_{\rm TAIL}}(0),
+\]
+the stop-loss function is obtained by deterministic integration of the
+fitted survival function, and continuous quantiles are obtained by
+deterministic inversion. Thus the simulation used for internal
+candidate validation is not reused as the final representation of the
+tariff-relevant functionals.
+
+
+
+\paragraph*{EVENT-EMP.}
+
+EVENT-EMP uses the same event-level history as TAIL but imposes no
+threshold or parametric tail/count model. Let \(\widehat G_E\) denote
+the pooled empirical CDF of all event-level maxima in the 24-month
+history, and let \(N_m\) denote the observed total event count in
+month \(m\). The induced monthly-maximum CDF is
+\[
+\widehat F_{\rm EE}(x)
+=
+\frac{1}{24}
+\sum_{m=1}^{24}
+\widehat G_E(x)^{N_m}.
+\]
+This is a finite discrete distribution. Its probability masses are the
+jumps of \(\widehat F_{\rm EE}\); its mean and stop-loss function are
+evaluated exactly by finite sums, and its quantiles use the discrete
+left inverse. There is no dedicated fallback branch.
+
+TAIL and EVENT-EMP therefore use the same broad event-level
+information source but different distributional constructions. TAIL
+adds threshold selection, a parametric excess law and a fitted
+exceedance-count law, whereas EVENT-EMP combines a pooled empirical
+event distribution with the empirical distribution of observed
+monthly event counts.
+
+
+\subsubsection*{Monthly-maxima constructions}
+
+\paragraph*{GEV.}
+
+The controlled-experiment GEV construction uses the 24 observed
+monthly maxima. It is fitted using L-moments/probability-weighted
+moments rather than maximum likelihood. L-skewness is inverted
+deterministically for the EVT shape parameter within
+\[
+[-0.90,0.90],
+\]
+and the location and scale parameters follow from the associated
+L-moment equations.
+
+A successful raw GEV fit is conditioned on the nonnegative part of its
+model-implied natural support. If more than 1\% of the raw fitted GEV
+probability lies below zero, or if the L-moment fit or resulting
+parameters are invalid, the procedure uses the empirical
+monthly-maxima distribution. Successful parametric fits satisfy the
+finite-mean requirement. When the fitted EVT shape is negative, its
+model-implied finite upper endpoint is retained; otherwise the upper
+support is unbounded.
+
+The conditioned GEV mean and stop-loss function are evaluated
+deterministically over this support, using one-dimensional integration
+where required. Quantiles use the conditioned inverse distribution.
+This GEV construction is distinct from the K-GEV procedure used in the
+external manufacturing-load analysis.
+
+
+\paragraph*{KDE.}
+
+KDE is fitted to the 24 monthly maxima
+\(M_1,\ldots,M_n\), with \(n=24\), using bandwidth
+\[
+h
+=
+1.06\,s\,n^{-1/5},
+\]
+where \(s\) is the sample standard deviation. The Gaussian mixture is
+conditioned on nonnegative demand. If
+\[
+\widetilde F(x)
+=
+\frac{1}{n}
+\sum_{i=1}^{n}
+\Phi\left(\frac{x-M_i}{h}\right)
+\]
+denotes the unconditioned Gaussian-mixture CDF and
+\[
+Z_+
+=
+1-\widetilde F(0),
+\]
+then
+\[
+\widehat F_{\rm KDE}(x)
+=
+\begin{cases}
+0,
+&
+x<0,
+\\[3pt]
+\dfrac{\widetilde F(x)-\widetilde F(0)}{Z_+},
+&
+x\geq0.
+\end{cases}
+\]
+
+For \(t\geq0\), its stop-loss function is
+\[
+H_{\widehat F_{\rm KDE}}(t)
+=
+\frac{1}{nZ_+}
+\sum_{i=1}^{n}
+\left[
+(M_i-t)
+\Phi\left(\frac{M_i-t}{h}\right)
++
+h\phi\left(\frac{t-M_i}{h}\right)
+\right],
+\]
+where \(\Phi\) and \(\phi\) are the standard normal CDF and PDF.
+Setting \(t=0\) gives the mean. Quantiles are obtained by deterministic
+inversion of the conditioned mixture CDF. If fewer than two
+observations are available or the observed variability is numerically
+degenerate, the implementation uses the empirical distribution.
+
+
+\paragraph*{EMP.}
+
+EMP assigns empirical probability to the 24 observed monthly maxima,
+with duplicate support values aggregated. For support points \(x_j\)
+with empirical probabilities \(p_j\),
+\[
+\mu_{\widehat F_{\rm EMP}}
+=
+\sum_jp_jx_j,
+\]
+and
+\[
+H_{\widehat F_{\rm EMP}}(t)
+=
+\sum_jp_j(x_j-t)_+.
+\]
+Quantiles use the empirical left inverse. No predictive-bootstrap layer
+is introduced into the final tariff-functional evaluation.
+
+
+% ==================================================================
+% S1.4
+% ==================================================================
+
+\subsection*{S1.4 From predictive laws to tariff actions}
+
+Every fitted predictive law is passed through the same tariff-action
+map. For the evaluated policies, \(\kappa\alpha>1\), and the interior
+contract probability is
+\[
+p^\ast
+=
+1-\frac{1}{\kappa\alpha}.
+\]
+For a fitted law \(\widehat F\), define the left generalized quantile
+\[
+\widehat q_p
+=
+\inf\{x:\widehat F(x)\geq p\}.
+\]
+The final contract level is
+\[
+\widehat D
+=
+\operatorname{clip}
+\left(
+\frac{\widehat q_{p^\ast}}{\alpha},
+\delta S,
+S
+\right).
+\]
+Thus lower and upper boundary solutions are handled directly through
+the feasible interval. No predictive Monte Carlo candidate search or
+local order-statistic candidate set is used.
+
+The fitted optimized tariff-mode values are
+\[
+V_{\widehat F}(\operatorname{cap})
+=
+r_cS,
+\]
+\[
+V_{\widehat F}(\operatorname{act})
+=
+r_d\mu_{\widehat F},
+\]
+and
+\[
+V_{\widehat F}(\operatorname{con})
+=
+r_d
+\left\{
+\widehat D
++
+\kappa
+H_{\widehat F}(\alpha\widehat D)
+\right\}.
+\]
+The selected tariff mode minimizes these deterministic mode values.
+Exact mode-value ties are resolved by the fixed lexicographic order
+\[
+\operatorname{actual\ demand}
+\;\prec\;
+\operatorname{capacity}
+\;\prec\;
+\operatorname{contract\ demand}.
+\]
+
+For discrete predictive laws, the left-quantile convention fixes the
+generalized-quantile representative. For continuous laws, quantiles
+are obtained directly or by deterministic root inversion.
+
+Although
+\[
+V_F(\operatorname{cap})=r_cS
+\]
+does not itself contain a distributional functional, selection of the
+capacity mode depends on its comparison with the estimated
+actual-demand and contract-demand mode values. Under contract demand,
+the complete action additionally contains \(D\); consequently,
+tariff-mode correctness and full-action optimality are separate
+endpoints.
+
+
+% ==================================================================
+% S1.5
+% ==================================================================
+
+% ==================================================================
+% S1.5
+% ==================================================================
+
+\subsection*{S1.5 Primary comparisons and high-$p^*$ tariff stress}
+
+The complete nine-cell primary summaries, mode-versus-within-contract
+regret decomposition, and core paired contrasts are reported in the main
+article. Supplementary Table~S12 gives all ten region-specific paired
+comparisons for the final 10,000-history primary run. It is a complete
+reference table; the ten contrasts are not treated as one confirmatory
+family.
+
+The high-$p^*$ stress analysis evaluates three target quantiles over ten
+utilization cells, using 10,000 histories and five predictive methods.
+Figure~\ref{fig:final-figures1} and Table~\ref{tab:si-high-pstar}
+report the history-level regret distributions, exact-zero-regret rates,
+and same-information paired comparisons. This stress design is separate
+from the nine-cell primary analysis.
+
+% ==================================================================
+% S1.6
+% ==================================================================
+
+\subsection*{S1.6 Functional-error associations and certificate-conditioned loss}
+
+Figure~\ref{fig:final-figures2} summarizes the within-method association
+of regret with absolute mean, stop-loss, and $q_{0.99}$ relative errors,
+and the concentration of regret among the largest-loss decisions.
+Table~\ref{tab:final-si-7} reports the paired functional-correlation
+contrasts with simultaneous max-$|T|$ intervals. Table~\ref{tab:si-certificate}
+reports within-contract loss among decisions stratified by certificate
+status. The certificate is a sufficient condition; observations outside
+the certified set are not classified as violations.
+
+% ==================================================================
+% S1.7
+% ==================================================================
+
+\subsection*{S1.7 Numerical bounds and fitting-support sensitivity}
+
+The theoretical sufficient conditions in the main article are
+summarized separately from their numerical implementation. The
+numerical audit uses upper constructions for the relevant distributional
+perturbations and a common numerical full-action solver allowance.
+For the primitive-action perturbation, the reported numerical upper
+quantity is
+\[
+\varepsilon_{\rm num}
+=\max\left\{
+r_d\left|\widehat\mu-\mu_F\right|,
+\;r_d\kappa\Delta_{H,\rm upper}
+\right\}.
+\]
+It is a numerical upper bound on primitive-action perturbation, not the
+mode-value error $e_V$ and not an exact analytic supremum. The
+feasible-threshold stop-loss quantity uses a direct 513-node estimate
+and a numerical upper allowance based on the monotone-CDF envelope and
+half-grid spacing; it is a numerical upper bound on the feasible
+stop-loss perturbation.
+
+The primitive numerical sufficient-condition check is
+\[
+2\varepsilon_{\rm num}+\zeta_{\rm full,num}<\gamma_F.
+\]
+For each non-oracle competitor $m$, the direct
+contrast-Wasserstein check is
+\[
+K_{m,m_F^\ast}W_{1,\rm upper}
++\zeta_{\rm full,num}<\gamma_{F,m},
+\]
+where $K_{\mathrm{cap},\mathrm{act}}=r_d$,
+$K_{\mathrm{cap},\mathrm{con}}=r_d\kappa$, and
+$K_{\mathrm{act},\mathrm{con}}=r_d\max\{1,|1-\kappa|\}$.
+The mode-wise pairwise Wasserstein comparator instead uses
+\[
+(L_m+L_{m_F^\ast})W_{1,\rm upper}
++\zeta_{\rm full,num}<\gamma_{F,m},
+\]
+for every non-oracle competitor, and the uniform Wasserstein check is
+\[
+2L W_{1,\rm upper}+\zeta_{\rm full,num}<\gamma_F,
+\qquad L=r_d\max\{1,\kappa\}.
+\]
+The numerical Wasserstein upper quantity is based on CDF bounds; the
+point estimates reported in Table~\ref{tab:final-si-6} use numerical
+quadrature. The solver allowance and distributional numerical quantities are
+floating-point implementation bounds without directed-rounding or
+interval-arithmetic guarantees. Table~\ref{tab:numerical-sufficient-condition-audit}
+reports the observed implementation-audit results: the primitive-
+perturbation check was satisfied by $26{,}975/450{,}000$
+($5.994444\%$); the direct contrast-Wasserstein check by
+$57{,}501/450{,}000$ ($12.778000\%$); the mode-wise
+pairwise-Wasserstein check by $26{,}393/450{,}000$
+($5.865111\%$); and the uniform-Wasserstein check by
+$5{,}329/450{,}000$ ($1.184222\%$). No observed mode-selection
+violations occurred among rows satisfying any of these four numerical
+checks.
+
+\paragraph*{Fitting-support sensitivity.}
+The primary controlled analysis evaluates each fitted law on the
+estimator-specific support described in Section S1.3. To assess
+sensitivity to finite fitting bounds, a paired analysis uses the first
+\(1{,}000\) primary histories and the same nine tariff cells. Three
+training-derived upper bounds are considered:
+\[
+B_{\rm tr}^{(10)}
+=
+10\max_{1\leq m\leq24} M_m,
+\qquad
+B_{\rm tr}^{(20)}
+=
+20\max_{1\leq m\leq24} M_m,
+\qquad
+B_{\rm tr}^{(50)}
+=
+50\max_{1\leq m\leq24} M_m,
+\]
+where \(M_1,\ldots,M_{24}\) are the observed training monthly maxima.
+Because the data-generating distribution is known in the controlled
+experiment, the sensitivity analysis also includes the
+oracle-referenced diagnostic bound
+\[
+B_{\rm or}
+=
+10q_{0.999}.
+\]
+This diagnostic specification is used only in the sensitivity
+analysis. The same histories and tariff cells are retained under every
+support rule. The support treatment affects the TAIL and GEV
+constructions; EVENT-EMP, KDE, and EMP are unchanged by construction.
+
+Panels (d--f) of Figure~\ref{fig:final-figures3} summarize the paired
+support-policy comparisons relative to the primary specification.
+Panels (d) and (e) show cellwise paired mean changes in regret for TAIL
+and GEV, respectively, with one paired Monte Carlo standard error, and
+panel (f) shows the percentage of TAIL tariff-mode decisions that
+change. Table~\ref{tab:final-si-11} reports, for both TAIL and GEV, the
+paired mean regret change, its paired standard error, and the percentage
+of changed tariff-mode decisions in each tariff cell. Across the
+displayed support rules and cells, the changed-mode percentage does not
+exceed \(0.20\%\) for TAIL or \(0.40\%\) for GEV. The largest absolute
+cellwise paired mean-regret changes are \(0.062\) and \(0.726\) thousand
+CNY/month for TAIL and GEV, respectively.
+
+% ==================================================================
+% S1.8
+% ==================================================================
+
+\subsection*{S1.8 Parameter recovery and threshold-fixed bootstrap interval coverage}
+
+
+The parameter-recovery experiment is separate from the 10,000-history
+primary comparison. It uses 200 histories at each of 12, 24, and
+60 months under a Poisson--GPD mechanism with generating threshold
+\(80{,}000\) kW,
+\[
+\xi=0.15,
+\qquad
+\sigma=12{,}000\ {\rm kW},
+\]
+and a Poisson rate of 30 tail events per month.
+
+The threshold continues to be selected by the fitted procedure rather
+than fixed at the generating threshold. Scale recovery is therefore
+evaluated relative to the threshold-specific scale implied by GPD
+threshold stability.
+
+The mean absolute errors of the fitted shape parameter are
+\[
+0.0699,\qquad
+0.0578,\qquad
+0.0343
+\]
+for 12, 24, and 60 months, respectively. Figure S4 reports the
+complete shape-error, relative-scale-error, and relative-\(q_{0.99}\)
+error distributions.
+
+\FloatBarrier
+
+For each history of length \(n\) months, we construct nominal 95\%
+nonparametric percentile intervals for the GPD shape and scale.
+The selected threshold \(\widehat v\) is held fixed. We draw 100
+bootstrap samples with replacement from the excesses in the first
+\(\lfloor0.8n\rfloor\) months, preserving the excess count, and fit
+a GPD with location fixed at zero to each sample. The interval
+endpoints are the 2.5th and 97.5th percentiles of the valid parameter
+estimates; at least 75 finite fits with positive scale are required.
+Shape coverage is evaluated against \(\xi=0.15\), and scale coverage
+against \(\sigma(\widehat v)=12000+0.15(\widehat v-80000)\).
+Table~S10 reports coverage across 200 histories and 95\%
+Clopper--Pearson intervals for its Monte Carlo uncertainty.
+Thresholds vary across histories and remain fixed within each
+bootstrap calculation.
+
+
+% ==================================================================
+% S1.9
+% ==================================================================
+
+\subsection*{S1.9 Physical clipping identity and sensitivity}
+
+Let latent event-level demand values be \(X_i\), and let physical
+clipping operate at level \(c\). Clipping commutes with maximization:
+\[
+\min\left(\max_iX_i,c\right)
+=
+\max_i\min(X_i,c).
+\]
+Thus clipping individual events before monthly maximization yields the
+same clipped monthly maximum as clipping the corresponding original
+monthly maximum.
+
+Let
+\[
+M_c=\min(M,c)
+\]
+and let \(F_c\) denote its distribution. Pointwise,
+\[
+M_c=M-(M-c)_+,
+\]
+so
+\[
+\mathbb E[M_c]
+=
+\mathbb E[M]-H_F(c).
+\]
+For every \(t\leq c\),
+\[
+(\min(M,c)-t)_+
+=
+(M-t)_+-(M-c)_+,
+\]
+and therefore
+\[
+H_{F_c}(t)
+=
+H_F(t)-H_F(c),
+\qquad
+t\leq c.
+\]
+For \(t\geq c\),
+\[
+H_{F_c}(t)=0.
+\]
+The equality case \(t=c\) is included in the first identity.
+
+The clipping experiment uses four physical regimes:
+\[
+\begin{aligned}
+\mathrm{UNCAPPED}:&
+\quad c=10q_{0.999},
+\\
+\mathrm{DISTANT}:&
+\quad c=\frac{q_{0.999}}{0.85},
+\\
+\mathrm{Q999}:&
+\quad c=q_{0.999},
+\\
+\mathrm{BINDING}:&
+\quad c=\frac{q_{0.999}}{1.25}.
+\end{aligned}
+\]
+``UNCAPPED'' is an experimental label for a distant finite physical
+clipping level. Its value \(c=10q_{0.999}\) defines a clipping regime
+only in this robustness experiment. The clipping level \(c\) is
+applied to generated demand and is distinct from the fitted-law support
+treatment used in the primary controlled analysis.
+
+The experiment uses 12- and 24-month histories,
+\[
+u\in\{0.62,0.63,0.64\},
+\]
+and 200 histories for each
+history-length--clipping--utilization setting. TAIL, KDE, EMP, and the
+robustness-only GATE selector are retained. In this experiment, normalized regret is one-month regret divided by
+one monthly capacity fee;
+it is distinct from the primary normalized regret \(R_F/V_F^\ast\).
+
+GATE selects TAIL when its fit status is \texttt{PASS}, the fraction
+of reconstructed maxima exceeding the support bound is at most 0.01,
+and two consecutive available threshold candidates pass screening
+with shape estimates of the same sign. Candidates are ordered by
+their threshold quantiles \(0.90,0.925,0.95,0.975\); the qualifying
+pair need not include the threshold ultimately selected by TAIL.
+Each member must have at least 100 exceedances, a nominal 95\%
+bootstrap shape-interval width at most 0.8, a uniform-transform KS
+\(p\)-value at least 0.01, and a compatible endpoint when its shape
+is negative, as defined in S1.3. GATE otherwise selects KDE.
+Shape-width screening uses 50 bootstrap resamples here and 500 in
+the physical-pipeline experiment in S1.10, with at least 80\% valid refits.
+The support bound is the clipping level \(c\) here and 120 MW in
+S1.10. Two zero shape estimates count as having the same sign.
+
+Figure S5 reports paired TAIL-minus-baseline ECDFs after averaging the
+three utilization cells within history. Negative values favour TAIL.
+ECDFs are used because the interquartile ranges of all 16 plotted
+contrast groups are zero and boxplots would obscure their nonzero
+tails.
+
+\FloatBarrier
+
+
+
+% ==================================================================
+% S1.10
+% ==================================================================
+
+\subsection*{S1.10 Physical-pipeline stress at $\alpha=1.20$}
+
+The physical-pipeline experiment evaluates high-amplitude,
+high-frequency, and clustered-event mechanisms at $\alpha=1.20$. Each
+method, training length, and tariff cell is evaluated on 200 paired
+histories, for 72,800 decision records. Figure~\ref{fig:final-figures6}
+and Table~\ref{tab:si-s6-updated} report the distributional and
+cell-aggregated results.
+
+\subsection*{S1.11 Joint negative-binomial--Weibull challenge}
+
+The joint misspecification challenge combines a negative-binomial event
+count with Weibull exceedances. Figure~\ref{fig:final-figures7} shows the
+cellwise distribution of regret across the actual, contract, and
+capacity oracle regions. Table~\ref{tab:final-si-4} gives the complete
+cell-by-method results, and Table~\ref{tab:final-si-5} gives the full
+regional paired contrasts. This experiment assesses a joint count and
+severity misspecification and is not used as a replacement for the
+physical-pipeline experiment above.
+
+% ==================================================================
+% S1.12
+% ==================================================================
+
+\subsection*{S1.12 Crossed tariff geometry without an artificial upper fitting bound}
+
+The crossed-grid analysis evaluates five methods over 19 utilization
+values at $\alpha\in\{1.05,1.10,1.15,1.20\}$ using 1,000 shared
+histories, for 380,000 decisions. Figure~\ref{fig:crossed-grid-all-methods}
+shows mean normalized full-action regret and oracle-mode accuracy. The
+curves connect discrete evaluated tariff cells for visual comparison;
+no interpolation or invariant within-region ranking is implied.
+
+% ==================================================================
+% S1.13
+% ==================================================================
+
+\subsection*{S1.13 External manufacturing-load design and predictive constructions}
+
+The external analysis uses the public South Korean
+manufacturing-factory electricity dataset described by Lee, Baek and
+Kim~\cite{Lee2022} and its associated Figshare release
+\cite{LeeFigshare}. The source contains one-minute electricity-demand
+records for 10 manufacturing facilities from March through September
+2019. All 10 facilities are retained for descriptive upper-tail
+summaries, whereas eight factories satisfy the completeness
+requirements for formal rolling predictive evaluation.
+
+The formal series is reconstructed using fixed, non-overlapping
+15-minute averages. Timestamps must be valid, duplicate timestamps are
+resolved before reconstruction, and demand values must be numeric and
+nonnegative. A reconstructed 15-minute window is retained only when
+all 15 constituent one-minute observations are available; no
+imputation is applied to the primary tail series. A factory-month is
+eligible when at least 95\% of its reconstructed windows are valid.
+
+The primary natural-tail analysis removes documented demand-response
+intervals and the subsequent 60-minute rebound period. The
+all-observations sensitivity analysis retains these intervals while
+otherwise preserving the same rolling evaluation.
+
+Four expanding-window forecast origins are used:
+\[
+\begin{aligned}
+\text{March--May}&\rightarrow\text{June},\\
+\text{March--June}&\rightarrow\text{July},\\
+\text{March--July}&\rightarrow\text{August},\\
+\text{March--August}&\rightarrow\text{September}.
+\end{aligned}
+\]
+For origin \(o\), let \(T_o\) denote its set of training months and
+let \(M_{o,m}\) denote the maximum reconstructed 15-minute load in
+training month \(m\). The training-derived normalization is
+\[
+s_o
+=
+\frac{1}{|T_o|}
+\sum_{m\in T_o}
+M_{o,m}.
+\]
+The same scale is applied to the corresponding final training series
+and test month.
+
+For candidate tail specifications, model selection is internal to the
+training window. Each available training month is held out in turn,
+the candidate is fitted using the remaining training months, and its
+predictive score is evaluated on the held-out training month.
+Candidate scores are averaged across these
+leave-one-training-month-out folds. Within each internal fold, the
+normalization is recomputed using only the fold-fitting months and is
+then applied to its held-out training month. The test month is never
+used for specification selection. After candidate selection, the
+chosen specification is refitted using all training months before the
+test-month maximum is scored. The recorded internal-validation
+registry contains 3,456 candidate-fold records.
+
+The formal external evaluation contains seven predictive
+constructions:
+K-BLOCK, K-EMP, K-GEV, K-GTAIL, K-KDE, K-POINT, and K-UGPD.
+With eight eligible factories and four forecast origins, each method
+contributes 32 factory--origin predictions, giving 224
+method--factory--origin records across the seven methods.
+
+\paragraph*{K-EMP.}
+
+K-EMP uses the normalized training monthly maxima. Unlike controlled
+EMP, whose downstream tariff functionals are evaluated exactly as a
+finite discrete law, the external K-EMP scoring representation uses
+50,000 bootstrap predictive draws from the empirical training
+monthly-maximum distribution at each rolling origin.
+
+\paragraph*{K-KDE.}
+
+K-KDE uses the same normalized training monthly maxima. Its Gaussian
+residual/kernel representation uses
+\[
+h=1.06\,s\,n^{-1/5}.
+\]
+Negative proposals are rejected, and the final external scoring
+representation contains 50,000 predictive draws. This draw-based
+external representation is distinct from the deterministic
+nonnegative Gaussian-mixture evaluation used by controlled KDE.
+
+\paragraph*{K-BLOCK.}
+
+K-BLOCK is a high-frequency non-EVT reference based on the
+reconstructed normalized 15-minute training series. A 24-hour block
+contains 96 consecutive 15-minute windows. The implementation first
+forms moving 96-window maxima within each training month, pools these
+complete-block maxima over the training months, and resamples them with
+replacement. Only blocks containing 96 observations at consecutive
+15-minute timestamps are eligible. For a target month containing $d$
+days, the procedure samples $d$ eligible 24-hour block maxima with
+replacement and takes their maximum as one synthetic monthly maximum.
+The external predictive scoring layer uses 50,000 such draws. Thus the
+implemented procedure resamples complete 24-hour block maxima rather
+than raw 15-minute observations.
+Across all 32 factory--origin fits, the 402,570 eligible blocks had
+consecutive 15-minute timestamps. These verified block sets were used
+for K-BLOCK prediction.
+
+\paragraph*{K-POINT.}
+
+K-POINT is a degenerate predictive reference concentrated at the mean
+of the normalized training monthly maxima.
+
+\paragraph*{K-GTAIL.}
+
+K-GTAIL is a runs-declustered peaks-over-threshold construction fitted
+to the normalized fixed-15 training series. Candidate threshold
+quantiles are
+\[
+\{0.90,0.925,0.95,0.975\},
+\]
+and candidate run lengths are
+\[
+\{30,60,120\}\ {\rm minutes}.
+\]
+Exceedances are strict. Exceedances separated by no more than the
+candidate run length belong to the same run cluster, and each cluster
+is represented by its maximum excess. GPD excesses are fitted by
+maximum likelihood with location fixed at zero.
+
+Every threshold--run candidate is evaluated through the
+leave-one-training-month-out procedure above. Within a fold, candidate
+predictive performance is measured on the held-out training-month
+maximum, and fold scores are averaged before specification selection.
+The selected threshold--run specification is then refitted using all
+training months.
+
+The final external tail reconstruction uses a Poisson cluster-count
+law with rate estimated from the training clusters. A bootstrapped
+subthreshold monthly component is combined with simulated Poisson
+cluster counts and GPD excess severities to form predictive monthly
+maxima. The final external predictive representation contains 50,000
+monthly-maximum draws.
+
+K-GTAIL also retains prespecified fit screening and fallback branches
+as part of the complete finite-sample procedure. If an admissible
+gated tail specification is unavailable, or if the selected
+all-training fit fails the required diagnostic checks, the procedure
+can use an exponential-tail fallback with \(\xi=0\) or an empirical
+monthly-maxima fallback. These fallback predictions remain in the
+formal score evaluation rather than being removed conditionally on fit
+status.
+
+After leave-one-training-month-out selection, the all-training K-GTAIL
+refit applies the final finite-sample gates directly. It requires at
+least 50 run clusters, a 95\% parametric-bootstrap interval for the GPD
+shape with width no greater than 0.8, a parametric-bootstrap
+Kolmogorov--Smirnov (p)-value of at least 0.05, and compatibility of
+any negative-shape endpoint with the observed final peaks and the
+normalized support bound 10. The shape and KS quantities use 500
+parametric bootstrap replicates; at least 80\% successful refits are
+required for these quantities to be considered valid. Candidate
+selection is by the mean leave-one-training-month-out validation log
+score, with ties broken by the lower threshold quantile and then the
+shorter run length. Each fold uses 2,000 predictive draws and the
+Gaussian-kernel log score defined in S1.3, evaluated at its held-out
+monthly maximum. Both the draws and the observation are divided by
+the mean monthly maximum of that fold's fitting months. If the
+predictive draws have numerically zero standard deviation, the scoring
+density is Gaussian with mean \(\bar Z\) and standard deviation
+\(\max(10^{-6}|\bar Z|,10^{-8})\); the same density floor
+\(\epsilon_{\rm tiny}\) applies. For a negative-shape final fit,
+the endpoint gate is \(\max_i X_i\leq u-\widehat\sigma_u/\widehat\xi
+\leq10\), with \(X_i\) the normalized final cluster peaks.
+
+If the final gate fails, the implementation compares exponential-tail
+and empirical fallbacks using leave-one-training-month-out scores. The
+exponential fallback is used only when its score is at least as good as
+the empirical fallback and the final fit has at least 25 clusters;
+otherwise the empirical monthly-maxima fallback is used. A final fit
+with fewer than three excesses also uses the empirical fallback.
+
+\paragraph*{K-UGPD.}
+
+K-UGPD is an auxiliary ungated POT/GPD construction using the same
+high-frequency training source and candidate threshold/run framework.
+It retains the tail construction without the complete K-GTAIL
+screening/fallback layer and is reported only as an external
+supplementary comparator.
+
+\paragraph*{K-GEV.}
+
+K-GEV is the external block-maxima parametric comparator. It fits a GEV
+distribution by maximum likelihood using SciPy's generalized-extreme-
+value implementation on the normalized training monthly maxima. At
+least six nondegenerate training maxima are required; the fitted shape,
+location, and scale must be finite and the scale must be positive. The
+fit is represented by 50,000 predictive draws. A draw outside the
+nonnegative interval ([0,10]) is counted in the truncation fraction;
+if this fraction exceeds 1\%, if a nonfinite draw occurs, or if fitting
+fails, the procedure falls back to the empirical distribution of the
+normalized training monthly maxima. Otherwise the draws are clipped to
+([0,10]). This external construction is distinct from the controlled
+L-moment/PWM GEV implementation; no controlled-experiment estimation
+algorithm is transferred to K-GEV.
+
+\paragraph*{Predictive scores.}
+
+Whole-distribution predictive performance is evaluated by the
+continuous ranked probability score~\cite{GneitingRaftery2007},
+\[
+\operatorname{CRPS}(F,y)
+=
+\mathbb E|X-y|
+-
+\frac12\mathbb E|X-X'|,
+\]
+where \(X\) and \(X'\) are independent under \(F\).
+
+For quantile level \(\tau\), pinball loss is
+\[
+\rho_\tau(y-q_\tau)
+=
+(y-q_\tau)
+\left[
+\tau-\mathbf 1\{y-q_\tau<0\}
+\right].
+\]
+The formal quantile-specific endpoints are the losses at
+\[
+\tau=0.95
+\qquad\text{and}\qquad
+\tau=0.99.
+\]
+
+The upper-tail score
+\(\operatorname{qwCRPS}_{0.90}\) is the factor-two trapezoidal
+integration of pinball loss over the prespecified upper-tail quantile
+grid
+\[
+\mathcal Q
+=
+\{0.900,0.905,\ldots,0.995\}.
+\]
+Writing $q_j=\widehat F^{-1}(\tau_j)$ and
+$\rho_j=\rho_{\tau_j}(y-q_j)$ for the predictive quantile and
+pinball loss at $\tau_j\in\mathcal Q$, the implemented discrete score
+is
+\[
+\operatorname{qwCRPS}_{0.90}
+=
+2\sum_{j=1}^{|\mathcal Q|-1}
+\frac{\tau_{j+1}-\tau_j}{2}
+\left(\rho_j+\rho_{j+1}\right).
+\]
+The score is evaluated on this fixed grid and is not reinterpreted as an
+interchangeable full-distribution CRPS.
+
+For each method $b$ and quantile level $\tau$, empirical exceedance
+frequency is summarized by
+\[
+\widehat e_{b,\tau}
+=\frac{1}{32}\sum_{f=1}^{8}\sum_{o=1}^{4}
+\mathbf 1\{y_{f,o}>q_{b,f,o,\tau}\}.
+\]
+The nominal exceedance frequency is $1-\tau$. The mean squared-
+exceedance statistic satisfies
+\[
+\overline B_{b,\tau}
+=(1-\tau)^2+(2\tau-1)\widehat e_{b,\tau}.
+\]
+It is therefore an affine summary of empirical exceedance frequency at
+method-specific thresholds. Calibration is described relative to the
+nominal frequency, while comparative predictive loss is evaluated
+using CRPS, upper-quantile-weighted pinball loss, and the two
+individual pinball losses.
+
+For aggregate method comparisons, the four origin-specific scores are
+first averaged within eligible factory, and differences are paired
+across the eight factories. Table~\ref{tab:final-si-9} reports paired
+mean differences with pointwise 95\% paired $t$ intervals using seven
+degrees of freedom.The external analysis evaluates
+predictive distributions; no observed tariff action or realized
+electricity bill is available in this dataset.
+
+
+% ==================================================================
+% S1.13
+% ==================================================================
+
+
+
+% ==================================================================
+% S1.14
+% ==================================================================
+
+\subsection*{S1.14 External predictive scores and fitted-branch summaries}
+
+The external analysis uses eight eligible factories and four rolling
+origins per factory. Table~\ref{tab:final-si-8} reports formal fit-status
+counts across the 32 factory--origin fits for each method. Fallback fits
+remain part of the evaluated procedures. Table~\ref{tab:final-si-9}
+reports paired predictive-score contrasts between K-GTAIL and the listed
+baselines. The score-specific intervals use eight factory-level paired
+differences; score contrasts are descriptive and do not imply a single
+winner across predictive targets. No real tariff bills are observed in
+this dataset.
+
+% ==================================================================
+% S1.15
+% ==================================================================
+
+\subsection*{S1.15 Numerical solver allowance}
+
+For a fitted distribution $\widehat F$, the contract-mode objective is
+\[
+C_{\widehat F,\mathrm{con}}(D)
+=r_d\left\{D+\kappa H_{\widehat F}(\alpha D)\right\},
+\qquad D\in\mathcal D_S=[\delta S,S].
+\]
+At a numerical contract level $\widetilde D$, its one-sided
+subgradients are
+\[
+g_-(\widetilde D)
+=r_d\left\{1-\kappa\alpha\Pr_{\widehat F}(M\geq\alpha\widetilde D)\right\},
+\qquad
+g_+(\widetilde D)
+=r_d\left\{1-\kappa\alpha\Pr_{\widehat F}(M>\alpha\widetilde D)\right\}.
+\]
+A valid subgradient $s\in[g_-(\widetilde D),g_+(\widetilde D)]$ is
+chosen nearest to zero. Convexity gives, for every feasible $D$,
+\[
+C_{\widehat F,\mathrm{con}}(D)
+\geq
+C_{\widehat F,\mathrm{con}}(\widetilde D)
++s(D-\widetilde D).
+\]
+Therefore the fitted-objective gap is bounded by
+\[
+B_s(\widetilde D)
+=\max_{D\in[\delta S,S]}s(\widetilde D-D)
+=\begin{cases}
+s(\widetilde D-\delta S),&s\geq0,\\
+-s(S-\widetilde D),&s<0.
+\end{cases}
+\]
+The numerical contract allowance adds a scale-based floating-point
+term,
+\[
+\zeta_{\mathrm{con,num}}
+=B_s(\widetilde D)
++512\,\epsilon_{\rm mach}
+\max\!\left\{1,
+ r_d(\widetilde D+\kappa\alpha\widetilde D)\right\}.
+\]
+
+Actual-demand and capacity modes are singleton actions. The full-action
+numerical allowance therefore combines the contract gap, saved-versus-
+recomputed objective-evaluation allowances, and any saved candidate
+selection gap. Writing $\eta_{\mathrm{sel}}$ for the objective-evaluation
+allowance of the selected mode, $\eta_{\max}=\max_{j\in\mathcal M}\eta_j$
+for the largest mode allowance, and $\theta$ for the nonnegative saved
+candidate-selection gap, the common implementation allowance is
+\[
+\zeta_{\mathrm{full,num}}
+=\zeta_{\mathrm{con,num}}
++\eta_{\mathrm{sel}}+\eta_{\max}+\theta.
+\]
+For each mode $j$, the numerical objective-evaluation allowance is
+\[
+\eta_j
+=
+\left|\widehat V_{j,\mathrm{recomputed}}-\widehat V_{j,\mathrm{saved}}\right|
++512\,\epsilon_{\rm mach}
+\max\left\{1,
+\left|\widehat V_{j,\mathrm{recomputed}}\right|,
+\left|\widehat V_{j,\mathrm{saved}}\right|
+\right\}.
+\]
+The saved candidate-selection gap is
+\[
+\theta=\max\left\{0,
+\widehat V_{\widehat m,\mathrm{saved}}
+-\min_{j\in\mathcal M}\widehat V_{j,\mathrm{saved}}
+\right\}.
+\]These terms use saved-versus-recomputed objective differences with a
+scale-based round-off term; they are numerical allowances, not proven
+floating-point error bounds. A 307-case implementation cross-check
+compared contract-objective excess with the fitted quantile-reference
+objective; all 307 cases satisfied the subgradient numerical bound up
+to the stated $10^{-3}$ CNY comparison tolerance.
+
+The mathematical subgradient inequality and the reduction from a valid
+contract objective-gap bound to a full-action allowance are exact. The
+floating-point evaluations used in the numerical implementation do not
+use directed rounding or interval arithmetic. Accordingly,
+$\zeta_{\rm full,num}$ is treated as a numerical solver allowance
+rather than an interval-certified error bound.
+
+% ==================================================================
+% S1.16
+% ==================================================================
+
+\subsection*{S1.16 Supplementary source and table index}
+
+The supplementary figure and table ownership is as follows.
+\begin{itemize}
+\item Figures S1--S8: high-$p^*$ tariff stress; functional-error and
+certificate diagnostics; numerical distribution-to-decision bounds
+and fitting-support sensitivity; parameter recovery; physical clipping;
+physical-pipeline stress; joint NB--Weibull challenge; and crossed
+tariff geometry, respectively.
+\item Table S1: high-$p^*$ paired comparisons;
+\item Table S2: certificate-conditioned within-contract loss;
+\item Table S3: physical-pipeline stress;
+\item Tables S4--S5: joint NB--Weibull challenge;
+\item Table S6: numerical Wasserstein quantities;
+\item Table S7: functional-error contrasts;
+\item Table S8: external fit-status counts;
+\item Table S9: external predictive-score contrasts;
+\item Table S10: threshold-fixed bootstrap coverage;
+\item Table S11: fitting-support sensitivity;
+\item Table S12: primary regional paired contrasts;
+\item Table S13: primary tariff geometry and analytic demand-scale radii;
+\item Table S14: numerical sufficient-condition audit.
+\end{itemize}\clearpage
+\input{FIGURES.tex}
+\clearpage
+\subsection*{Supplementary tables}
+
+\input{tables/Table_S1.tex}
+\FloatBarrier
+
+\input{tables/Table_S2.tex}
+\FloatBarrier
+
+\input{tables/Table_S3.tex}
+\FloatBarrier
+
+\input{tables/Table_S4.tex}
+\FloatBarrier
+
+\input{tables/Table_S5.tex}
+\FloatBarrier
+
+\input{tables/Table_S6.tex}
+\FloatBarrier
+
+\input{tables/Table_S7.tex}
+\FloatBarrier
+
+\input{tables/Table_S8.tex}
+\FloatBarrier
+
+\input{tables/Table_S9.tex}
+\FloatBarrier
+
+\input{tables/Table_S10.tex}
+\FloatBarrier
+
+\input{tables/Table_S11.tex}
+\FloatBarrier
+
+\input{tables/Table_S12.tex}
+\FloatBarrier
+
+\input{tables/Table_S13.tex}
+\FloatBarrier
+
+\input{tables/Table_S14.tex}
+\FloatBarrier
+
+\FloatBarrier
+
+\section*{AI-assisted preparation}
+OpenAI Codex was used to assist with code development and checking, analysis implementation, manuscript revision, language editing, and preparation of submission materials. The authors take responsibility for the content and interpretation of the work.
+
+\begin{thebibliography}{9}
+
+\bibitem{Lee2022}
+Lee E, Baek K, Kim J.
+Datasets on South Korean manufacturing factories' electricity
+consumption and demand response participation.
+\textit{Scientific Data}. 2022;9:227.
+doi:10.1038/s41597-022-01357-8.
+
+\bibitem{LeeFigshare}
+Lee E, Baek K, Kim J.
+Datasets on South Korean manufacturing factories' electricity
+consumption and demand response participation.
+Figshare. Version 9. 2022.
+doi:10.6084/m9.figshare.14822256.v9.
+
+\bibitem{GneitingRaftery2007}
+Gneiting T, Raftery AE.
+Strictly proper scoring rules, prediction, and estimation.
+\textit{Journal of the American Statistical Association}.
+2007;102:359--378.
+doi:10.1198/016214506000001437.
+
+\end{thebibliography}
+
+\end{document}

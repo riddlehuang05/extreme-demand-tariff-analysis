@@ -1,0 +1,6 @@
+condition,total_rows,passing_rows,coverage_percent,observed_mode_selection_violations,solver_zeta_status
+Primitive numerical check,450000,26975,5.9944444444444445,0,NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED
+Contrast-Wasserstein numerical check,450000,57501,12.778,0,NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED
+Mode-wise pairwise-Wasserstein numerical check,450000,26393,5.865111111111111,0,NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED
+Uniform-Wasserstein numerical check,450000,5329,1.1842222222222223,0,NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED
+Distributional envelope,450000,0,0.0,0,NUMERICAL_BOUND_NOT_INTERVAL_CERTIFIED

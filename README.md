@@ -1,89 +1,53 @@
-# Extreme-demand tariff analysis
+# Extreme-demand tariffs: final manuscript and reproducibility package
 
-Simulation, model fitting, and source data for **Decision-Relevant Modelling of
-Extreme Demand for Industrial Electricity Tariffs**, by Mingyu Huang,
-Jiangweixi Wang, Zheng Gao, Yihang Yuan, Zhengjun Yang, and Huiqiong Li.
+This repository accompanies *Decision-Relevant Modelling of Extreme Demand for Industrial Electricity Tariffs*.
 
-This study connects errors in demand distributions to the costs and stability
-of industrial tariff decisions. The framework identifies the mean and stop-loss
-functionals used by competing tariffs, establishes a sufficient condition for
-mode stability, and bounds full-action regret. Paired simulations examine these
-relationships; manufacturing-load forecasts provide an external assessment of
-predictive performance.
+Industrial electricity tariffs translate uncertainty in monthly peak demand into different economic actions. This study links predictive distributions to the tariff functionals they affect, the optimized tariff mode, and the resulting full-action regret.
 
-The primary experiment uses **1,000 simulated training histories, five methods,
-and nine tariff settings**, producing **45,000 tariff decisions**. The methods
-include an event-level tail model (TAIL), an event-level empirical model
-(EVENT-EMP), and GEV, kernel density (KDE), and empirical (EMP) models of
-monthly maxima. Additional analyses vary event frequency, tariff geometry,
-and operating regimes. A Gaussian reference and paired functional-error
-analyses connect the forecast comparison to the tariff cost functionals.
+## Research design and findings
 
-## Explore the results
+The final controlled analysis uses 10,000 shared 24-month histories, five predictive methods, and nine tariff settings, yielding 450,000 method–history–cell decisions. The five methods are TAIL, EVENT-EMP, GEV, KDE, and EMP.
 
-- [Summary tables](tables/README.md): model fidelity, tariff decisions,
-  paired regret contrasts, and sensitivity analyses.
-- [Source data](data/README.md): 67 indexed files covering simulation results,
-  external prediction scores, and supplementary figure data.
-- [Functional analyses](docs/FUNCTIONAL_ANALYSES.md): paired associations,
-  a Gaussian reference, and independent contract-objective comparisons.
-- [Experiment design](docs/DESIGN.md): estimation, tariff settings,
-  uncertainty calculations, and sensitivity analyses.
+The theory characterizes contract demand through a tariff-implied constrained Expected Shortfall, separates full-action regret into mode-selection loss and within-contract excess, and gives competitor-specific and direct tariff-contrast stability bounds. A scalar mode-value certificate provides a compact stability summary; the contrast formulation retains the shared effect of a predictive distribution across competing tariff costs.
 
-The result files can be used without running the experiments. The
-[data index](data/SUPPLEMENTARY_DATA_INDEX.csv) describes each file, and the
-[figure map](data/FIGURE_SOURCE_MAP.csv) identifies the fields and display
-transformations for Supplementary Figures S4–S6.
+The analysis reports signed functional associations using simultaneous familywise intervals, compares methods within matched information sets, and examines the findings under high-p* tariffs, fitting-support sensitivity, a joint negative-binomial–Weibull challenge, and physical-pipeline stress. In the monthly-maxima information set, the GEV–KDE mean-regret contrast is −3.887 thousand CNY/month in the contract-demand region and +5.470 thousand CNY/month in the capacity region.
 
-## Run the analyses
+Rolling forecasts from eight eligible manufacturing facilities provide an external comparison of predictive scores. Economic tariff regret is evaluated in the controlled tariff experiments.
 
-Use Python 3.12. From the repository root, install the dependencies:
+## What is included
+
+- The final main manuscript and Supporting Information LaTeX source, their review-facing PDFs, and the final Figure 1–4 and Figure S1–S8 PDF assets.
+- The final upload tables, machine-readable table sources, figure-ready data, and compact source summaries.
+- The deterministic tariff-contrast stability audit, with the saved source inputs required to rerun its numerical checks and Figure S3 outputs.
+- A filtered data index and a file-level SHA256 manifest for this release.
+
+The package is arranged so the manuscript, figures, tables, and supporting data can be checked together. The companion source-data archive distributed with the submission retains the full decision-level records for the other reported experiments.
+
+## Reproduce the deterministic stability audit
+
+Use Python 3.12 and install the dependencies in `requirements.txt`:
 
 ```bash
 python -m pip install -r requirements.txt
+python -m py_compile code/build_contrast_stability_package.py
+python code/build_contrast_stability_package.py --root .
 ```
 
-Start the primary workflow with its small simulation run:
+The script reads saved oracle values, numerical-audit rows, and plotting inputs. It draws no random numbers, generates no histories, and fits no predictive laws. It writes the tariff radii, numerical coverage summaries, smoke checks, Expected-Shortfall identity audit, and Figure S3 files under `data/derived_publication/tariff_contrast_wasserstein/`.
 
-```bash
-python scripts/run_revision_experiment.py --mode smoke
-```
+`data/derived_publication/tariff_contrast_wasserstein/source_input_hashes.csv` records the relative paths, sizes, and hashes of all 404 script inputs. The filtered `data/SOURCE_DATA_INDEX.csv` describes the data included in this repository.
 
-The [reproduction guide](docs/REPRODUCING.md) gives the commands, required
-inputs, and output locations for each analysis. Full experiments require
-substantial computation. Experiment settings and random seeds are supplied
-in [configs/](configs/), with a [seed index](configs/seed_manifest.yaml).
-See [workflow coverage](docs/RELEASE_SCOPE.md) for the available code and the
-supplementary experiments supplied as result data without a complete run workflow.
+## Manuscript files
 
-For the external analysis, download the original manufacturing load data from
-[Figshare Version 9](https://doi.org/10.6084/m9.figshare.14822256.v9).
-The guide describes preprocessing with `scripts/prepare_external_inputs.py`.
+- Main article: `manuscript/main/Manuscript.tex`
+- Supporting Information: `manuscript/supplementary/Supporting_Information.tex`
+- Main figure PDFs: `manuscript/main/figures/`
+- Supplementary figure PDFs: `manuscript/supplementary/figures/`
+- Main upload tables: `manuscript/main/upload_tables/`
+- Supporting Information table sources: `manuscript/supplementary/tables/`
 
-## Repository structure
+See [the alignment note](docs/FINAL_ALIGNMENT.md) for the manuscript-to-data crosswalk and review criteria reflected in the final release.
 
-```text
-configs/                 Experiment settings and random seeds
-data/                    Source data, file index, and figure mappings
-docs/                    Study design and instructions for running analyses
-scripts/                 Experiment runners and result summaries
-src/extreme_demand/       Demand models, estimators, and tariff calculations
-tables/                  Selected manuscript result tables
-requirements.txt         Python dependencies
-LICENSE                  MIT license
-```
+## Citation and license
 
-## Citation
-
-When using this work, cite the accompanying manuscript by its title and
-authors above, and include the repository URL. The [data index](data/README.md)
-and [seed manifest](configs/seed_manifest.yaml) identify the supplied results
-and random-number streams.
-
-## License and contact
-
-The repository is distributed under the [MIT license](LICENSE). The external
-manufacturing dataset has its own terms at the linked source.
-
-Corresponding author: Professor Huiqiong Li, Yunnan University
-([lihuiqiong@ynu.edu.cn](mailto:lihuiqiong@ynu.edu.cn)).
+Cite the accompanying manuscript and this repository when using the materials. Code and data files are distributed under the MIT License; third-party data retain their original terms.

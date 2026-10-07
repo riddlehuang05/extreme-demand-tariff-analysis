@@ -1,115 +1,26 @@
-# Running the analyses
+# Reproduction guide
 
-Run the commands below from the repository root with Python 3.12.
-The included [source data](../data/README.md) and [summary tables](../tables/README.md)
-can be read directly if you do not need to regenerate results.
+## Final paper assets
 
-## Environment
+The `manuscript/` tree contains the final LaTeX source, bibliography, Wiley class and style files, upload tables, canonical figure PDFs, and review-facing manuscript/SI PDFs. The source trees compile from their own directories using the supplied dependencies.
+
+## Deterministic tariff-contrast audit
+
+From the repository root, install the pinned environment and run:
 
 ```bash
 python -m pip install -r requirements.txt
+python code/build_contrast_stability_package.py --root .
 ```
 
-The pinned dependencies support the primary smoke workflow and the additional
-functional and Gaussian analyses. Complete environment records for the original
-five-method runs are unavailable; numerical agreement across other environments
-should be assessed against the supplied results.
+This is deterministic post-processing of saved final analysis records. The script verifies the 450,000 primary decisions, checks both competitor-specific gaps for every decision, computes analytic tariff radii, and writes numerical coverage and smoke-audit outputs. It does not generate histories, refit predictive laws, or rerun primary tariff decisions.
 
-## Primary simulation and frequency sensitivity
+The script consumes 404 saved files listed in `data/derived_publication/tariff_contrast_wasserstein/source_input_hashes.csv`. It also uses the final Figure S3 source tables in `data/plot/r5/` and compact source tables under `data/source/`.
 
-```bash
-python scripts/run_revision_experiment.py --mode smoke
-python scripts/run_revision_experiment.py --mode full
-python scripts/run_revision_experiment.py --mode frequency
-python scripts/analyze_revision_results.py
-python scripts/analyze_capacity_leave_one_cell_out.py
-python scripts/analyze_spearman_history_bootstrap.py
-```
+## Figure, table, and inference sources
 
-The full and frequency runs require a successful smoke run with the same
-source signature. They write results to `outputs/full/` and
-`outputs/frequency/`. The analysis scripts read those outputs and write to
-`tables/` and `reports/`; running them replaces the corresponding summary
-tables. Use a separate checkout to retain the supplied tables for comparison.
+- Main Figures 1–4 are supplied as canonical PDFs; machine-readable plot data are in `data/plot/`.
+- Supplementary Figures S1–S8 and Tables S1–S14 are supplied with their LaTeX source. Numeric and display data are in `tables/`.
+- Primary regional contrasts use history-paired Student t intervals (df = 9,999); external score comparisons use factory-level paired Student t intervals (df = 7). The separate simultaneous-correlation and threshold-fixed bootstrap procedures remain documented in the final article and Supporting Information.
 
-Two optional historical comparison tables require all three files below in
-`reference_inputs/r1/`:
-
-- `01_mechanism_cell_design.csv`
-- `02_mechanism_results_full.csv`
-- `05_exact_dgp_recovery_full.csv`
-
-These inputs are not included. The analysis script skips these comparisons
-when they are absent and reports whether they were included.
-The primary and frequency summaries use the generated outputs above.
-
-## Functional analyses and Gaussian reference
-
-These commands use the supplied primary data and original history seeds:
-
-```bash
-python scripts/analyze_decision_functionals.py
-python scripts/run_gaussian_comparison.py
-```
-
-They write the files described in [Functional analyses](FUNCTIONAL_ANALYSES.md)
-to `data/extensions/`. The Gaussian comparison adds 9,000 decisions; the
-contract-objective comparisons cover 1,863 cases.
-
-## Tariff geometry and diagnostics
-
-After the primary full run:
-
-```bash
-python scripts/run_gap_crossed_experiment.py
-python scripts/summarize_gap_crossed_experiment.py
-python scripts/run_diagnostic_adjustment_analysis.py
-python scripts/check_replication_convergence.py
-```
-
-After the frequency run, `python scripts/check_tail_quadrature.py` provides
-an additional numerical integration check.
-
-## Operating-regime sensitivity
-
-```bash
-python scripts/run_regime_shift_sensitivity.py --mode smoke
-python scripts/run_regime_shift_sensitivity.py --mode full
-```
-
-Results are written to `ablations/ASMBI_REGIME_SHIFT_V1/`, using the settings
-in `configs/regime_shift_sensitivity.yaml`.
-
-## External manufacturing loads
-
-Download [Figshare Version 9](https://doi.org/10.6084/m9.figshare.14822256.v9).
-Place `Factories/*.csv` and `DR_information/Industy DR Information.xlsx`
-under `inputs/korean_source/`, retaining the source filenames, including
-the spelling of `Industy`.
-
-```bash
-python scripts/prepare_external_inputs.py
-python scripts/run_external_rolling_validation.py --variant natural_tail
-python scripts/run_external_rolling_validation.py --variant all_observations
-python scripts/summarize_external_variant_sensitivity.py
-```
-
-If the dataset is stored elsewhere, pass `--source-root PATH` to
-`prepare_external_inputs.py`. Prediction outputs are written to
-`outputs/external_rolling_cv/` and
-`outputs/external_rolling_cv_all_observations/`.
-Use `python scripts/check_kblock_continuity.py` for the optional K-BLOCK
-continuity check.
-
-## Seeds and output sizes
-
-Random seeds are listed in [configs/seed_manifest.yaml](../configs/seed_manifest.yaml)
-and the experiment configuration files. The primary full run produces 45,000
-decision records; frequency sensitivity produces 28,000; crossed tariff
-geometry produces 380,000; and operating-regime sensitivity produces 36,000.
-The primary external analysis produces 224 prediction-score records.
-
-The [data index](../data/SUPPLEMENTARY_DATA_INDEX.csv) describes the included
-scientific data. See [Workflow coverage](RELEASE_SCOPE.md) for supplementary
-analyses whose result data are available but whose complete original run
-workflows are not included.
+The package manifest and SHA256 list make file-level integrity checks straightforward. The full source-data archive accompanying the submission provides the complete decision-level records for the reported simulation designs.

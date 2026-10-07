@@ -1,0 +1,4119 @@
+{
+  "scientific_ownership_version": "final submission",
+  "scope": "final manuscript, figure/table sources, plot-ready data, and deterministic stability audit",
+  "file_count_excluding_manifests": 586,
+  "self_hash_exclusions": [
+    "FINAL_REPOSITORY_MANIFEST.json",
+    "FINAL_REPOSITORY_SHA256.csv"
+  ],
+  "primary_design": {
+    "histories": 10000,
+    "methods": 5,
+    "tariff_cells": 9,
+    "decisions": 450000
+  },
+  "files": [
+    {
+      "relative_path": ".gitattributes",
+      "size": 131,
+      "sha256": "ac56e2dd9dceed0fab1e26b72ea360a3ece6cf8d72e0488d35145ea69d752b1e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": ".gitignore",
+      "size": 35,
+      "sha256": "38a625724da0ddb71534a40209fb31465260661d585f7f9c5581608d635ea175",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "code/build_contrast_stability_package.py",
+      "size": 24646,
+      "sha256": "11114c8cb31256d305b3687f1ee6e5f05b070ae3f4bc5f6be0a28384a5d3fcd4",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/audit_summary.json",
+      "size": 2057,
+      "sha256": "a6e41322cf95f11b90be18435a848ef6596c84b24ff43e0a7f8dcaec12f2705f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/competitor_pair_summary.csv",
+      "size": 403,
+      "sha256": "e00655046e5d10fcd7090f95431ac88456f8044a06897d6daf6cfeb9460be1bc",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/coverage_by_method_cell.csv",
+      "size": 2070,
+      "sha256": "611c803623544466ce6263cc62c14cc79d8b81b8321cf0ce80108544fa816d4d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/es_atoms_boundary_audit.csv",
+      "size": 913,
+      "sha256": "3fa4fbdd443360883d20e892cacd772660fca6186cacff20cde3542bc2d743e7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/FigureS3.eps",
+      "size": 165805,
+      "sha256": "695e2c1eacdd40a1b5827c50279bf3096d34e4ce2ad942a662e6e63b388db0fb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/FigureS3.pdf",
+      "size": 46142,
+      "sha256": "e285b4c9047883c864fa0973be0d8d8d11b23b09b59b8488c899f887b94971a2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/FigureS3.png",
+      "size": 569919,
+      "sha256": "b7a1e47f8c309218326b0f93374ea4a62c75e8d8a9a27569f727c712a7eea94f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/FigureS3.svg",
+      "size": 216340,
+      "sha256": "6d4b199297f1ec276d03d96cade8126f374c7fd5f91bd1888df700af7f5ae780",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/FigureS3.tiff",
+      "size": 994116,
+      "sha256": "9cbc7fdf8f1037bbd9e68b452f1c6cbf58963840226f8426b47e71f59230a699",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/FigureS3_coverage_input.csv",
+      "size": 613,
+      "sha256": "5d115a5578e9441a18d0d3747bcf1e180234b7553ea21b23222917a95c90744a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/FigureS3_primitive_cell_input.csv",
+      "size": 3888,
+      "sha256": "5b389edd962011ffd2c9837a3c69427ba3ed1d8dcd79fe1845a97cf5ce689ae0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/FigureS3_support_input.csv",
+      "size": 35428,
+      "sha256": "5c8df3284be6b2ee4245f90b422c05698dca6cf261685b5103aac54fd9e3e3bd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/FigureS3_W1_input.csv",
+      "size": 563,
+      "sha256": "ba9afa3cbaa9926725c3527248f73897ad6896e938f0a28cc65bb01fd077d80c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/file_hashes.json",
+      "size": 1825,
+      "sha256": "c0d76e6d63cdcbc62e992882c80004fcb03ce8fcc9c76f5e0edc3960dc11c0d2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/numerical_condition_coverage.csv",
+      "size": 607,
+      "sha256": "bd15c786d6b8444706e7a57e98e35b1832583f0409be3d9ad9c6936e73622738",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/primary_tariff_radii.csv",
+      "size": 2787,
+      "sha256": "229bd3b68b9d16b3badc76a61f631aa398b4d9571f1c7f891b581e8a686dda28",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/smoke_contrasts.csv",
+      "size": 27458,
+      "sha256": "c658e0aca60887638d5b3a2df2ab5a72146f53ef9d780e3a97ed5013032c05ed",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/smoke_radii.csv",
+      "size": 5937,
+      "sha256": "e1cf130a92ffbcf8d3220c03cdcb5d20f52278e948268e74ffc3ea0c56e3b3ee",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/smoke_summary.csv",
+      "size": 78,
+      "sha256": "b699c3050bf6742b4e2d995d14e727ef2746d17a9bbba93eb581e2b760ff8be0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/derived_publication/tariff_contrast_wasserstein/source_input_hashes.csv",
+      "size": 47385,
+      "sha256": "7920101eefcdd5c0bb845f122271521a6d67b5351214d754aad390050d4df596",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00000.parquet",
+      "size": 329649,
+      "sha256": "8c7f1c04de934f73a24427a14afaec298e1020afeeb97e405765ed0c22345e1f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00050.parquet",
+      "size": 326644,
+      "sha256": "8afc839a1fabc97195a330c91ce9d8f0e1854ef35715a9119424848b869c8c2d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00100.parquet",
+      "size": 328540,
+      "sha256": "0e0b70005ee26fcc4346d9316fe463da6f79f75585e97d46d9d3233a2f2625ae",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00150.parquet",
+      "size": 327125,
+      "sha256": "b9cad3859afbfdd2f66e655e96895f7bff6fda36605376d0277a7e92286b3a6d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00200.parquet",
+      "size": 330658,
+      "sha256": "d91ce6c7b8de4f3bce0993edd710e1acf95fd1bd6bac4ab057f67a75e54604af",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00250.parquet",
+      "size": 327712,
+      "sha256": "8af8c1df7e5afa81ec658bc447d883a5861117eb23b07ec1ee7b5dae1a692429",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00300.parquet",
+      "size": 328706,
+      "sha256": "afa29c9dd4bc55d9ed0721ce9de69419ae4d9a677a4023ea04237f2bc259f156",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00350.parquet",
+      "size": 329533,
+      "sha256": "30ddf7fa882104be448cff36b83bdb3df780771f7249035cf122ed0c5555f0a1",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00400.parquet",
+      "size": 327691,
+      "sha256": "5bb34ff5afb020333350471b5ad2e628bb45767aa4b27af438607c1dbc8b5bc9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00450.parquet",
+      "size": 327675,
+      "sha256": "47b72f12cc5543892e840032fc160b86629821a6db3e72376dd0cae9fa9d6c48",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00500.parquet",
+      "size": 327057,
+      "sha256": "59a779f2acc5b0240c594c04c27de736ca863559cb00704c0f6c20f3e9594d48",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00550.parquet",
+      "size": 327842,
+      "sha256": "6f4ebeea0b0653c313dc16c08d0f01df9c85fa525d241e55436668117b9727c1",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00600.parquet",
+      "size": 328296,
+      "sha256": "54eb3f7cc21ea388ef96d83a9184655e7add865f011f7f7512a382aeaf17291e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00650.parquet",
+      "size": 329695,
+      "sha256": "0d70f10d1754c44db36e9710a9b444b1212e57fc20596de57c5f2c1dcd60abf9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00700.parquet",
+      "size": 328561,
+      "sha256": "681538182ff9cc56378a8d508942bd0979555b8975d871e6470b97618160cb94",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00750.parquet",
+      "size": 328047,
+      "sha256": "11f5dd1451e67b35598869b682d75d557f97a965ae3520e1a58c28bd7dbbf206",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00800.parquet",
+      "size": 327299,
+      "sha256": "3c9a7c40ea4fd25eb980091ada1664784677c34fd09e3e42d16e5100bc221914",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00850.parquet",
+      "size": 329110,
+      "sha256": "f09a39c2ed83d954334b1840aee06f32bb2a99edddf4cbb003dd52cdfe4768f9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00900.parquet",
+      "size": 328612,
+      "sha256": "4e9f3ece330b0e0c2c19960b4e64d4cc18ce9bc77573061db0d79c7cad44d0c0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_00950.parquet",
+      "size": 327950,
+      "sha256": "478c7f9ec6d41420055bcaab7c79f1175b240f6df45c1d1b8572bf472114e0ee",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01000.parquet",
+      "size": 329609,
+      "sha256": "04d19a0b1d32969bf40a9c88075e1e5cf52741323134e2a6025daec759d9fcc9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01050.parquet",
+      "size": 326745,
+      "sha256": "189505da5f5e2c956d03441ac8400ce05c256049b7edcb55e9568380a037ee2e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01100.parquet",
+      "size": 328798,
+      "sha256": "3c6655c775eccc6d41dabf812f6ec9b4243868b3281696f3ac20f767d4e9b99d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01150.parquet",
+      "size": 326723,
+      "sha256": "329a12b9d66b1c4b019a8dff9dd16493e2a5c21b65b6857a268ff20cc93319a5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01200.parquet",
+      "size": 327475,
+      "sha256": "b164438728dffc257aecf0df275ab476b22dd2e0ce4d279a646e876602b86949",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01250.parquet",
+      "size": 328865,
+      "sha256": "c969133530ce31664d15d7631c0ec6760b1829fcd51b8b784ef8df1840f21d48",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01300.parquet",
+      "size": 328793,
+      "sha256": "4bc4b7db20042332e687f014f1af5c03d55d981ccdf9dd4214d3d5811683b7cc",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01350.parquet",
+      "size": 328383,
+      "sha256": "4ebaa37f840f925cddef2fc43451bcaeda500dcc99f2f92db8da7d128623c05b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01400.parquet",
+      "size": 327115,
+      "sha256": "182fb5aad5cade9a8fadba26bd4780c0d171d8c2ac3e72adef6f3563f985302d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01450.parquet",
+      "size": 330666,
+      "sha256": "12da965334e4ecfde352c66af075a73b9e15bdf3d254e696e747fdb878736e4a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01500.parquet",
+      "size": 329523,
+      "sha256": "ef02e8222e39a1217ee28ec7235239cac503f3ee33bbcaeb014527f0c24b8cf5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01550.parquet",
+      "size": 327217,
+      "sha256": "acd78f4b7b9d9972927f828222ad4de8aac6adf2fb6e79728e8fee8d1e0ec8e9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01600.parquet",
+      "size": 328090,
+      "sha256": "44abf11979544cea3f7c8758c47c24d15a0c41d4cd8861af0060e51169cce042",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01650.parquet",
+      "size": 327971,
+      "sha256": "c37a7b092a1701d3f1276a072f7d7ec716a0bccc13798d777954d8d854214711",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01700.parquet",
+      "size": 328338,
+      "sha256": "6f4527710a92de1456ed06961fdc3ad2aa47ceba2541d36ed66022beab831bda",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01750.parquet",
+      "size": 327297,
+      "sha256": "bb8187fd956b1c0f8f194dc36f99b2efcd153cb94a1776f0d8a01f66ffd2d04b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01800.parquet",
+      "size": 328072,
+      "sha256": "fcf78dcc60f27f3240302b598caa6b30c04a29c33ade747580b26bd21f9a1852",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01850.parquet",
+      "size": 328132,
+      "sha256": "ec4821014b68c2f195584cf9aaee6bd5ca3fd70695d6fa02c5f1465128462001",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01900.parquet",
+      "size": 329879,
+      "sha256": "3349d4af50cf3855ee61a5135f882d84d3c46b381e963dfaca7c075b1979c998",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_01950.parquet",
+      "size": 328862,
+      "sha256": "59366dafad233543703a6a991554718542bc0aa3e5a7e5b620453a52a1bb11d4",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02000.parquet",
+      "size": 330993,
+      "sha256": "6aa24db327ccc79a75fdeaeea9c7c673046c6225250699e6dac096f811146512",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02050.parquet",
+      "size": 328496,
+      "sha256": "54510d44a95b922215fe29316dae9023e630cba337f3426c74ce069f26009eb5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02100.parquet",
+      "size": 328718,
+      "sha256": "d9d625ae7a016af5e5c625f947b2763577e84c43d305ca89d5626d35604377f8",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02150.parquet",
+      "size": 329795,
+      "sha256": "d5ec2b8a6a2f764412627ba87b059a8c7cca0272f94246fbec611c8df3aff8c3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02200.parquet",
+      "size": 330285,
+      "sha256": "27104aaa70db773682c1558a479fa7eb47c52eb38a335d86c4181c0f8cc2ce52",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02250.parquet",
+      "size": 328369,
+      "sha256": "4c27319ecd3cb0aa6cecff4bb0341efd06b1d2bf013fe1b4580626b4af6d69cc",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02300.parquet",
+      "size": 327264,
+      "sha256": "24b10b138daf40cad637b9f9c7eb12927727b5e1bceedae248b65441139aefaf",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02350.parquet",
+      "size": 328406,
+      "sha256": "e49af8cb3c490e1740f2f73b2ede5a5f21d4562d10aa4d4b3682e00865f2cd1b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02400.parquet",
+      "size": 329311,
+      "sha256": "9e77b80f67f71a2ed4e0b730194288d77acd96b802f18733e2db7dda0e2b5d13",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02450.parquet",
+      "size": 328954,
+      "sha256": "83ea276deed6b5843106ead434e945a7a32242cfa20aa3c4413d00e4dda5e06b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02500.parquet",
+      "size": 328393,
+      "sha256": "1e108ecc1a91bcc904912ac6af3a19aaa632ddfe0414c18050b3db531d55c886",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02550.parquet",
+      "size": 328719,
+      "sha256": "a67d7c222e1358e1634bc531fa0db50502ec24a232ea36da1d5dfe0d66636d8b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02600.parquet",
+      "size": 329027,
+      "sha256": "d64b67726f446bc364c6f93a2488e3294d0496b699d335a0d8bb4293ebc4cdf1",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02650.parquet",
+      "size": 328826,
+      "sha256": "89fc879379486588ba72c01a61a1afac41402973e1da7bb5c3e62c3ab193771d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02700.parquet",
+      "size": 330031,
+      "sha256": "196573fdfae4693a587f45ca4ae1de7d7086de0f8dfa39e25b3d77be9d008084",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02750.parquet",
+      "size": 328261,
+      "sha256": "58fb4988f480835a1fd7359d097c5b61812bb5a0910dc27ce7d85929988a7615",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02800.parquet",
+      "size": 329214,
+      "sha256": "122163dead9669dc54c3c80a8e09a80c3ca4284ac3e2e07f9cf42219f27129ea",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02850.parquet",
+      "size": 327400,
+      "sha256": "10df41b26ec0036478fd5aba9759c7fa67532b3e00b1695b5fea80d143dcb518",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02900.parquet",
+      "size": 326611,
+      "sha256": "a311610a120f5837584d29743e1b3ae1b1cff026e8b1b810a6ba6bad92fbd25c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_02950.parquet",
+      "size": 329945,
+      "sha256": "54dc2133174ce7ee8960dc7888bd2af1529ac8cbef39b6c341346746fe51eee4",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03000.parquet",
+      "size": 328353,
+      "sha256": "3deb84fdbdfb80e1081bcd63de381e65d68190722ba6bbe8a9c29f3e27d669b7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03050.parquet",
+      "size": 330408,
+      "sha256": "3b474b1a62e1e435d79e0637f9e1ce216c6dfa4dc17e4718f6dab17f4cfc1f2f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03100.parquet",
+      "size": 328454,
+      "sha256": "23a29de4667361d74afd83c4e900c6a73eaf8f7433f9b0a2d36130a2ae0a672f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03150.parquet",
+      "size": 328036,
+      "sha256": "28a0de553f5cc7b0f255425714e6b601614968e0acc61eccd8f013eaae39cc85",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03200.parquet",
+      "size": 328074,
+      "sha256": "51263bea6660981cfe00829b98d9c55d77e6d3bcc5a904b9927f30e04ba6775e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03250.parquet",
+      "size": 329425,
+      "sha256": "98d28c8c1f14ed8630e7e4c236b43854fe196e8d18933b34fe7e94557a963846",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03300.parquet",
+      "size": 326342,
+      "sha256": "eaed8d805e78983875db083e7e309c41dfa74019b75bc9fddce2c6c8c3ceb3a9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03350.parquet",
+      "size": 331336,
+      "sha256": "a51f8227a45c6af46b70916348de74f2225f6529b6d834c5722d43c6f78569e4",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03400.parquet",
+      "size": 329855,
+      "sha256": "d3e52aa28e8f98284828c6fdd359c3d2437391fd80bda1718112f7024594c393",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03450.parquet",
+      "size": 328575,
+      "sha256": "623a8dfb9e6702725677df9d70d658a572d3f4d648957d06a6a15940e26dc954",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03500.parquet",
+      "size": 329197,
+      "sha256": "b3d77ffc405144881f6f42ae0456796dffd0d546527a528a79747531c1579adf",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03550.parquet",
+      "size": 329462,
+      "sha256": "cc6042d33c29321ee9292d45ede9ebc8779f2acdecc911a3a317d9bb8e23cce3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03600.parquet",
+      "size": 329090,
+      "sha256": "d54f58da046def2c869867b1c3307de596b62dcecf5c7d90344e65514c814390",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03650.parquet",
+      "size": 327256,
+      "sha256": "1fe8aa9888b0f5a2aec4296cade1ae3552f9955f48e2f8cdd35cac25f7a5f370",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03700.parquet",
+      "size": 328918,
+      "sha256": "0b34f00b2f2e3189ae2bbc1422988479ecb46e8a39fa72fca220775d225ba74c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03750.parquet",
+      "size": 330597,
+      "sha256": "7f057c3ebc6e1a6417619e125e0d4f16b8ebdbc4c28efe327065608346f6d95f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03800.parquet",
+      "size": 331642,
+      "sha256": "813162ac64674105aa963feb3e29eaf0686f571084e1bcd9a5386ae5003ba615",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03850.parquet",
+      "size": 327918,
+      "sha256": "5c612cd3593095a1da2d12649d18dac9043f251782a00833c2903a3eb52ba35b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03900.parquet",
+      "size": 327243,
+      "sha256": "2023e5e93743d66d112853835d2a827842ac25deed3e8f849453b3b95f628c8b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_03950.parquet",
+      "size": 330089,
+      "sha256": "e905c8e5e33e7707fd89a0f00e4c077d7e9fa7d1c9f556718cca341fc2687a3c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04000.parquet",
+      "size": 328724,
+      "sha256": "dcb4bed1e0b683010d933258ab4969d30ed2a86ef2f6700ac2dee8e790fdbcee",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04050.parquet",
+      "size": 329316,
+      "sha256": "98fe5c4489374787aea16d2f87eb7b547ef18aca35a220b8ec32d8db5a9da078",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04100.parquet",
+      "size": 329012,
+      "sha256": "e4d3755e2c57752a77c3c01e3837a14ce4d4381431eb49ecc53921923d5ca432",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04150.parquet",
+      "size": 329980,
+      "sha256": "df09a7550ea72a026af05a7f76cb5ea901af344a8e5734fca335f6e064a2890a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04200.parquet",
+      "size": 328103,
+      "sha256": "91f0c989ba5371c54fd66c5bc25d43a3c8433ec782dca7e3883d7a98628c16f3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04250.parquet",
+      "size": 329321,
+      "sha256": "31799dcf6465aae550429eceec7484c1233a127b9423c30d44d63ad75e1938bd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04300.parquet",
+      "size": 329340,
+      "sha256": "59f86916be49453f8f147a4d85ceedf0ab631546de30d7f6fadcb000ff423493",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04350.parquet",
+      "size": 329256,
+      "sha256": "c12426dfdf8badb6c04c35eb77392cb290e5f7edd43d88a257714728e0b25e2c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04400.parquet",
+      "size": 328896,
+      "sha256": "6fec1b75e3e3c3c583fee1a4e9501a6ec668b6ad065d1e156e96e1324cbac05d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04450.parquet",
+      "size": 330432,
+      "sha256": "92d16d01b552743352d09f61df40e8ce1a9c08075abd233b7b37a7e314413891",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04500.parquet",
+      "size": 327851,
+      "sha256": "c13934408b10befb15a945b2a9b59e4337b30e7230abcb5615d9553fdc9b65ff",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04550.parquet",
+      "size": 326940,
+      "sha256": "e3446948a9afa8118d72906d9dea4b35f9bcdb98c41be46389e585e7e5cf9816",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04600.parquet",
+      "size": 326966,
+      "sha256": "5a1f72cb7a19a491c88293b111445549a6948c909a31cbc6e3ad4e1e2d6ec20a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04650.parquet",
+      "size": 328225,
+      "sha256": "c7d11cbe23ebd4d3e1d44efd7601ed971d05ff830508def254f322eb3f37ae98",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04700.parquet",
+      "size": 328966,
+      "sha256": "1d9b4b66e049723361339976f4986225ba7d0bffbe958de0ef3ba3b10fd47051",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04750.parquet",
+      "size": 328805,
+      "sha256": "5a6b6d418cb38c129d186a7e55270c9580eff11f7b88379579557494c0bf5409",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04800.parquet",
+      "size": 328341,
+      "sha256": "c83f8d1408b3a77fa11371c2c2179276cf8c0ef1aa2a24d2cd6dd75c92d2285a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04850.parquet",
+      "size": 327547,
+      "sha256": "ae82bcdba5d71b7d9fb3bdbb1b0ec5105f453bc83d66a9caa129f1fe43e8e25d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04900.parquet",
+      "size": 328770,
+      "sha256": "c351465be19fb553a1c9f97439f4fa3923982d36b1593a19698d973c4b597d9d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_04950.parquet",
+      "size": 329094,
+      "sha256": "c5046c0d207a940cfaec4e754cb01846bbecff5401198c048ef0df5caabe0e8e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05000.parquet",
+      "size": 328901,
+      "sha256": "83fcc86782a164dc7ae92d775c93679f29daaadf784f5c7d12c9d84266503afd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05050.parquet",
+      "size": 330196,
+      "sha256": "c3893b0c34bf297e613f08ed387ae791c9f12455e8ce369adc5b71532ab7d1ff",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05100.parquet",
+      "size": 328069,
+      "sha256": "936f8129fe2ae8017c80ea88200a689ee0ff4d28a8732639552091bdd175b3cf",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05150.parquet",
+      "size": 327290,
+      "sha256": "eee2039f2673275b22c05f8cc6323edb75641325074ac6106c4d9c4d362dbc15",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05200.parquet",
+      "size": 328097,
+      "sha256": "1c47e71cfc1c24058f74db14327a0d76d2b436e20cd1c410eb58d4e616edee6a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05250.parquet",
+      "size": 329561,
+      "sha256": "0a369dc5f1908df9cb6b583aa7230bca3fd63a31b670c5a355229281ec890d0e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05300.parquet",
+      "size": 329488,
+      "sha256": "b15ec73223af29fb678c1fd8f671e70aeebdd5255e87e5a60c0db1379de434c3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05350.parquet",
+      "size": 328729,
+      "sha256": "fa0a0599fe994955e3c3dcf417db135ad397ec001e0e4f40a062040db57677f5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05400.parquet",
+      "size": 329026,
+      "sha256": "6add9872928fcff213d303a06b8bfbc21c1e22531b1c3250ae4f6bc62e6d1436",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05450.parquet",
+      "size": 326482,
+      "sha256": "2840d28eb7242a744a0c27744692058db7651d2a2993093a3eeb06b149a7f1da",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05500.parquet",
+      "size": 329179,
+      "sha256": "481661c0b387256d592d34a5404555ef89b26ada9b7dba77f69b18bba11a661f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05550.parquet",
+      "size": 328838,
+      "sha256": "c4c741e4456097c6eb628bca18f5dd315bf09dcae5a97360780de7b15ada3e73",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05600.parquet",
+      "size": 329793,
+      "sha256": "da5e5be8aec57a220a7792dd8f5fc29c011632b090eb476c366bf23f7c549424",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05650.parquet",
+      "size": 328292,
+      "sha256": "9147afeccd2ff4db7db57e6867e38c3c2ef2141ef683b34263b780a50e273fe7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05700.parquet",
+      "size": 328181,
+      "sha256": "1ab18d34810eea7d392060c4cc5a85b511f5f9e05ca54a64b473fd5acd45b73d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05750.parquet",
+      "size": 329806,
+      "sha256": "bf3f803899a77a9358b74737a5c42783c01489bc54adb9360531df424c6fb497",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05800.parquet",
+      "size": 327953,
+      "sha256": "b6b61a5e42574fceb95e3db585bc77ff83994c7765b7f9b8b1b2dac8cd7bd011",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05850.parquet",
+      "size": 328114,
+      "sha256": "c5421b227a62dea162b77fa43bbcbe0f7c14dee4de4a1dcf630eacc148163bcd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05900.parquet",
+      "size": 330151,
+      "sha256": "ea4e48d86046484f8bf365e423507cb12df975c8159b91835ca26ff4acfb4f27",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_05950.parquet",
+      "size": 327556,
+      "sha256": "421a5bfeef671bce3131f8cc83aad776f59e14ff496e3f41c93d161c5893d148",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06000.parquet",
+      "size": 329143,
+      "sha256": "89b52676ab309827c93cc144d0bddf7975e7feb737d2583c707938ada7ae6c6b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06050.parquet",
+      "size": 329571,
+      "sha256": "632002c305af9d3faf71b4aec31765e65865bc7df1dc320627e05946a2ebf437",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06100.parquet",
+      "size": 328303,
+      "sha256": "5882da5b9f3c9f7e7e0aaa771e17667545933a7519fd4deab77d04d2522ba7ae",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06150.parquet",
+      "size": 329676,
+      "sha256": "9fb597df65f93fb4754a2d2d6c07d4beceda932be1fc0c734c8264bb7168776b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06200.parquet",
+      "size": 326721,
+      "sha256": "970d8b5da1674a7e80c9eb34611b1ba41731e4fc5300b3e5d4eed989d705b1c0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06250.parquet",
+      "size": 329838,
+      "sha256": "be3ccb34e9e34ee163eebbf4f5b2784cadd588409876cd8ad1dbcdcfc43765d9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06300.parquet",
+      "size": 329039,
+      "sha256": "b5868cf2fa49ea860449fb2157571c219047772f960e39fb7e679c11a70cb79b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06350.parquet",
+      "size": 331098,
+      "sha256": "e6cb2941bce27025af3dcf0dabf3f3695fa2ee0c7bc36ab72c083febf2f66712",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06400.parquet",
+      "size": 328329,
+      "sha256": "fb00def1794ca4cd4ce618fda3a30eaa647951fc7861ec944633e0798400e085",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06450.parquet",
+      "size": 327063,
+      "sha256": "89f6d114162e784dbc9a7cb7a775053280df2dd4ec2023fc20f53db0b8e617b7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06500.parquet",
+      "size": 330306,
+      "sha256": "d388d507b0f02d2cb12219a628b5466b66c35ddfe78ce8acc009b03291a960b8",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06550.parquet",
+      "size": 328104,
+      "sha256": "9b40225642589ec732da695d60775c93e214a48a4aa8bfe75d8fca93b054e40a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06600.parquet",
+      "size": 330415,
+      "sha256": "f11cfcf1363f54105f15260c30df0fded362109c0ee00fd2ecf081d9aa72b25c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06650.parquet",
+      "size": 330331,
+      "sha256": "c9af7f78f3cc23dc6d591c69f2389dd2e5870f303f7d0377501d5bb5f91b5072",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06700.parquet",
+      "size": 329657,
+      "sha256": "eb99369f69373a1ea5dab7045ef66dba6613f3af543e2baa496c6ea3c08eba87",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06750.parquet",
+      "size": 328799,
+      "sha256": "1ffdf5a503b8a2b0f2c9cb74218d3dd14573d38b508563c14af4cd7fa9c43b79",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06800.parquet",
+      "size": 328773,
+      "sha256": "b4c7c64e81c7bfa01da8da7492e4b57b497c449707ed73ce48bce659ce342cff",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06850.parquet",
+      "size": 328286,
+      "sha256": "3a604ddb7cbe3b34c2cb13278caa60b2ac50722b6df56928c4b21683a9119df3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06900.parquet",
+      "size": 327648,
+      "sha256": "e45a98260bb5debe5978efe3eabbb52af2ce5ea39d70b6ca3eba43d3aaca0dd3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_06950.parquet",
+      "size": 330197,
+      "sha256": "fd296abd9223c939a06983eda2badebb2e87331eb52d1cad4db2edf7f4fbbeba",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07000.parquet",
+      "size": 328934,
+      "sha256": "778edf67a9b42e4db2f3930b71890c677ac5352766e926830bb5a6cf92dd8d1c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07050.parquet",
+      "size": 328355,
+      "sha256": "1ae17af45fda68d970602bead41af3f594274884f00590e992fa7ac77628a90d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07100.parquet",
+      "size": 327769,
+      "sha256": "439c21c29e4ea2fbd8e536aac5a1c59818745cf9288ae33add255297914ac12c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07150.parquet",
+      "size": 328295,
+      "sha256": "94893c87ad897b7c2c424eeb0b96a3800d23b4309b845f7bda27e07a909bdd13",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07200.parquet",
+      "size": 329098,
+      "sha256": "3f877c24599f5ea1f324a5b69cd7f075da243e8cfa37876195eac3fa067e08da",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07250.parquet",
+      "size": 328915,
+      "sha256": "8f123653a264d17f515b6bf154094b087a40d3e48ba1543066ed3fb3478098b3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07300.parquet",
+      "size": 329635,
+      "sha256": "5af25cf97faf99f996f195b5229219ca998b2f5b77e1f7367230fa901f45b617",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07350.parquet",
+      "size": 329753,
+      "sha256": "d52538e04d92dcc63b6cb363ab27c311ed0b89097b222c4f1195b8b004037513",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07400.parquet",
+      "size": 329245,
+      "sha256": "86f95478f0f34852dc209b2472f06909105217f27931316534ebacec1d51e6bb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07450.parquet",
+      "size": 327427,
+      "sha256": "696943afdf1b37471873939db00dc5a26dab2b5654020ae2d5b50ea8dc1e2357",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07500.parquet",
+      "size": 327808,
+      "sha256": "ae15f8d77b44812ba2755223bce4248e938531208b7a80b1ccf3f862aab6548b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07550.parquet",
+      "size": 329613,
+      "sha256": "a45b51f127806fbeb658d0240c4356e08832aa67cb12a97d5c70477c5d0bbeda",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07600.parquet",
+      "size": 326683,
+      "sha256": "c7016e27fd7492a5ad73860c75bf2779befd03482c97c7022b2935bf9bfbaf88",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07650.parquet",
+      "size": 328795,
+      "sha256": "0dc5fd7da41f849b831cd436ba1c8f169712e2242430496b5d708364f3cd03e2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07700.parquet",
+      "size": 330677,
+      "sha256": "9a8c1222c6edb952af929e83c3ab238635e8d94d27f27b00819c56faf989991e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07750.parquet",
+      "size": 328770,
+      "sha256": "f5612e90bebcdb82f910361c3379c4dd6d3bf3396a359ef4ca5001f067faaea1",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07800.parquet",
+      "size": 329243,
+      "sha256": "15a590cca3374ef619b1951a5c1c8928bb9abc887624efea4bcf57b3bfccc733",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07850.parquet",
+      "size": 328798,
+      "sha256": "6807b3b99cd67b406e701be3300a204519dcaec097f87e8791bc158c93e54c69",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07900.parquet",
+      "size": 328559,
+      "sha256": "6e6e83ecb567c001bd85356379c463a217ceff613939c6c86cfbb3c2134edfea",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_07950.parquet",
+      "size": 329154,
+      "sha256": "73f7d55646a7d67a68e1d4029c2baa529c0405923669b106d6cd59bc3d2665c9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08000.parquet",
+      "size": 329382,
+      "sha256": "0f6614b457fcc8f587a003bdb30b4acd8fa205b7e35814cc02ffb544094c0887",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08050.parquet",
+      "size": 329203,
+      "sha256": "fea8321d5af07de5981d376101e5a8183ee03a14c3cc590ee676b36017ad2f17",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08100.parquet",
+      "size": 328601,
+      "sha256": "23ca2762f5b8fe094965f16bb0dd0e7e7f17ac08e03d6ba4d3d562650581e80b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08150.parquet",
+      "size": 328182,
+      "sha256": "c7cbcff03d76b4a48f26b497993dc9014d7941d852bbe04eb085e5320e8f67b3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08200.parquet",
+      "size": 327541,
+      "sha256": "63f33dfbb08cf822c1b56df25bdbd388470d58d8b19be3587ac529ec33fa7523",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08250.parquet",
+      "size": 327461,
+      "sha256": "e91c79e85d589caef2c03c3faaa209488a39346035c8e418f029a94fa608b3ee",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08300.parquet",
+      "size": 329010,
+      "sha256": "8d7505a092f59aaafe6944c02cde04ff138e2ddb3b85b5295380029257808b54",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08350.parquet",
+      "size": 328168,
+      "sha256": "f29b8794819a3504f15ed852f29aeb07339a4f33dd866fe0909b368ee7442b16",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08400.parquet",
+      "size": 328638,
+      "sha256": "d71e89f268711baffc2289355ab6a25e3591ac18b7d828449da8c4625b3f697e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08450.parquet",
+      "size": 328323,
+      "sha256": "828b3e2f4af430709efb8d748b70a8d81a11605104593449541a10ed87768957",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08500.parquet",
+      "size": 329232,
+      "sha256": "600be790c1008ae6b0c9781af162f59800d9d944c37b7651274499e954d9b1ed",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08550.parquet",
+      "size": 329272,
+      "sha256": "2f2d2e4c07580028d13b5703a159cd4997f63f9a068a747af6eefc3d2ded7e48",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08600.parquet",
+      "size": 330066,
+      "sha256": "6c54c813257443eb20588d8755f117721b3e70640b97775477b9b8bbf9e4ae99",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08650.parquet",
+      "size": 330209,
+      "sha256": "1f8286d6bb9e010ba048e61facf1505dd91ad5e290e581d5e43c93e5782932ed",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08700.parquet",
+      "size": 329784,
+      "sha256": "daa4f088183ddc10d011f7d90ea20d4e1a6a5c72f8311abd3034ba9da3566a2e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08750.parquet",
+      "size": 329202,
+      "sha256": "994e61d5bc677adfc9d8ca4c74aea125db7ae6d845ff3f663eac8a73bc6ae1ba",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08800.parquet",
+      "size": 327310,
+      "sha256": "6051031fc836440aa6584134f0ce7493ca86cf1639366d8f20cdcb355781b25a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08850.parquet",
+      "size": 330665,
+      "sha256": "98e4908c6275d3564d4cd86353f35ab692df7456905664d634b9b1909ccc7cbd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08900.parquet",
+      "size": 330473,
+      "sha256": "2a2b925372199047b498d147a9355cb2a0b0b1436fb0847f5d1ccd7c4f0b9c72",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_08950.parquet",
+      "size": 328988,
+      "sha256": "83d5e02e3002d3c4a9b6072e861038b7799ecec89f9bd62c1fabe366d3deacd5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09000.parquet",
+      "size": 329568,
+      "sha256": "8aee776ea266dea713eb1d89e2f0aa497dc398c9999b7df3abe527bb0e2827d5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09050.parquet",
+      "size": 329486,
+      "sha256": "a28548ffef58d162000df09529ecdaa8d66801f3fd0f7cbc378dfc646ef2bde3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09100.parquet",
+      "size": 329049,
+      "sha256": "34cc2220581e2d06c0cf9a85f1c1a6f32d278b7b4cf196a421284b87dc279290",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09150.parquet",
+      "size": 330886,
+      "sha256": "4f992194ef0324903ece06ccb6740123d8c58b2e8cbaa45e6f73b5bf17238b2d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09200.parquet",
+      "size": 328696,
+      "sha256": "0c01505399ecdccc07906fbef979153d4be4a131dfbf3ddfa982d0c026cac516",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09250.parquet",
+      "size": 328967,
+      "sha256": "804aa4368d6497a7077957702b71d1b27c02421e0fabe0f89ea8ba1d944e4c0e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09300.parquet",
+      "size": 328592,
+      "sha256": "153ad4bedce17278f01f216ae6bc57181b4508387b3313a31ba448f7bd1bc7bf",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09350.parquet",
+      "size": 328997,
+      "sha256": "fd12139c2ba947af4c79ba46ce9903a664dc298dbcf1f43b5022369d67593511",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09400.parquet",
+      "size": 326665,
+      "sha256": "19cf8d8231f5bccfadb39242423cf64c7bae92614490be5cd08d3d6c1e5d6c71",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09450.parquet",
+      "size": 329906,
+      "sha256": "b43adc4e1f9c4203fe38bad6446ed9897cb12eeb1c8f78b94564274f9a65b76e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09500.parquet",
+      "size": 328692,
+      "sha256": "90ecdc3b5951d1bc2c089051d36bb89a69e0801abc025c5edc81fe98d9df80e2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09550.parquet",
+      "size": 328036,
+      "sha256": "be9868994caccba27bf6fcb953f00948a24e766045daa00944e25a47c89ea82f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09600.parquet",
+      "size": 328065,
+      "sha256": "625c1cee12a9bda1b538a43ac7e2f22e04d3bdcc5c823949d499c5612e7388bb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09650.parquet",
+      "size": 328024,
+      "sha256": "998c54cd183fa9404832f47eb0e31bb342fe20e270cf239771211db1599ce6ca",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09700.parquet",
+      "size": 329501,
+      "sha256": "8a9ca7b3201488302b8a401b437fa1be40d26d5cd0ac3803825835261859590e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09750.parquet",
+      "size": 331255,
+      "sha256": "bf9ceb3c578c7493d2e63cce01d8792be62c31722c5f357c6a28f3213f71a2c4",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09800.parquet",
+      "size": 328691,
+      "sha256": "9d86e3628f6f4ba8d28e6007329edd6037757d2d8c2575d033737e0ebdc0f286",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09850.parquet",
+      "size": 330166,
+      "sha256": "c3d9c7428b707e0f788026cdcf94076c7513dc69b62c90ea09cbde81de4883fe",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09900.parquet",
+      "size": 326949,
+      "sha256": "0f9608eb329ea59a97c431ef4c8d758619d521e96b11a9d222bc659bf3a16d6b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/decisions_09950.parquet",
+      "size": 330024,
+      "sha256": "274c67c97ea3150c4e75631a37ebd425f993105b5a5a4ca208e69de2ab43d457",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00000.parquet",
+      "size": 71668,
+      "sha256": "69a9fb748eb3dee715c1e7eaef2a193b67662343f622c48ee5ad79a004a634f1",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00050.parquet",
+      "size": 71597,
+      "sha256": "bffef94eebc8ee0c8d7745a2fd732594970a313a5d24584fce02f23d9db509c8",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00100.parquet",
+      "size": 71310,
+      "sha256": "21eb8fa59e9a7a6e8633ee89ade127aa1fcb63b69afd73f87f5360e3c3aad813",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00150.parquet",
+      "size": 71666,
+      "sha256": "25832f6eeeebafeaac4363b69761a22594cfd1f1d1d0bdd543f006966f927895",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00200.parquet",
+      "size": 71664,
+      "sha256": "c2418131c97404d40d6dd1a1bdf8049c0fac78e2c204abb1d34e3a7809747a39",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00250.parquet",
+      "size": 71584,
+      "sha256": "49125a4d9eded971357cc36f6b3d66707311ad871ff561b381b2255daf511cc4",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00300.parquet",
+      "size": 71814,
+      "sha256": "97f0d2c7a239970b459202ca54d51d6d6b62d4c9a63629ba6852dc4191b4f651",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00350.parquet",
+      "size": 71688,
+      "sha256": "93323909959c762d0ddc26759f8b9cae24988b7eabb0e4edaf5ead53a3ebda57",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00400.parquet",
+      "size": 71684,
+      "sha256": "f072dbb81c53b9938f3c279383f2a7cb2b410ace3c664ca2cd4e2f4f097f4375",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00450.parquet",
+      "size": 71492,
+      "sha256": "69c75c8a471746f7cfaa79b30013be6e77bf9d5a6c652e8700cd88676c73c9b5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00500.parquet",
+      "size": 71598,
+      "sha256": "3aace74d64661c73647a949f0634cce6aa2622dee86d3ab0ee50488083f1c9b2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00550.parquet",
+      "size": 71473,
+      "sha256": "0a0a299e2d5d6ff543f3f8efacdbac7f23d41aab46bf1de1f6631be45e6e6719",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00600.parquet",
+      "size": 71742,
+      "sha256": "04850df1bd9780c5f6dafe2c1ab9558ca362c082dabe8b3226bd476ca9787b79",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00650.parquet",
+      "size": 71721,
+      "sha256": "538a71011803f803bc8007557206032b9227b40cd3673aa5ab9cc1aa5d6e9014",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00700.parquet",
+      "size": 71667,
+      "sha256": "3ac2f3d904c79008551c2779d647e22b4a7cd2870e1f0124ddde4555618b95f7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00750.parquet",
+      "size": 71736,
+      "sha256": "2bcbb9512f70dc4125486b90e8574782a20b552538b4205b7b6e3db2703ea20b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00800.parquet",
+      "size": 71334,
+      "sha256": "fe71880f4b97c634fe010914863d178cc76d775bd8b888222921f0c9a150c63c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00850.parquet",
+      "size": 71578,
+      "sha256": "cdefd2cf8e51c43fe4ef1b2ad8b6e1d2f6ec76baa4699ad4c06f78ddfc84e8b5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00900.parquet",
+      "size": 71605,
+      "sha256": "51fddebafd36a5f55f9a64543ad902e64ebd33fff52fb53a7c2af66ac284b988",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_00950.parquet",
+      "size": 71824,
+      "sha256": "f3ee234b726b71be0fcdb8e0048dfba7791d681e520a2dfb74d5734221e36b0c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01000.parquet",
+      "size": 71423,
+      "sha256": "c0fdc7401bc3afd02e7d280ba13e9f48c983cf297a727fe2f0fa955bb32b8675",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01050.parquet",
+      "size": 71308,
+      "sha256": "404ebe8d0bb3c16df4a8dbe91780256303841012e4ba30cbfe1441a2c4d9bdc5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01100.parquet",
+      "size": 71484,
+      "sha256": "009b2d156d15cfc4199c36d98a6e8c46790741cf42cd9b55dca741524052f7ab",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01150.parquet",
+      "size": 71777,
+      "sha256": "41388a6bd6985ca780dbccb56ad322631e17cc913af49711f292616b52b0883c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01200.parquet",
+      "size": 71493,
+      "sha256": "415e23fdece38c49473350149deaa4d726ecdfecff0b3069c663aaea23191766",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01250.parquet",
+      "size": 71761,
+      "sha256": "536574c28d685c2080dfcebabd9cf013cadbe5a5ed14f21795c464a956c44aee",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01300.parquet",
+      "size": 71866,
+      "sha256": "69d61dbb282310d09754849f643163992668a3430829ce2e0edad30e5240389d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01350.parquet",
+      "size": 71586,
+      "sha256": "e4a16fe7f08455c8756f7003ca948ff1e9b0b7472785420af69caf4573b68e69",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01400.parquet",
+      "size": 71805,
+      "sha256": "ebf9059f110ba42697582f0ba68044365e28da32adcfa41f1c8d3f42b4269df8",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01450.parquet",
+      "size": 71935,
+      "sha256": "6ed2492fdfbec65e644b7d66dbfb10bc628f1c488a0ef7b8e3944f58ac6e750a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01500.parquet",
+      "size": 71866,
+      "sha256": "7f5348f29079a376d387bce69e2ff31dde63cb651ef4c5c8a54e17e305d6355e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01550.parquet",
+      "size": 71586,
+      "sha256": "fc3c695c882d541ec667dc183a5dd83e87017ca6fad135ef90814406c23ef7b6",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01600.parquet",
+      "size": 71619,
+      "sha256": "e039df4057f3e6b32e45e157e2f50e6019ed52253dfa11b06fd405657e1a7c1b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01650.parquet",
+      "size": 71853,
+      "sha256": "276c98fc6dfc9985db894857eaa8e14ae64ff0f1dc9471b071208ba1066186dc",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01700.parquet",
+      "size": 71634,
+      "sha256": "5d9228455c0c5adb0be39dcaa5289ad885fcc1221a7d3f8bcc4dd9d775faf959",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01750.parquet",
+      "size": 71567,
+      "sha256": "800a409125867ab54d7891dff9b1e335863bca2f1a1636af3a2d0deaee3a8728",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01800.parquet",
+      "size": 71639,
+      "sha256": "bb805bee580d45eae679220220c8ae911f411aa7413c63495cab73fce6788c1b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01850.parquet",
+      "size": 71775,
+      "sha256": "e46eef84d893a3d9eda772b97be5972f20c23c19c351218a7dcd0c890e885771",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01900.parquet",
+      "size": 71760,
+      "sha256": "7b7642d2131f6abb017cd047b7af8fe14f8ea2b6a194b17b7cbc46551ae8f616",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_01950.parquet",
+      "size": 71270,
+      "sha256": "db3189ab4e57f7272821cca4c4efaf494edeefc606a1d03a5845bd55be81284d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02000.parquet",
+      "size": 71744,
+      "sha256": "be50f812d875bcf0f260fd5b7747dc23eeaffc4736933a25f03cb1bdbdf8be86",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02050.parquet",
+      "size": 71869,
+      "sha256": "d3ba0197f1dc1c5bc526839cb169455be1edc64dbc46cf1bcf7347b8192b9acb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02100.parquet",
+      "size": 71677,
+      "sha256": "41343cabe81a5384868d102feba400992de77b1626024753f71884f057274c22",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02150.parquet",
+      "size": 71693,
+      "sha256": "c1484c6272812abae9dc15f8f14ad956541b8f231bf50b22c0b6d1845e3c7e4a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02200.parquet",
+      "size": 71898,
+      "sha256": "de78329862f767b3d4b4316af1fc92353134358d6558f9b1ad54cf8bd014ea42",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02250.parquet",
+      "size": 71893,
+      "sha256": "e35452f837056932ff4f7aef308aa322eed3010000940a871f4cc8ef41efd6d0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02300.parquet",
+      "size": 71711,
+      "sha256": "0c304368599c68ec007c5dc8413ece12dde45c6e141fdcd4481a37b19508cfc9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02350.parquet",
+      "size": 71685,
+      "sha256": "7f072de8b09796f3673852c471dcacbdc566d4080a9e3756f7a468a79f53de16",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02400.parquet",
+      "size": 71755,
+      "sha256": "40249d30f102664d1a0372e7cb46cf4fb5ebd3b72cb54b43bd9a69c79100f790",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02450.parquet",
+      "size": 71676,
+      "sha256": "4e80f8f022823405ac82e4c20b12694e0ab507fd5ac4e50b99d1311f934fce40",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02500.parquet",
+      "size": 71689,
+      "sha256": "5f0d894ef3cbef937f1a61e39d74fca90a73286190fbdbf489a38f718291d945",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02550.parquet",
+      "size": 71817,
+      "sha256": "f7126ab58d9b5306830a36a9bef6e1959ed6c8c1c7ea4f4d32edbffd3b4d45da",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02600.parquet",
+      "size": 71899,
+      "sha256": "282ff0ec81ab9f39b0e0f5950627fd6f2746afe3d48b4382a54c86811713c603",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02650.parquet",
+      "size": 71715,
+      "sha256": "ef55f58dc155dc90e895b419b629cc6cf13867be149510430a2d725bb65768ff",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02700.parquet",
+      "size": 71761,
+      "sha256": "5a7ac1ce59022d01a0721a1abe46ba6e6429cdf523dd44bd4193143bff9fc545",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02750.parquet",
+      "size": 71693,
+      "sha256": "d27cdb79c7697ce13aaed65b91699822b96703f0e6dde25683d9612daf07c479",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02800.parquet",
+      "size": 71302,
+      "sha256": "12f64370204101112cd7d7473843387465588939ce1ce90b45482e96bf4c8a79",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02850.parquet",
+      "size": 71747,
+      "sha256": "1632d5f1d12d5d04ee24cc8fbdb79f39249c1b5abd5a0878734388f17cbd0c27",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02900.parquet",
+      "size": 71660,
+      "sha256": "48b2b7b73a048ef71e1af5400a7002156cf049719ef8994b7e6024122a7c7ea9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_02950.parquet",
+      "size": 71402,
+      "sha256": "619eac4312e7b53b7459600f8206a654cfb8bdec81582774af7a80251174eeab",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03000.parquet",
+      "size": 71675,
+      "sha256": "e8ea4b6845040bbf86f1fdf49d90c8d5a33a1b7ea7d81121f614765854c104d7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03050.parquet",
+      "size": 71772,
+      "sha256": "8129d76e8eba66e5822f5eec3ab3b2970ae5aa0478647522e02e0d4544d2005e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03100.parquet",
+      "size": 71823,
+      "sha256": "e29b751353adf09bd6b295c01397acff80fb9030a37d3c46bebfbb809d7b058d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03150.parquet",
+      "size": 71862,
+      "sha256": "a2aef4bf3e2b7193d82c4a248640b35d00d8352187f6e92058c146fc097cb481",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03200.parquet",
+      "size": 71776,
+      "sha256": "14e9a4e3f2465af163b5b396fe9c4ecc85ccfdbec532c8e2996ef04912e20040",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03250.parquet",
+      "size": 72320,
+      "sha256": "47c7480ba770e0dac76e0feb3a30a1a44049e698b0caa7e35089a43952de4925",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03300.parquet",
+      "size": 71446,
+      "sha256": "061d0dd52faa1afdeb24f2184d71c3cc0737ca92823cf8a97a28aeadfc1d42c2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03350.parquet",
+      "size": 71628,
+      "sha256": "0348c9e158f8c78606890613fb734b35088e77f94bcd80164c7fc8720326e21a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03400.parquet",
+      "size": 71540,
+      "sha256": "d01f95995332cd4d53e5012eb3b369e1bea22e920db0f809fc2adaa76dadb010",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03450.parquet",
+      "size": 71515,
+      "sha256": "125ec37395553fe2e0a02d7d1f6408819821c0958de834c1efb632f1c0532b85",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03500.parquet",
+      "size": 71805,
+      "sha256": "64c411939699674517aff32198700fcb7eb0e567815a2c7d75d7876bf6687163",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03550.parquet",
+      "size": 71517,
+      "sha256": "ab99ebded0b348e2b5455cc1c90a1550f1b66866319349869bb2f575ea94898c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03600.parquet",
+      "size": 71772,
+      "sha256": "b0ef1b5fbb318e180f802668d2ce243613f857dc3eafcbe40bb9d09f24cdb707",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03650.parquet",
+      "size": 71928,
+      "sha256": "87c90e0e351853439116d1982f97249917e2b393877899deaa73ecffac7fded0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03700.parquet",
+      "size": 71553,
+      "sha256": "0a7adfb1060cfc31aa46b818a70dacad5a14a9b686ead0ff46dd9128d3a9c53a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03750.parquet",
+      "size": 71482,
+      "sha256": "8da8498d8f9077991fbaa8d247d08057d0e524e1fbdfc46d503eb8b881876672",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03800.parquet",
+      "size": 71750,
+      "sha256": "153f054dbf2763afc61bdc74149d1f4a8f5f3629fe40e5c175ffdbd4bf423ee2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03850.parquet",
+      "size": 71785,
+      "sha256": "6470d1a1aef130353edd7b3d88ca8bb99802628c8b37e0762039d6f183ad5c11",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03900.parquet",
+      "size": 71842,
+      "sha256": "ce51c8ae9ba2389cfec3fd455da3583989b6b2ddd628f7c013c00fb0f0d95867",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_03950.parquet",
+      "size": 71525,
+      "sha256": "16ae35114653f3ed79d093960d5105eee96a4977fdb190f9adf8fe76f24ccbb9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04000.parquet",
+      "size": 71903,
+      "sha256": "838ab40f0e1de60a9c1fdeea73def6782e0cbe097a76a6117a62b0496dd7fb11",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04050.parquet",
+      "size": 71736,
+      "sha256": "e588846dc54e8378563f0eb7f75c223f56b892a49be63c70092b5fefee1752c6",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04100.parquet",
+      "size": 71835,
+      "sha256": "42289ee07a49cb2ddbac98f9b71122ebc72b12e453499310ecfa8ca2f8b137fe",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04150.parquet",
+      "size": 71664,
+      "sha256": "639ef49487baea348fcd346967ebb4709b649517b4f16476b919c5ed14142da8",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04200.parquet",
+      "size": 71341,
+      "sha256": "6c9f8ed87e6981d66d1b6c7afbd0c124690fe0c7ca0592ec750129d964124b63",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04250.parquet",
+      "size": 71475,
+      "sha256": "458aa37a9c542d878ffdcc32b36d977f7bd204320d055396681999b1b0516ebd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04300.parquet",
+      "size": 71656,
+      "sha256": "b597483d08d24893707138da76569d1b93a603e8f6a095944ce27e0de862797c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04350.parquet",
+      "size": 71989,
+      "sha256": "dd8971863573a122e4bd83e17c1cf3429b7e1d9418f3be37a5dd2bf4b1179797",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04400.parquet",
+      "size": 71925,
+      "sha256": "d00c9ed27bb1a83ed5dd96d92df094ef19fea23b56e20660d37f8c9147e83830",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04450.parquet",
+      "size": 71859,
+      "sha256": "054f5dc4db698d40fe5545a2211e7a788de1a8170934cca4584b00b2439081b0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04500.parquet",
+      "size": 71628,
+      "sha256": "3b50b3bb343603749243f57716dd64f9cc46b7523b1d5ff8d7f3b5df2f716a64",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04550.parquet",
+      "size": 71268,
+      "sha256": "ca4b0f4c43107d60410e36c068a323f8e8bd572584c65bb3a4ca2f583fed61a7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04600.parquet",
+      "size": 71982,
+      "sha256": "4a804ba181363cbad9b48e5e80c957de9a52276f9e200d49949c7cb5b650d23b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04650.parquet",
+      "size": 71614,
+      "sha256": "49d0885e4935c7b2638e44a3580b352b4b5d9c5179911f63cb9509572e792881",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04700.parquet",
+      "size": 71551,
+      "sha256": "46adb7d949c86ba68513ec9a6ed55430ac64d25d66e7b7ff7cf7e30b41e68971",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04750.parquet",
+      "size": 71906,
+      "sha256": "c1df54031128eb6f288391fec5af974b299cf7ec19c80af287913ac9326deedb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04800.parquet",
+      "size": 71820,
+      "sha256": "a088fbb0e0e76dd644ac8419b6b2547bdbd48855b20a1db28d26a80d15a3f3a3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04850.parquet",
+      "size": 71711,
+      "sha256": "9110461d05b6142557f439403c504175791acacdfcc5360616f69d42c22f2e2d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04900.parquet",
+      "size": 71569,
+      "sha256": "a3a3a968c438f1fa5676c0f5ebb9e7a37bac5c777e33a11e3a32264350194dfa",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_04950.parquet",
+      "size": 71513,
+      "sha256": "fbf9bc892a03d0fc3c7ae25e5b55ee8f972e19fdfb83798c594fae8a8bb08e22",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05000.parquet",
+      "size": 71349,
+      "sha256": "0b6fe4d05648e52a70d03d72c8f6424710ec6503474da2eb58520294411ee6aa",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05050.parquet",
+      "size": 71564,
+      "sha256": "f492a9eeca595d107b64d7102f65fc03975296f0ac66233c9730dde317c02a2f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05100.parquet",
+      "size": 72053,
+      "sha256": "3b321debc05811da0a844b5a639616105a32a164536e645b0b9ff800c81d4d39",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05150.parquet",
+      "size": 71893,
+      "sha256": "2bf1abf22e768318e96c965febc5d5d4ca6df3bb9c5b7be98c13c67bffa50008",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05200.parquet",
+      "size": 71555,
+      "sha256": "caf182a8fa9287887151425965215c6a9790bc92839c24f006e7f2dde626c00d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05250.parquet",
+      "size": 71972,
+      "sha256": "506b179e588e8cfcd52165f40867322b8e2015bc9f4c6cd4280fbc0642104fc2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05300.parquet",
+      "size": 71565,
+      "sha256": "e6bc1a3cf45e9904a959d85e3e0a472fec11361adbe19405e390487bab902b68",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05350.parquet",
+      "size": 71396,
+      "sha256": "e8584947dd1d046cfa45157064567f11c942a5cf5d684abe5f1e458b7b05ef1f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05400.parquet",
+      "size": 71644,
+      "sha256": "4223f0f315d67cc7062665b08dd43ae0038bdeaef4a01a94569f7ca6b10ed766",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05450.parquet",
+      "size": 71580,
+      "sha256": "9e2afc1d8cf585e79da6067e409d327890398ab50f1687e13870267af08fa0bc",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05500.parquet",
+      "size": 71813,
+      "sha256": "dba3e61985fac0af5e9f53363cba658c591ee2fa3b849f4da559ea6511f50d96",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05550.parquet",
+      "size": 71302,
+      "sha256": "31625ab8c28e146d18a08e4d8055be9228fc69c02ffd2e9dcdf4a745e5991608",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05600.parquet",
+      "size": 71865,
+      "sha256": "8b75d6aeb2c0a13f58e152f12ebe8cbc32c86f3c30ee3735953ed03bb7576493",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05650.parquet",
+      "size": 71600,
+      "sha256": "241c2bed15b656713772eeb305df7f6b76ecd7589e45404705dc5add052d4f9b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05700.parquet",
+      "size": 71713,
+      "sha256": "4e98f94163c8db6cdc7ea32e0ea17feb909a79addc05544a0c728b7beb01d475",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05750.parquet",
+      "size": 71641,
+      "sha256": "8a442d0a14b11135715868f6f08c76a72a2a580e4d8005f37f3f8a30056bc76c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05800.parquet",
+      "size": 71790,
+      "sha256": "205a99d4efe05e08d978ef1c35153e5189c5a55cb1d5256699228e2b592b92b2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05850.parquet",
+      "size": 71706,
+      "sha256": "eb7ed4967f186aac33d591ccc1cf2aae77c224a960d22052b1cb49b08a120949",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05900.parquet",
+      "size": 72007,
+      "sha256": "20ff78b547716272d5c07f19afb5c5f48dc2838d3b0c89316f9b50f5f0b8394d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_05950.parquet",
+      "size": 71728,
+      "sha256": "7f4cf0b51b64df5a67b7b08440bc0905f359f64ec4d1015af84140919070f781",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06000.parquet",
+      "size": 71693,
+      "sha256": "7e7490d19838eca1114cc370a187a17684603b5c86f61be146efb8f083af00a2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06050.parquet",
+      "size": 71519,
+      "sha256": "c1deb3958d3aa6b97dd09cbab6b2980eb32f3fb2134e29ed411f25c7149ddafb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06100.parquet",
+      "size": 71808,
+      "sha256": "05903867e9a987ad9071ccf3a99b50013f52583f02a77b2f87422dfe95970a81",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06150.parquet",
+      "size": 71675,
+      "sha256": "83bb3bd84a7ed3196faaa6a92b40e419128fc0bf532f20084e7dcbe1382eb8e8",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06200.parquet",
+      "size": 71535,
+      "sha256": "791e8f9dd4da691ac3df4f9335907627744fe42b2e7f87c1364f76183aef1fe2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06250.parquet",
+      "size": 71585,
+      "sha256": "20645bfaca6f8e7e9abc71b36100260af35822a7204f7528a186a95416341e9b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06300.parquet",
+      "size": 71705,
+      "sha256": "ff36d527ac2dfe16500e3bfc3da530c0ff09ef339eee0ee4f0f3328b90e207a1",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06350.parquet",
+      "size": 72021,
+      "sha256": "2df83ef93881067b3d1ad049749963f58f0c363a607288d27128a7b446207246",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06400.parquet",
+      "size": 71809,
+      "sha256": "2dbadbbe3729ac06efcf9278badc08abe53f31e1d3b5a61e4ec0b0699efe011d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06450.parquet",
+      "size": 71844,
+      "sha256": "0288ac662459f2114b492f24eef8ca4b0ddf388b28207ea85e868745f253918a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06500.parquet",
+      "size": 71575,
+      "sha256": "675bb378d2dbac5eec42616b4547f7cc35a7d459e3f951879ea0d1bc253d9ca5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06550.parquet",
+      "size": 71842,
+      "sha256": "26808758f60794e7700b2acc824fd84c1f0a933ca1106fad85260a9276f1820b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06600.parquet",
+      "size": 71789,
+      "sha256": "c6acbfb2b11f2eb8f412d6d3b5bfac7557660acd8126967cff7a097ae353bd2e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06650.parquet",
+      "size": 72037,
+      "sha256": "5aec2e8d74f2d5ad3d14536cb67d421f9274a515e5446ab2ce8d791f44aff1d9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06700.parquet",
+      "size": 71639,
+      "sha256": "667accdc7b1597213330fa05fb4c07468393e1b29164e8b7b9276090b26b01fa",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06750.parquet",
+      "size": 71428,
+      "sha256": "1b6c81ba9c15851c718dc0f38f9a28dc02d7605e0298a107cec324580bb0748d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06800.parquet",
+      "size": 71783,
+      "sha256": "60a5f5e984ba4f51bdd858f6e4a646ca25d9aaf33fa60eb98b9e32254070da35",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06850.parquet",
+      "size": 71834,
+      "sha256": "975c20a96a78a7c51fb715f63ad339d75624263bc1e5bcf6e375af52cc06fb0f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06900.parquet",
+      "size": 71402,
+      "sha256": "14ba596de42f356c0a5b388452bf72feac383881b32544f35acc8e63630b534e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_06950.parquet",
+      "size": 71675,
+      "sha256": "cebe133921a7e1624403d77cacd817759b2e10338a4bf97c7969dda3eb53a8c4",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07000.parquet",
+      "size": 71558,
+      "sha256": "306f83114be0e16820a321903b0703bb726d16067521b0174a9d7635b3fd6a69",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07050.parquet",
+      "size": 71826,
+      "sha256": "ea246cc3314594c471f4663cf1b5dc1e5348d9812c90daf066c105f00538a140",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07100.parquet",
+      "size": 71640,
+      "sha256": "a0e4e91aacdbb63837dc4bd31f60989a1d642c3c33aedefc1362e85408b1a898",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07150.parquet",
+      "size": 71776,
+      "sha256": "74f529c61f61e35d90c794f30d00be923d3db092b3bfeea53bff6bc4f71866f3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07200.parquet",
+      "size": 71245,
+      "sha256": "74333ef919a2e52f097ca22baa7a82f55a02b5fc97199624a7c73240fab1888f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07250.parquet",
+      "size": 71830,
+      "sha256": "3da5bfa5c756db6dc8f2abb8f3f1dbbc43fba18c8203163200193db0ecb927e9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07300.parquet",
+      "size": 71857,
+      "sha256": "173c2af1464c907546b8245a4c4b9b7510b91fa727889429bc370ffb56706eae",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07350.parquet",
+      "size": 71852,
+      "sha256": "74ed20ecaae933b3260328d373146abccec0cd2d59afe1dabb338c31a59f2d62",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07400.parquet",
+      "size": 71805,
+      "sha256": "981d24489146c311e519fee350d6e6399fa35cc1b63fe0c61ea31545fe70ed7e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07450.parquet",
+      "size": 72029,
+      "sha256": "326fd10a4ebbd6e7069207ff8be21e5032181714b2182d2b3fe8ec2881fbf9bd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07500.parquet",
+      "size": 71573,
+      "sha256": "aaac2d7f2075051437fdbd9e40620ba004f257ed33f885950cbb88739d34526d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07550.parquet",
+      "size": 71804,
+      "sha256": "f17b05f801c8057a9b66621f8e793e0b1fe80772be3640a9887272412c366bf2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07600.parquet",
+      "size": 71943,
+      "sha256": "36eb10be165b7b9bfd26815c0b6ca2443f32c4080f57c70704031bac0acd1a43",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07650.parquet",
+      "size": 71565,
+      "sha256": "3ea5ceaa48168c2c738003a41537aea67382122d8fbffdf358408580970f5cb7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07700.parquet",
+      "size": 72113,
+      "sha256": "5ca41e44a1d72539fee788fc3487af354f564caecd947cef5c7a5c2dae3f98cf",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07750.parquet",
+      "size": 71920,
+      "sha256": "ead6752b7404fab67c2684c4f6852fc889fed57d692a4128b819da6160974205",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07800.parquet",
+      "size": 71640,
+      "sha256": "1da07a03e4a6dc84c1bf9b9af5eb0cad9b9c8ebe6af0a77596c11744286200ac",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07850.parquet",
+      "size": 71651,
+      "sha256": "67966354e949b2f8a5019be9e22dc351a521d1962abca809888465d19276e245",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07900.parquet",
+      "size": 72028,
+      "sha256": "2e21a01c733ab7775eacb538f1b0f444b7f56f7baa2c9c0b910acd4f19e3634d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_07950.parquet",
+      "size": 71603,
+      "sha256": "cb153e67d150c6fcc004de6c9a800409f0068cd2951013ec0c77d93a7f4baf4c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08000.parquet",
+      "size": 71662,
+      "sha256": "b43554a960d8401ba46549b8248d21c4c6353b473f9e9c97aff513330ae5e6d1",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08050.parquet",
+      "size": 71588,
+      "sha256": "16015a2a6564248261663f2fd8c6ff3a696c3f2ca22b6738825a3c33a4a51059",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08100.parquet",
+      "size": 71683,
+      "sha256": "4dc6844c9f57fcd67d54b39608ccd9f07563db47ddff651b703cf39f919408fa",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08150.parquet",
+      "size": 71727,
+      "sha256": "03cede869e49e48e023f45ca39caf1da1408c5f616a326dc97a7c52d0968f746",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08200.parquet",
+      "size": 71732,
+      "sha256": "9dbf0b337b1e2fa8937e8ce751c29bbe0752e8f73c3195ee22bddc25a1560ceb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08250.parquet",
+      "size": 71688,
+      "sha256": "a187edacc70e9d25ebd9a96e5ce9d1fa48d6b1e10e79f38afac29911d70c174d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08300.parquet",
+      "size": 71642,
+      "sha256": "582ad7338acf3d947889b5ce2c385a5d5482382b7556761638948976d5920478",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08350.parquet",
+      "size": 71625,
+      "sha256": "ff09acc7265f937964b93dee9d06f12f2ec65567e5b7620d873ff3cf5764bf6d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08400.parquet",
+      "size": 71614,
+      "sha256": "2dba76d173b5ac2afc9668c7caaf2ba8b67140218d13375e6cd5a484ca7fb0a5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08450.parquet",
+      "size": 71478,
+      "sha256": "9f82da2b4373c8bdd88360054df380afb2541c46f12690c9861a102ec1f6e005",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08500.parquet",
+      "size": 71299,
+      "sha256": "fe5b7cdf69a23ae3530d031b9ad87bf1ac09f5b49a8136ca91329d27c0b4da84",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08550.parquet",
+      "size": 71573,
+      "sha256": "a872c02fc327d9f9c3c4b9ae35f9505c0a52e3ba468f0dafa4e15c365d47349b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08600.parquet",
+      "size": 71767,
+      "sha256": "4c61b7740a94e41ebacec01b090c057dd1fd7d1e57586e2c07199ae2a24d2c7a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08650.parquet",
+      "size": 71402,
+      "sha256": "dceb954cd3bd4c126671095c8e527c9ca226b51666b839ad6b37ec7bcfc74bff",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08700.parquet",
+      "size": 71574,
+      "sha256": "1f0984770bacbd2e01ff63590f9e7bb1514b27c5ca3cecdc2f1e0ea92ce8b18d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08750.parquet",
+      "size": 71848,
+      "sha256": "5f67aa94f472c75738f280e5811f3b082086ae66ffde52154f9e0e21489b8c77",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08800.parquet",
+      "size": 71813,
+      "sha256": "c119f1fadb76c2a1553b655cbd78ebfc125d54e05feebec95205d11ba3be3b7e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08850.parquet",
+      "size": 71991,
+      "sha256": "0d9c445ca515fa429ed527c645a7136b6d6b62db40e927f75b06d090420c00db",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08900.parquet",
+      "size": 71690,
+      "sha256": "0ec53a8d2b973a811672de7030da2de662a802d0e2bf5e555b2de0f9ae831f11",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_08950.parquet",
+      "size": 71492,
+      "sha256": "5da2ccf7ff9721719d493801e772853f30237af39a12064e6ad695f3e483e57f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09000.parquet",
+      "size": 71560,
+      "sha256": "a3f67b6d45153f5f3f5a04e508ecb54c4ebc6457984b446d380df4de7c5dab1c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09050.parquet",
+      "size": 71908,
+      "sha256": "6bfff24351442bb698adad3d6f04c11842bd4c4942dd1204e36eee79987486ed",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09100.parquet",
+      "size": 71705,
+      "sha256": "a85d84e6b6255b33a61bcd3b988ae3999bcc278e2bd6bcaf9865ba22452645d5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09150.parquet",
+      "size": 72145,
+      "sha256": "732ff857875d1f6ea99a7e53d9fad8ecd405f03b3ae5c3207db3034cc796af01",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09200.parquet",
+      "size": 71615,
+      "sha256": "f891f102658923db15deb09837386021e9dab321d9c00d0d4d8d08a62e117e90",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09250.parquet",
+      "size": 71791,
+      "sha256": "39bd8bf4cd591d0a0ab5dd6560465b82d16a9f293f9773ade2e19f1f0fe33bf3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09300.parquet",
+      "size": 71906,
+      "sha256": "7d9e8f7a4359358c39634ddaa2dda762ffe3e1c6dc73967b11029a66800d7a90",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09350.parquet",
+      "size": 71717,
+      "sha256": "df9007c691d9c6c81850356ad7950d0c02a21320abe81309b411775703f068a6",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09400.parquet",
+      "size": 71819,
+      "sha256": "29654c05f355f3258a0d7d3a0eb1fa7a153d3ba43398c90194879fa12a29387f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09450.parquet",
+      "size": 71825,
+      "sha256": "9d0948e49d15723b1e08f29afd38dbe445d00de607cd77f42be8591595433a86",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09500.parquet",
+      "size": 71725,
+      "sha256": "50f97d8cf0f87d172fd2fd921b8f2bed68c3bfeed1c3b056aa1e87180d868aeb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09550.parquet",
+      "size": 71427,
+      "sha256": "d62203c102261d66f2455d6ee4587ce8ed55f4737e1c9301fb01b6c1ee83a54e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09600.parquet",
+      "size": 71715,
+      "sha256": "9f27f03cbe94485bef2454d76b347dc87027d52b774d62a79ca0830e8edf3419",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09650.parquet",
+      "size": 71578,
+      "sha256": "5725d293c6bc38c7e1e2ec24a08326a55f1cfa9159fe997cb9d6db0d2dcc293a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09700.parquet",
+      "size": 71818,
+      "sha256": "5a05faf7927e984f993636279763eba697099e8035b0cc679bcdc486cc8a9501",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09750.parquet",
+      "size": 71852,
+      "sha256": "5154b485e63f8bf2c91fa6466c0d812dec3090e50553378f2d37533cab703bda",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09800.parquet",
+      "size": 71360,
+      "sha256": "7b21a142ccf5c5f6e3160688b4ae215475ef80b42f661ab300ef11c822135e0d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09850.parquet",
+      "size": 71822,
+      "sha256": "b3e08fd99835bc3f9a993db66b1bafe92c98b374a2c9c3f78467f23d4fd260ed",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09900.parquet",
+      "size": 72106,
+      "sha256": "e77bda4228fe01833d72563a8def8bea2f0845ed400d8425498e3b2895bcc008",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/numerical_audit/pairwise_09950.parquet",
+      "size": 71989,
+      "sha256": "a5286c571835b7585bd0a2ac4060a84ba78a0166683ce8576b5d6c12948bc3eb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/Figure1_geometry.csv",
+      "size": 84676,
+      "sha256": "dff98874f1b51806304b474cd660f5f6f52de03236c1ac2281c15ff5967228a1",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/Figure2_crossed_grid_selected_contrasts.csv",
+      "size": 15625,
+      "sha256": "b10b96dac224f1049252a8c8427ab857e96537d040f968d180343928793284ba",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/Figure2_q99_display_limits.csv",
+      "size": 259,
+      "sha256": "51f43212b8d7baa8e450d9c50523e33104622e93d793f9146de92f023904ae99",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/Figure2_q99_ecdf.csv",
+      "size": 2732049,
+      "sha256": "3dc7b33f7b6b5979972b70cc2f1af0fb7b0b498afc6242cb25e1a769799fef94",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/Figure2_regional_paired_ecdf.csv",
+      "size": 6052109,
+      "sha256": "e98c54859452e29ab10092a835a94c9cc367e189db784997e8dd9e5f715b4bb2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/Figure2_regional_t95_summary.csv",
+      "size": 1495,
+      "sha256": "6ce095f1eaef9a2777bb98a6703d740e49b17ccd6a3c5a76b18f5a68fd7cc7ba",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/Figure3_conditional_dmv.csv",
+      "size": 1714,
+      "sha256": "7ca4f469b745baf1973284b5160adeeba8b296bcd9e7d6b0ff52ab78a4b7aff2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/Figure3_conditional_pairwise.csv",
+      "size": 1748,
+      "sha256": "7a12cd8560853c1bfbfa4b7aed4b75eee936c57c72d818f31dfd30fc9648508f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/FigureS8_crossed_full_method_profiles.csv",
+      "size": 35097,
+      "sha256": "9be589493760b0ecab02b4fc1a1545d23bb3e9a2fac3e92d34152b90848bd8ef",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/FigureS_new_fidelity_maxT.csv",
+      "size": 2641,
+      "sha256": "e7dd69313430e4b10daeb74fd74335a1587b4f6d26800e031326dad4d569a5c2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/Figure5_GEV_KDE_actual_ecdf.csv",
+      "size": 126846,
+      "sha256": "feb10de3493d4af282e704d2e436b0540d0799767e96d095fc5ed4721a8fc288",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/Figure5_GEV_KDE_capacity_ecdf.csv",
+      "size": 111132,
+      "sha256": "cabf82bc965b7da81741dd6a1ffa5dc4759af6cb9db53bfadaeaa98ed80e70a7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/Figure5_GEV_KDE_contract_ecdf.csv",
+      "size": 252341,
+      "sha256": "5d8f35f9a6be5ae28b37aea9768e75209e0e3cf8b89969cc755437d65d971cad",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/Figure5_mean_intervals.csv",
+      "size": 795,
+      "sha256": "0538c1a70d836ecd291dbd89f43e97a769a0fa58169eb9b048caa3e56dff4ef9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/Figure5_TAIL_EVENT-EMP_actual_ecdf.csv",
+      "size": 187217,
+      "sha256": "2de93d29ca5e01aa2cfd64b4111cdbdb8a9524c3dd0b518373c3e8cdd4db2e25",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/Figure5_TAIL_EVENT-EMP_capacity_ecdf.csv",
+      "size": 152359,
+      "sha256": "7d901f7c4f66fb43924c583a167ac5a955c65de64daa6c74b0628b8b5c54430e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/Figure5_TAIL_EVENT-EMP_contract_ecdf.csv",
+      "size": 260976,
+      "sha256": "3621f88b58338579a21a6139327de9a8e3f20d9a9eabac00ddc3c52dcd9bbff4",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/Figure5_TAIL_KDE_actual_ecdf.csv",
+      "size": 163725,
+      "sha256": "7e17e3b17cf2de94b11f70831a84b689d6a34795ab86cbddcbef98271ffabe9c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/Figure5_TAIL_KDE_capacity_ecdf.csv",
+      "size": 144707,
+      "sha256": "8399f38abf1c8c15b1d774e66c491f4b253fe2fdecc65098b02bd5d2cc9f4939",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/Figure5_TAIL_KDE_contract_ecdf.csv",
+      "size": 261464,
+      "sha256": "f47f59bbda01d28f2567024922dbedb372533156b1aec09886835c0ca2ffb45a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/FigureS6_physical_distribution.csv",
+      "size": 58545,
+      "sha256": "4cc81a770b6dbab16135ab552e4808ae7f904ce51c71348f52ad4a07c5337a59",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/high_density_v2/FigureS7_cell_distribution.csv",
+      "size": 6105,
+      "sha256": "24275abf82fe70b5d7821c7b6f67ea0fea86367734c22ad5b30824013318c72f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/r5/FigureS3_primitive_cells.csv",
+      "size": 3888,
+      "sha256": "5b389edd962011ffd2c9837a3c69427ba3ed1d8dcd79fe1845a97cf5ce689ae0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/r5/FigureS3_support.csv",
+      "size": 35428,
+      "sha256": "5c8df3284be6b2ee4245f90b422c05698dca6cf261685b5103aac54fd9e3e3bd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/plot/r5/FigureS3_W1.csv",
+      "size": 563,
+      "sha256": "ba9afa3cbaa9926725c3527248f73897ad6896e938f0a28cc65bb01fd077d80c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/README.md",
+      "size": 2354,
+      "sha256": "75555a4f068568b592a81e3a590fcba8cf612a15c6b015d6b3d67560c95a0634",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/reported_separate_experiments/FigureS4_parameter_recovery.csv",
+      "size": 38929,
+      "sha256": "0c6c4ab29c1acab86a695a21c45394fe14399f7c8970904a6df4ee3e36c8ffb4",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/reported_separate_experiments/FigureS5_physical_clipping.csv",
+      "size": 112136,
+      "sha256": "3942154b3b426deb611a2d0c3be23a9b74e04fa2db12c479db2e99b91524537a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/reported_separate_experiments/TableS10_conditional_coverage_source.csv",
+      "size": 703,
+      "sha256": "0dfd51c73eab24653fa9507980833312fd970a034acb110d59faeb34f75886fa",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/analytic_geometry_verified.csv",
+      "size": 84806,
+      "sha256": "67dc355f523332d328b42a054d6082b0d6dbfa4a71799b1789b90d4bffcad5a1",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/dgp_external_support/external_rolling_tail_scores.csv",
+      "size": 78600,
+      "sha256": "884e8de5df1cb52d7bd2cf45a5907e710ed63ef4d368079963508c833f5718ee",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/dgp_external_support/external_score_factory_paired_differences.csv",
+      "size": 192372,
+      "sha256": "176627d5225f3d1b69eabcb43cfeb50a3242a90163b47b0c94503d8b7b5c20be",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/dgp_external_support/external_score_paired_t_exact_signflip.csv",
+      "size": 33951,
+      "sha256": "efe8f360129188cd7386991d54e465924c4ffbc5e65eebc34f021460aa2824ee",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/dgp_external_support/support_five_policy_paired_vs_no_upper_first1000.csv",
+      "size": 45596,
+      "sha256": "690a954481cb74e8499512a383c0809b8f2ced43431578c44e659ab308c7531b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/run_manifest.json",
+      "size": 730067,
+      "sha256": "ba849b855c0bad2ccf9c2cbce16d3afad105b019d3df7a9826dd94ce007d1f02",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/decision_mode_crossings.csv",
+      "size": 3558,
+      "sha256": "96f128fe736255d11949eecc0b0626f8095aea7d9e046fc62415d52d671e748d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/fit_status_counts.csv",
+      "size": 189,
+      "sha256": "6762963f092146e51e6cf5dcf7f4655086bd44ade7b993e64d942d2e8b3b8bad",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/five_method_by_cell.csv",
+      "size": 19403,
+      "sha256": "1b9f7b769b7bbfa632aaaedae699ba2a983df948f5e7f55be06d2fe18c1d484a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/five_method_by_oracle_region.csv",
+      "size": 6704,
+      "sha256": "3e37b2423bd7aceb1703707d92cba021b75338ea7e8e0710ff6a5dce469a373f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/method_information_labels.csv",
+      "size": 379,
+      "sha256": "cef1304c9d9ffa80d884bc9d4d1b722978fef4372414127fbe71c0f4dd1f96b0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/oracle_numeric_near_tie_screen.csv",
+      "size": 2476,
+      "sha256": "3ca68a7473476bdbf044297564b67bfbd4f18d6b1a306ee092c99a00845902be",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/oracle_tariff_design.csv",
+      "size": 2343,
+      "sha256": "fac91eacc83a9117446d6d5b3d34ab2423a8c15b355494d328278f36d0f82e2f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/paired_method_contrasts_by_region.csv",
+      "size": 3198,
+      "sha256": "c6309b212ffe22fe3ec416d8204ffc0fff8c237d95a0567dbabdfe6c93bc32df",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/paired_regret_contrasts_by_cell.csv",
+      "size": 16937,
+      "sha256": "1878dff07f7f0a8cfb3d0b86d246003c73812d084c2312343f43988cbad949c8",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/paired_regret_contrasts_cell_region_alpha_loco.csv",
+      "size": 89059,
+      "sha256": "506cf5a15b157e093d6387fcb63849ab84763acf2db8f8cf4a60df2cdeb2adbc",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/signed_functional_errors_by_method_cell_region.csv",
+      "size": 32582,
+      "sha256": "97917d1ed0660971d8a7a60cde00c194908e6cd06c13525a19f0705e3e605ba7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/tail_candidate_threshold_diagnostics.csv",
+      "size": 5293892,
+      "sha256": "ca4120dc223dc2e7a94e2d354969321cc36bc784162cc124dbe12c0081c2ad7b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/tail_candidate_threshold_frequency_summary.csv",
+      "size": 516,
+      "sha256": "1dfb3d7a1ba072eb7a2e5a74ddc1f1811b9f8e5d4f4c6ed44e97afeaad35a9cd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/tail_fallback_count_threshold_frequencies.csv",
+      "size": 258,
+      "sha256": "79c3a7a3bbcc18e95a2ca85fac277f25f4806c7653cbb0815e319204467596a3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/01_NB_Weibull_五方法挑战_450000行/summary/tail_selected_fit_history_diagnostics.csv",
+      "size": 1443880,
+      "sha256": "fa591742d1e0892fe9ea5fd78d16e43cd3b9c268273778b463d159dbd46ac14e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/02_alpha120_物理实验_72800行/official_full_outputs/execution_summary.json",
+      "size": 5289,
+      "sha256": "5b523d34fd0f40a53f611cbd9b9f8d947ec7fd83eb293211d59d69eb199da385",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/03_high_pstar_1500000行/summary/high_pstar_cell_summary_10000.csv",
+      "size": 35181,
+      "sha256": "0fad52ca3489c92cd3565c6a3538c75705f9ff6efd50605b3d81d414ec0ea0bc",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/03_high_pstar_1500000行/summary/high_pstar_mode_confusion_10000.csv",
+      "size": 32363,
+      "sha256": "9b980ca7756e8a28c8c2ec1e3cf86ff2ee5d16fe4d0e82efc4d6bba2abf2c740",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/03_high_pstar_1500000行/summary/high_pstar_oracle_design_cells.csv",
+      "size": 4730,
+      "sha256": "ae0c6400797b01a503878443a9d6de2af0e0dc79b6598ab2fd5a3e1775fdbf28",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/03_high_pstar_1500000行/summary/high_pstar_oracle_region_summary_10000.csv",
+      "size": 7111,
+      "sha256": "31e7402ed203f9f4ec2255ca3dc2396a64274a7f7d0e2c47a034c027be7f58ef",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_density_v2/03_high_pstar_1500000行/summary/high_pstar_same_information_paired_contrasts.csv",
+      "size": 25360,
+      "sha256": "bc442caadece5e268ed9b7cebfa6573d78f969a0e77286fba3985210b646e9ae",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_pstar/high_pstar_cell_summary_10000.csv",
+      "size": 35181,
+      "sha256": "0fad52ca3489c92cd3565c6a3538c75705f9ff6efd50605b3d81d414ec0ea0bc",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_pstar/high_pstar_oracle_design_cells.csv",
+      "size": 4730,
+      "sha256": "ae0c6400797b01a503878443a9d6de2af0e0dc79b6598ab2fd5a3e1775fdbf28",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/high_pstar/high_pstar_same_information_paired_contrasts.csv",
+      "size": 25360,
+      "sha256": "bc442caadece5e268ed9b7cebfa6573d78f969a0e77286fba3985210b646e9ae",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/primary/method_cell_precision_10000.csv",
+      "size": 63226,
+      "sha256": "10a95a6f6ad64b498d21740aceb4fc591e51dc6c841e23fafedf7408108dcc00",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/primary/oracle_mode_values_9_cells.csv",
+      "size": 2879,
+      "sha256": "286c959358bc6559d3d37d95c3c8987ded08b7db8d1eba9b8dfa7330aa9f7715",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/primary/paired_regret_contrasts_10000.csv",
+      "size": 18553,
+      "sha256": "7b21d1b32f8d31745304158ae06cdc87b6182e434ea330bd05e13a35db9d0d03",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/primary/regret_contributions_by_method_oracle_region_10000.csv",
+      "size": 5925,
+      "sha256": "5066faa40cbd76c0a6fb6bc9fcd10b81312bc8e3b96dce64cabe1a09bfbb56b0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/primary/regret_tail_summary_by_method_cell_10000.csv",
+      "size": 18730,
+      "sha256": "c5a1193c4e1b94e3c370cd55cdaa8ed27f861a66c74eb0ab3b868690267e6742",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/primary/signed_functional_shifts_and_crossings_10000.csv",
+      "size": 12335,
+      "sha256": "9fdba4a1ad0fc66da18c6c1eec0b0753dea9ba410717682600896e97fb544f8e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/r5_primitive_bounds/primitive_summary_by_method_cell_oracle.csv",
+      "size": 3888,
+      "sha256": "5b389edd962011ffd2c9837a3c69427ba3ed1d8dcd79fe1845a97cf5ce689ae0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/r5_primitive_bounds/w1_summary_by_method.csv",
+      "size": 566,
+      "sha256": "6687d329d120dae9d58976715ef99f017e58f1848ba9ea0a3c4f9070186f9434",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/s6_alpha120/cell_method_oracle_region.csv",
+      "size": 58691,
+      "sha256": "d7189437eeedaad9cf58aea40fb54262f9a4a9e72d436c223dc68d4efc27374f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/s6_alpha120/method_overall_by_physical_scenario.csv",
+      "size": 3421,
+      "sha256": "215b67f689073b9e65a26419de53ae5a08ee58a7c599177b1ad80707f7c18dab",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/s6_alpha120/oracle_grid_42_cells.csv",
+      "size": 7471,
+      "sha256": "3f39a65665d3856afb5770f8117fa219e75ffd36ca25204c55c65ff1797dec10",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/teacher_sonnet/original_10_correlation_family_maxT.csv",
+      "size": 2943,
+      "sha256": "a06ba5701e499d9e1bb5f409fc5cdaf894447a12bc50f69585b775b83fcf2efc",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/teacher_sonnet/teacher_fig3d_dmv_certificate_pooled.csv",
+      "size": 1727,
+      "sha256": "ff2b797592d8ced4ebf6f535f9e92ef60f0e03ef1174cfb796cda3aa93b6edab",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/source/teacher_sonnet/teacher_fig3d_pairwise_certificate_pooled.csv",
+      "size": 1759,
+      "sha256": "4a9ce409d1235b02f4bf113600d3159f567b3b1fc2283eaa4a920b149a7982dd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "data/SOURCE_DATA_INDEX.csv",
+      "size": 101392,
+      "sha256": "b7081f429a070855a9ae0b1624bceb1fbfb87716887fdfa93139c24c92f415fe",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "docs/FINAL_ALIGNMENT.md",
+      "size": 5041,
+      "sha256": "d75756dcd5ffbb0b8150ba77c0d18e740638c09f7906bf86800ccf01b2b279e9",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "docs/REPRODUCING.md",
+      "size": 1935,
+      "sha256": "4751a7595f59e9ea768bf5ea3e92d8614a5700128f9a267d903314722d30451e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "LICENSE",
+      "size": 1125,
+      "sha256": "883dd618fc5b72674ac60c2c5a021b074d5c7fe02b810786a8d6f42f49be43ce",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/figures/Figure_1.pdf",
+      "size": 42395,
+      "sha256": "b55896a1e492daa487d888f5b1d1021359315ae84b666e4d449ff0ee06d6c057",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/figures/Figure_2.pdf",
+      "size": 107099,
+      "sha256": "f2cf17b260594de4c9bb644000cac23882db3a0bd6ce3980328830f5cde87328",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/figures/Figure_3.pdf",
+      "size": 35263,
+      "sha256": "f7d68994fb035d5ca518e36b334dce3d3f7be74e63df1f368cc1557e0cb92fab",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/figures/Figure_4.pdf",
+      "size": 43476,
+      "sha256": "a0a3ed81c2eefbc2e1da098544df9a98ca60c693adcca8792ee747ed6e475411",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/introduction_references.bib",
+      "size": 11738,
+      "sha256": "58a00f713b54f0e237013e7c3468e6860877ae6df5459adcb9e990118e364b58",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/Manuscript.pdf",
+      "size": 363500,
+      "sha256": "fb1fd307b3c58e26ad69f9f19481315e051d00e0149b9de3982bbe86ed6a29d3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/Manuscript.tex",
+      "size": 90354,
+      "sha256": "c61c5064b7ba97abf51cc7835e5334ef0884a85860dcfb19b2be11316902c2dd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/upload_tables/Table_1.tex",
+      "size": 1770,
+      "sha256": "d3fb8d0bf9d4a9d7aea5a057727a674f6bb49c424844ea5b8b78cdd2663e9289",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/upload_tables/Table_2.tex",
+      "size": 2177,
+      "sha256": "3db0144b1374813200bece39f0a2b4213b22cb878fb57aff33a09074a22f8a69",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/upload_tables/Table_3.tex",
+      "size": 2906,
+      "sha256": "79b875bf91c827fe6fc89001cfeb735cd28a119bded368c1581c16936e156bc1",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/wiley_template/lettersp.sty",
+      "size": 12456,
+      "sha256": "bfad6a8ea41ecd09fcd995b3846032161ec71aa448041f601f21e39f61dc0d0d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/main/wiley_template/WileyNJDv5.cls",
+      "size": 229196,
+      "sha256": "4ada59b8a19f7538ffe81a632f60e29dca57ffc5e11b2a3ad61c5eebd8558432",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/figures/FigureS1.pdf",
+      "size": 82891,
+      "sha256": "51e2c2aa94044b34bfa52b3a87867395854bb69852ad5150ca15f8b344abe93c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/figures/FigureS2.pdf",
+      "size": 33714,
+      "sha256": "5555fdb62eeadba1720e28807ec7f9852141316e484d16e00074031b5667da8c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/figures/FigureS3.pdf",
+      "size": 46142,
+      "sha256": "e285b4c9047883c864fa0973be0d8d8d11b23b09b59b8488c899f887b94971a2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/figures/FigureS4.pdf",
+      "size": 35429,
+      "sha256": "e1621c1690e2688dd9695e0708411d28e65163935cb6f2733de08a3c23ac4f10",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/figures/FigureS5.pdf",
+      "size": 14208,
+      "sha256": "90ece3812b13d1eec458d4e49abf75a74d4bafec927ea80a0a0b38e8d3759c5d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/figures/FigureS6.pdf",
+      "size": 115557,
+      "sha256": "476fa2400b54e3b6a6f964804095e69ea7ab8d59b7235fca2faa665bc15fd9c5",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/figures/FigureS7.pdf",
+      "size": 40183,
+      "sha256": "3f417371444ea0bbe58ce24014da218ba7b7b9e23e1db73a724444bec57ede2f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/figures/FigureS8.pdf",
+      "size": 37526,
+      "sha256": "95848cbf87cf3b7f964bc1aabcfc9b7f9d4660a7672ec92fcd5b671d5af315a2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/FIGURES.tex",
+      "size": 7744,
+      "sha256": "8f4b0563ab6bc7e93e8c5d172531139a11a9becc66c266aac917eb77551452b4",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/README.txt",
+      "size": 425,
+      "sha256": "98738dba69c253a2ebb19ee043bcbe3025502e72f03dab6978bfa4ea4bb80339",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/Supporting_Information.pdf",
+      "size": 651888,
+      "sha256": "4aab5439569d6558484d9d9fd86377f10994b72ea955a4512065f716bda94c31",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/Supporting_Information.tex",
+      "size": 52293,
+      "sha256": "2242a217bbaf111200d168b66d491f63754a27f0cea1338c10e989aae907cb2d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S1.tex",
+      "size": 1929,
+      "sha256": "4a67e04fb24b2cfbfb359da41841752143532224fb30e309f3e314bb5a0a16cb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S10.tex",
+      "size": 1248,
+      "sha256": "a8041c2bf668b21b3a9c2754c26fe23cd7da2102c9d09b6d159327da8ef6dc3e",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S10_numeric.csv",
+      "size": 305,
+      "sha256": "2a65d7c5e9ea21c08cebd0f67ef88a7a4abc36c155b0d21f9435730773aef061",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S11.tex",
+      "size": 3573,
+      "sha256": "64ea883c43bbbddbb00742e98bd7184fdc96fe37b7de969a55ee0a5df389166f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S11_display.csv",
+      "size": 2262,
+      "sha256": "6256c12a48d1bcfb4a2cad94fed2a4a4e1ea253282b7c6efc3fe5771eb41db26",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S11_numeric.csv",
+      "size": 26671,
+      "sha256": "2073baf196c22e8ba5c4a8836fdc7169a0c22cf465698d902684305d78077fc3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S12.tex",
+      "size": 2220,
+      "sha256": "6813923658ac3ce08e6646d2606d3f2b0c2d16e4176a92fc18f103539cbfbdaf",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S12_numeric.csv",
+      "size": 2860,
+      "sha256": "addd36054fb50466b578b290e13bf6dda493408e849089502bdc59e581681745",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S13.tex",
+      "size": 2153,
+      "sha256": "9430384bd20d7e3ec226bfb856209072181852b0301c87970b15d29d7fcd9510",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S14.tex",
+      "size": 1452,
+      "sha256": "ec8e673a3b5667f7d8e5de4359aa8981d5ef21f034e972ebebf3b9c4006dbd5f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S1_numeric.csv",
+      "size": 3134,
+      "sha256": "74385e4c35398b946f8212aa0b90033239c482a4a86fdb0476611718cbb9644f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S2.tex",
+      "size": 2121,
+      "sha256": "d3bd7acbd4921fb83186972bab34a55ae1ffc4ed79017fa4e3f331950df5cb97",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S2_numeric.csv",
+      "size": 3245,
+      "sha256": "0d5cb710a5df7e4700cd6632998551e6128502d00f57de2cdfe14fa8d8a8ff6c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S3.tex",
+      "size": 2740,
+      "sha256": "2f278a4cee0b35f76643831209e370e9ef052cc42f06219ac7fcb915644aeda3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S3_numeric.csv",
+      "size": 3371,
+      "sha256": "0508f5a7f8402ef0749b220ce5da47a80665b58d5b4e38cbb65d65ba20eed781",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S4.tex",
+      "size": 3504,
+      "sha256": "3d87b7439ef36d7ba4a2ef8db6912bac38e7a7f73f07ffdc3501bd6503ce7b2f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S4_display.csv",
+      "size": 2506,
+      "sha256": "c06577107d79a4fd65a68a0a261101b15326072221ce3347a8dfc0c64dce3697",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S4_numeric.csv",
+      "size": 18960,
+      "sha256": "d8388d99bdefd8a002e67ec3dc572f2086bf6491f7f30383ed9cc2b7fa3aec6f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S5.tex",
+      "size": 2224,
+      "sha256": "0edbe80389b57ae96e41a123b09c138f4813149c8ce1348cc18e768997976846",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S5_display.csv",
+      "size": 1439,
+      "sha256": "b0f5ca73b6411990d986ea218cce9dfcfb36c0a9c0751d45b44374ac15d0947b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S5_numeric.csv",
+      "size": 3159,
+      "sha256": "5d8bc7a74d59fceacd8f9bde09a8b83490a2e0cecaad92bccae3f348f87936e8",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S6.tex",
+      "size": 888,
+      "sha256": "0f525f51208ac3ad5e2027bddcae4b3e4e242ff5a88460f4c5ff6b8d3501aa45",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S6_display.csv",
+      "size": 158,
+      "sha256": "0c4af69435fc63367da5bfb2b21576a0327ca558d644b5592eba080d5d22d1d3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S6_numeric.csv",
+      "size": 566,
+      "sha256": "6687d329d120dae9d58976715ef99f017e58f1848ba9ea0a3c4f9070186f9434",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S7.tex",
+      "size": 1122,
+      "sha256": "04b4c0d7f73352aa54ebbe6bd19a7108d156a2ef1da6f43ad901121c4d083cbb",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S7_display.csv",
+      "size": 504,
+      "sha256": "d4206a79d3032d8002eb698ca33971fcfa4f34655b4ed847b1fd326cdf3bb250",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S7_numeric.csv",
+      "size": 2641,
+      "sha256": "e7dd69313430e4b10daeb74fd74335a1587b4f6d26800e031326dad4d569a5c2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S8.tex",
+      "size": 813,
+      "sha256": "674029d3ab126c66e3d62c3b269ae3dc01c30bf6bf4de6de44700bf318f55472",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S8_display.csv",
+      "size": 238,
+      "sha256": "a699e02a410e0b3387e507d7b0537983dd9e96344c554b6337f08b1e4e33b5c0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S8_numeric.csv",
+      "size": 220,
+      "sha256": "4b59722bd549a67711db90911141a461a6a476c1d7697b9cb8bfa1b63895fe03",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S9.tex",
+      "size": 1403,
+      "sha256": "47c63ae1353acbddbc20715629b4e71c0c902c26ee69e395e4be09daeb0948af",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S9_display.csv",
+      "size": 733,
+      "sha256": "544bfed0fd133d1d76e3a8467fefc37eec4954cba586406d58f36a878f414ebd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/tables/Table_S9_numeric.csv",
+      "size": 4376,
+      "sha256": "453ed71e03d49d2a9e00c75a727133dd089a78ee10265bd9e979b9621e617fe7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/wiley_template/lettersp.sty",
+      "size": 12456,
+      "sha256": "bfad6a8ea41ecd09fcd995b3846032161ec71aa448041f601f21e39f61dc0d0d",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "manuscript/supplementary/wiley_template/WileyNJDv5.cls",
+      "size": 229196,
+      "sha256": "4ada59b8a19f7538ffe81a632f60e29dca57ffc5e11b2a3ad61c5eebd8558432",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "README.md",
+      "size": 4198,
+      "sha256": "953f83bef876f7293647a643eb868caa483045e4041ede7e2254b3ded9fd277a",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "requirements.txt",
+      "size": 104,
+      "sha256": "418f1849bd85df4001eec1069b0d8b00a0baf64345a528b41c7139735ceaf7d8",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "SCIENTIFIC_OWNERSHIP.json",
+      "size": 604,
+      "sha256": "d7f287b2a2187c67b94eae970d765dfd9c3db51ec9917a383b6e8c78a38ff9b7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table3_regional_loss_numeric.csv",
+      "size": 6398,
+      "sha256": "350d4d48212661283fd6642cb79cf0c0517568f82ee56e06aa7f3b3fc101cb74",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table5_statistical_fidelity_numeric.csv",
+      "size": 792,
+      "sha256": "e67784b64e92ecf52d6c6134f4f8ed04e63bf7e61fe823ef5baf2061349496e0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S10_numeric.csv",
+      "size": 305,
+      "sha256": "2a65d7c5e9ea21c08cebd0f67ef88a7a4abc36c155b0d21f9435730773aef061",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S11_display.csv",
+      "size": 2262,
+      "sha256": "6256c12a48d1bcfb4a2cad94fed2a4a4e1ea253282b7c6efc3fe5771eb41db26",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S11_numeric.csv",
+      "size": 26671,
+      "sha256": "2073baf196c22e8ba5c4a8836fdc7169a0c22cf465698d902684305d78077fc3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S12_numeric.csv",
+      "size": 2860,
+      "sha256": "addd36054fb50466b578b290e13bf6dda493408e849089502bdc59e581681745",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S1_numeric.csv",
+      "size": 3134,
+      "sha256": "74385e4c35398b946f8212aa0b90033239c482a4a86fdb0476611718cbb9644f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S2_numeric.csv",
+      "size": 3245,
+      "sha256": "0d5cb710a5df7e4700cd6632998551e6128502d00f57de2cdfe14fa8d8a8ff6c",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S3_numeric.csv",
+      "size": 3371,
+      "sha256": "0508f5a7f8402ef0749b220ce5da47a80665b58d5b4e38cbb65d65ba20eed781",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S4_display.csv",
+      "size": 2506,
+      "sha256": "c06577107d79a4fd65a68a0a261101b15326072221ce3347a8dfc0c64dce3697",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S4_numeric.csv",
+      "size": 18960,
+      "sha256": "d8388d99bdefd8a002e67ec3dc572f2086bf6491f7f30383ed9cc2b7fa3aec6f",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S5_display.csv",
+      "size": 1439,
+      "sha256": "b0f5ca73b6411990d986ea218cce9dfcfb36c0a9c0751d45b44374ac15d0947b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S5_numeric.csv",
+      "size": 3159,
+      "sha256": "5d8bc7a74d59fceacd8f9bde09a8b83490a2e0cecaad92bccae3f348f87936e8",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S6_display.csv",
+      "size": 158,
+      "sha256": "0c4af69435fc63367da5bfb2b21576a0327ca558d644b5592eba080d5d22d1d3",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S6_numeric.csv",
+      "size": 566,
+      "sha256": "6687d329d120dae9d58976715ef99f017e58f1848ba9ea0a3c4f9070186f9434",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S7_display.csv",
+      "size": 504,
+      "sha256": "d4206a79d3032d8002eb698ca33971fcfa4f34655b4ed847b1fd326cdf3bb250",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S7_numeric.csv",
+      "size": 2641,
+      "sha256": "e7dd69313430e4b10daeb74fd74335a1587b4f6d26800e031326dad4d569a5c2",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S8_display.csv",
+      "size": 238,
+      "sha256": "a699e02a410e0b3387e507d7b0537983dd9e96344c554b6337f08b1e4e33b5c0",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S8_numeric.csv",
+      "size": 220,
+      "sha256": "4b59722bd549a67711db90911141a461a6a476c1d7697b9cb8bfa1b63895fe03",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S9_display.csv",
+      "size": 733,
+      "sha256": "544bfed0fd133d1d76e3a8467fefc37eec4954cba586406d58f36a878f414ebd",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "tables/Table_S9_numeric.csv",
+      "size": 4376,
+      "sha256": "453ed71e03d49d2a9e00c75a727133dd089a78ee10265bd9e979b9621e617fe7",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "validation/contract_correct_subset.json",
+      "size": 594,
+      "sha256": "93ce4652c17008590f9c5beef45948abeff9b12b0cb5148b740aa4c05c564278",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "validation/numerical_bounds_summary.json",
+      "size": 2066,
+      "sha256": "e4fc97936304730ee408910d435fdc5a6611833c3bc0cb8614463bcac9824a86",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    },
+    {
+      "relative_path": "validation/primary_analysis_checks.json",
+      "size": 1255,
+      "sha256": "d6edd38d8c4faa1e0ef300e658b74a5d32a305b19e4aa555ecfc0c34423c519b",
+      "role": "final submission companion",
+      "scientific_ownership_version": "final submission"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Method,Contrast,Estimate,Simultaneous 95% CI
+TAIL,Mean -- q99,+0.220,"[+0.203, +0.237]"
+TAIL,Stop-loss -- q99,+0.149,"[+0.139, +0.160]"
+EVENT-EMP,Mean -- q99,+0.555,"[+0.527, +0.583]"
+EVENT-EMP,Stop-loss -- q99,+0.405,"[+0.379, +0.432]"
+GEV,Mean -- q99,+0.457,"[+0.430, +0.483]"
+GEV,Stop-loss -- q99,+0.247,"[+0.226, +0.269]"
+KDE,Mean -- q99,+0.539,"[+0.514, +0.565]"
+KDE,Stop-loss -- q99,+0.316,"[+0.285, +0.347]"
+EMP,Mean -- q99,+0.559,"[+0.531, +0.587]"
+EMP,Stop-loss -- q99,+0.344,"[+0.317, +0.371]"

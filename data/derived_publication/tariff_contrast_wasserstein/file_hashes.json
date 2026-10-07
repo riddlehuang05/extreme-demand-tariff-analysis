@@ -1,0 +1,21 @@
+{
+  "audit_summary.json": "a6e41322cf95f11b90be18435a848ef6596c84b24ff43e0a7f8dcaec12f2705f",
+  "competitor_pair_summary.csv": "e00655046e5d10fcd7090f95431ac88456f8044a06897d6daf6cfeb9460be1bc",
+  "coverage_by_method_cell.csv": "611c803623544466ce6263cc62c14cc79d8b81b8321cf0ce80108544fa816d4d",
+  "es_atoms_boundary_audit.csv": "3fa4fbdd443360883d20e892cacd772660fca6186cacff20cde3542bc2d743e7",
+  "FigureS3.eps": "695e2c1eacdd40a1b5827c50279bf3096d34e4ce2ad942a662e6e63b388db0fb",
+  "FigureS3.pdf": "e285b4c9047883c864fa0973be0d8d8d11b23b09b59b8488c899f887b94971a2",
+  "FigureS3.png": "b7a1e47f8c309218326b0f93374ea4a62c75e8d8a9a27569f727c712a7eea94f",
+  "FigureS3.svg": "6d4b199297f1ec276d03d96cade8126f374c7fd5f91bd1888df700af7f5ae780",
+  "FigureS3.tiff": "9cbc7fdf8f1037bbd9e68b452f1c6cbf58963840226f8426b47e71f59230a699",
+  "FigureS3_coverage_input.csv": "5d115a5578e9441a18d0d3747bcf1e180234b7553ea21b23222917a95c90744a",
+  "FigureS3_primitive_cell_input.csv": "5b389edd962011ffd2c9837a3c69427ba3ed1d8dcd79fe1845a97cf5ce689ae0",
+  "FigureS3_support_input.csv": "5c8df3284be6b2ee4245f90b422c05698dca6cf261685b5103aac54fd9e3e3bd",
+  "FigureS3_W1_input.csv": "ba9afa3cbaa9926725c3527248f73897ad6896e938f0a28cc65bb01fd077d80c",
+  "numerical_condition_coverage.csv": "bd15c786d6b8444706e7a57e98e35b1832583f0409be3d9ad9c6936e73622738",
+  "primary_tariff_radii.csv": "229bd3b68b9d16b3badc76a61f631aa398b4d9571f1c7f891b581e8a686dda28",
+  "smoke_contrasts.csv": "c658e0aca60887638d5b3a2df2ab5a72146f53ef9d780e3a97ed5013032c05ed",
+  "smoke_radii.csv": "e1cf130a92ffbcf8d3220c03cdcb5d20f52278e948268e74ffc3ea0c56e3b3ee",
+  "smoke_summary.csv": "b699c3050bf6742b4e2d995d14e727ef2746d17a9bbba93eb581e2b760ff8be0",
+  "source_input_hashes.csv": "7920101eefcdd5c0bb845f122271521a6d67b5351214d754aad390050d4df596"
+}

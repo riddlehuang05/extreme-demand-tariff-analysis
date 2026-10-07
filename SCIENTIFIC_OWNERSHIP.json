@@ -1,0 +1,15 @@
+{
+  "Figure 1": "final main figure",
+  "Figure 2": "final main figure",
+  "Figure 3": "final main figure",
+  "Figure 4": "final main figure",
+  "Figure S1": "high-pstar",
+  "Figure S2": "functional/certificate diagnostics",
+  "Figure S3": "numerical bounds and support sensitivity",
+  "Figure S4": "parameter recovery",
+  "Figure S5": "physical clipping",
+  "Figure S6": "physical-pipeline",
+  "Figure S7": "NB-Weibull",
+  "Figure S8": "crossed-grid",
+  "Tariff-contrast Wasserstein audit": "deterministic post-processing of saved primary outputs; no simulated histories or refitted laws"
+}

@@ -1,0 +1,29 @@
+\begingroup
+\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{table}[tbp]
+\centering
+\caption{Primary tariff geometry and analytic demand-scale stability radii.}
+\label{tab:analytic-demand-radii}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}rrlrrrrrr@{}}
+\toprule
+$\alpha$ & Utilization & Oracle mode & $V_F^*$ & $\gamma_F$ & Relative gap & $\rho_F^{\mathrm{contrast}}$ & $\rho_F^{\mathrm{pair}}$ & $\rho_F$ \\
+& & & \shortstack{($10^3$ CNY/month)} & \shortstack{($10^3$ CNY/month)} & (\%) & (kW) & (kW) & (kW) \\
+\midrule
+1.05 & 0.620 & Actual & 5,336.473 & 43.036 & 0.806 & 1,195.45 & 1,195.45 & 298.86 \\
+1.05 & 0.630 & Capacity & 5,294.120 & 42.353 & 0.800 & 1,176.47 & 1,176.47 & 294.12 \\
+1.20 & 0.400 & Actual & 5,336.473 & 318.649 & 5.971 & 8,851.37 & 2,950.46 & 2,212.84 \\
+1.20 & 0.450 & Actual & 5,336.473 & 4.962 & 0.093 & 137.84 & 45.95 & 34.46 \\
+1.20 & 0.455 & Contract & 5,324.612 & 11.861 & 0.223 & 329.48 & 109.83 & 82.37 \\
+1.20 & 0.625 & Contract & 5,276.065 & 60.408 & 1.145 & 839.00 & 559.34 & 419.50 \\
+1.20 & 0.630 & Contract & 5,276.065 & 18.055 & 0.342 & 250.77 & 250.77 & 125.38 \\
+1.20 & 0.635 & Capacity & 5,252.434 & 23.631 & 0.450 & 328.20 & 328.20 & 164.10 \\
+1.20 & 0.700 & Capacity & 4,764.708 & 511.357 & 10.732 & 7,102.18 & 7,102.18 & 3,551.09 \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\linewidth}\footnotesize $V_F^*$ and $\gamma_F$ are in thousand CNY/month; relative gap is $100\gamma_F/V_F^*$. The direct contrast radius is $\rho_F^{\mathrm{contrast}}=\min_{m\neq m_F^*}\gamma_{F,m}/K_{m,m_F^*}$; the mode-wise pairwise radius is $\rho_F^{\mathrm{pair}}=\min_{m\neq m_F^*}\gamma_{F,m}/(L_m+L_{m_F^*})$; and the uniform radius is $\rho_F=\gamma_F/(2L)$ with $L=r_d\max\{1,\kappa\}$. All are oracle-dependent analytic quantities in kW and contain no numerical-integration or solver allowance. For the primary coefficients, $\kappa=2$, so $K_{\mathrm{act},\mathrm{con}}=36$ CNY/kW compared with $L_{\mathrm{act}}+L_{\mathrm{con}}=108$ CNY/kW. Across these cells, $\rho_F^{\mathrm{contrast}}\geq\rho_F^{\mathrm{pair}}\geq\rho_F$.\end{minipage}
+\end{table}
+\endgroup

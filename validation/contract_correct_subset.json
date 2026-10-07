@@ -1,0 +1,10 @@
+{
+  "subset_definition": "oracle_mode == contracted_maximum_demand AND action_correct",
+  "primary_certificate_split": "d_MV < 1 certified vs d_MV >= 1 uncertified (original Figure 3d definition)",
+  "additional_certificate_split": "pairwise_gap_certificate true vs false",
+  "decision_rows": 80330,
+  "histories": 8100,
+  "maximum_abs_mode_selection_regret_cny": 0.0,
+  "maximum_abs_decomposition_error_cny": 7.450580596923828e-09,
+  "interpretation": "Conditional on oracle contract and correct mode, total regret is within-contract loss; uncertainty uses history-clustered means."
+}

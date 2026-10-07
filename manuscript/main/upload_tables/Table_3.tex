@@ -1,0 +1,69 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,array,longtable}
+\usepackage{placeins,caption,setspace}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage[mathlines]{lineno}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\tablebodyfont}{\small}
+\newcommand{\tablefootnotefont}{\small}
+\renewcommand\linenumberfont{\normalfont\scriptsize\sffamily}
+\setlength\linenumbersep{10pt}
+\setstretch{1.25}
+\setlength{\emergencystretch}{2em}
+\captionsetup{font=small,labelfont=bf}
+\captionsetup{hypcap=false}
+\raggedbottom
+\makeatletter
+\newlabel{fig:statistical-regret}{{2}{}}
+\makeatother
+\begin{document}
+\setcounter{table}{2}
+\begingroup
+\centering
+\centering
+\captionof{table}{Regional decision loss across tariff modes.}
+\label{tab:table_3}
+{\small
+\resizebox{\linewidth}{!}{\begin{tabular*}{0.98\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{80pt}>{\raggedright\arraybackslash}p{65pt}>{\raggedright\arraybackslash}p{85pt}>{\raggedright\arraybackslash}p{85pt}>{\raggedright\arraybackslash}p{70pt}@{}}
+\toprule
+\textbf{Region} & \textbf{Method} & \textbf{Mean regret (thousand CNY/\allowbreak{}month)} & \textbf{Mean normalized regret (\%)} & \textbf{Oracle-mode accuracy (\%)} \\
+\midrule
+Actual-demand & TAIL & 6.15 & 0.115 & 71.9\\
+Actual-demand & EVENT-EMP & 6.76 & 0.127 & 70.0\\
+Actual-demand & GEV & 7.63 & 0.143 & 70.3\\
+Actual-demand & KDE & 6.81 & 0.128 & 76.6\\
+Actual-demand & EMP & 8.47 & 0.159 & 68.5\\
+Contract-demand & TAIL & 16.69 & 0.316 & 58.7\\
+Contract-demand & EVENT-EMP & 18.37 & 0.348 & 59.6\\
+Contract-demand & GEV & 20.18 & 0.382 & 55.1\\
+Contract-demand & KDE & 24.07 & 0.456 & 36.1\\
+Contract-demand & EMP & 22.34 & 0.423 & 58.4\\
+Capacity & TAIL & 24.38 & 0.485 & 64.4\\
+Capacity & EVENT-EMP & 27.05 & 0.539 & 63.1\\
+Capacity & GEV & 25.73 & 0.512 & 65.2\\
+Capacity & KDE & 20.25 & 0.398 & 68.6\\
+Capacity & EMP & 28.96 & 0.577 & 64.3\\\bottomrule
+\end{tabular*}}}
+\noindent{\tablefootnotefont
+\textit{Notes.}
+Each oracle region contains three prespecified primary tariff cells.
+Within each of the 10,000 histories and each predictive method,
+cell-level quantities are first averaged over the three cells in the
+region and are then averaged across histories. Mean regret is
+full-action regret $R_F(\widehat a)$, reported in $10^3$ CNY/month.
+Mean normalized regret is $100R_F(\widehat a)/V_F^\ast$.
+Oracle-mode accuracy is the percentage of corresponding cell-level
+decisions satisfying $\widehat m=m_F^\ast$. Formal paired regional
+mean differences and their paired Student $t$ 95\% intervals are shown
+in Figure~\ref{fig:statistical-regret}(b--d) and reported in
+Table~S12.\par}
+\endgroup
+\end{document}

@@ -1,0 +1,47 @@
+\begingroup
+\fontsize{8.5}{10.5}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}llllllll@{}}
+\caption{Fitting-support policy sensitivity.}\label{tab:final-si-11}\\
+\toprule
+Alpha / u & Policy & TAIL delta R & SE & Mode (\%) & GEV delta R & SE & Mode (\%)\\\midrule\endfirsthead
+Alpha / u & Policy & TAIL delta R & SE & Mode (\%) & GEV delta R & SE & Mode (\%)\\\midrule\endhead
+1.05/0.620 & Oracle reference & +0.000 & 0.000 & 0.00 & -0.086 & 0.061 & 0.20\\
+1.05/0.630 & Oracle reference & +0.000 & 0.000 & 0.00 & +0.042 & 0.042 & 0.10\\
+1.20/0.400 & Oracle reference & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.450 & Oracle reference & -0.005 & 0.005 & 0.10 & -0.000 & 0.000 & 0.00\\
+1.20/0.700 & Oracle reference & +0.003 & 0.003 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.635 & Oracle reference & -0.025 & 0.034 & 0.10 & +0.155 & 0.107 & 0.40\\
+1.20/0.625 & Oracle reference & +0.004 & 0.006 & 0.00 & +0.032 & 0.053 & 0.20\\
+1.20/0.630 & Oracle reference & +0.016 & 0.009 & 0.10 & +0.074 & 0.068 & 0.30\\
+1.20/0.455 & Oracle reference & +0.012 & 0.012 & 0.10 & -0.000 & 0.000 & 0.00\\
+1.05/0.620 & Training x10 & +0.043 & 0.043 & 0.10 & -0.043 & 0.043 & 0.10\\
+1.05/0.630 & Training x10 & +0.000 & 0.000 & 0.00 & +0.085 & 0.060 & 0.20\\
+1.20/0.400 & Training x10 & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.450 & Training x10 & -0.010 & 0.007 & 0.20 & -0.000 & 0.000 & 0.00\\
+1.20/0.700 & Training x10 & -0.000 & 0.004 & 0.00 & +0.726 & 0.726 & 0.10\\
+1.20/0.635 & Training x10 & -0.052 & 0.042 & 0.20 & +0.155 & 0.107 & 0.40\\
+1.20/0.625 & Training x10 & +0.062 & 0.061 & 0.10 & +0.032 & 0.053 & 0.20\\
+1.20/0.630 & Training x10 & +0.032 & 0.021 & 0.20 & +0.117 & 0.080 & 0.40\\
+1.20/0.455 & Training x10 & +0.024 & 0.017 & 0.20 & -0.000 & 0.000 & 0.00\\
+1.05/0.620 & Training x20 & +0.000 & 0.000 & 0.00 & -0.043 & 0.043 & 0.10\\
+1.05/0.630 & Training x20 & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.400 & Training x20 & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.450 & Training x20 & -0.005 & 0.005 & 0.10 & -0.000 & 0.000 & 0.00\\
+1.20/0.700 & Training x20 & +0.003 & 0.003 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.635 & Training x20 & -0.025 & 0.034 & 0.10 & +0.032 & 0.053 & 0.20\\
+1.20/0.625 & Training x20 & +0.004 & 0.006 & 0.00 & +0.032 & 0.053 & 0.20\\
+1.20/0.630 & Training x20 & +0.016 & 0.009 & 0.10 & +0.032 & 0.053 & 0.20\\
+1.20/0.455 & Training x20 & +0.012 & 0.012 & 0.10 & -0.000 & 0.000 & 0.00\\
+1.05/0.620 & Training x50 & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.05/0.630 & Training x50 & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.400 & Training x50 & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.450 & Training x50 & +0.000 & 0.000 & 0.00 & -0.000 & 0.000 & 0.00\\
+1.20/0.700 & Training x50 & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.635 & Training x50 & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.625 & Training x50 & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.630 & Training x50 & +0.000 & 0.000 & 0.00 & +0.000 & 0.000 & 0.00\\
+1.20/0.455 & Training x50 & +0.000 & 0.000 & 0.00 & -0.000 & 0.000 & 0.00\\
+\bottomrule
+\end{longtable}
+\noindent\footnotesize The TAIL and GEV column blocks each give paired mean change in regret, paired SE, and changed-mode percentage. All differences are relative to the primary support specification. The first 1,000 paired histories form this separate support audit. Loss and SE units: $10^3$ CNY/month. This subset does not replace the 10,000-history primary experiment.
+\endgroup
