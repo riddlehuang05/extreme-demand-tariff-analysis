@@ -1,10 +1,5 @@
-Supporting Information source package
+Supplementary materials
 
-This package contains the current supplementary LaTeX source, Figures S1-S8,
-Tables S1-S14, and the source files needed to compile the document. Figure and
-table numbering follows the current supplementary ownership map.
+This directory contains the Supporting Information PDF, individual PDF files for Figures S1-S8, and machine-readable CSV data supporting Tables S1-S14.
 
-Build from this directory with:
-  latexmk -xelatex -interaction=nonstopmode -halt-on-error Supporting_Information.tex
-
-The main manuscript is maintained separately.
+The main article PDF is in ../main/. Repository-level data and code documentation is in the README.md at the repository root.

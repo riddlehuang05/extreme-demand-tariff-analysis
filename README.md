@@ -1,53 +1,39 @@
-# Extreme-demand tariffs: final manuscript and reproducibility package
+# Data and code for *Decision-Relevant Modelling of Extreme Demand for Industrial Electricity Tariffs*
 
-This repository accompanies *Decision-Relevant Modelling of Extreme Demand for Industrial Electricity Tariffs*.
+This repository accompanies the article and provides its figures, supplementary materials, machine-readable analysis data, and code for a deterministic tariff-contrast stability audit.
 
-Industrial electricity tariffs translate uncertainty in monthly peak demand into different economic actions. This study links predictive distributions to the tariff functionals they affect, the optimized tariff mode, and the resulting full-action regret.
+## Study at a glance
 
-## Research design and findings
+The controlled study uses 10,000 paired 24-month histories, five predictive methods, and nine tariff settings, for 450,000 method–history–cell decisions. It examines how distributional features used by industrial electricity tariffs affect tariff choice and economic regret. An external rolling-forecast analysis covers eight eligible manufacturing facilities and compares predictive scores and hypothetical charges; it does not estimate savings from observed tariff bills.
 
-The final controlled analysis uses 10,000 shared 24-month histories, five predictive methods, and nine tariff settings, yielding 450,000 method–history–cell decisions. The five methods are TAIL, EVENT-EMP, GEV, KDE, and EMP.
+## Repository contents
 
-The theory characterizes contract demand through a tariff-implied constrained Expected Shortfall, separates full-action regret into mode-selection loss and within-contract excess, and gives competitor-specific and direct tariff-contrast stability bounds. A scalar mode-value certificate provides a compact stability summary; the contrast formulation retains the shared effect of a predictive distribution across competing tariff costs.
+| Path | Contents |
+|---|---|
+| [Main article (PDF)](manuscript/main/Manuscript.pdf) | Article for review |
+| [Supporting Information (PDF)](manuscript/supplementary/Supporting_Information.pdf) | Supplementary methods, results, figures, and tables |
+| `manuscript/main/figures/`, `manuscript/supplementary/figures/` | Figures 1–4 and S1–S8 as individual PDF files |
+| `manuscript/supplementary/tables/`, `tables/` | Machine-readable numeric and plotting data for the reported tables |
+| `data/` | Analysis records, experiment summaries, and plot data; see [`data/SOURCE_DATA_INDEX.csv`](data/SOURCE_DATA_INDEX.csv) |
+| [`code/`](code/) | Deterministic post-processing for the tariff-contrast stability audit |
+| [`docs/REPRODUCING.md`](docs/REPRODUCING.md) | Environment, command, inputs, outputs, and scope of the reproducible audit |
+| `FINAL_REPOSITORY_MANIFEST.json`, `FINAL_REPOSITORY_SHA256.csv` | File inventory and SHA256 checksums |
 
-The analysis reports signed functional associations using simultaneous familywise intervals, compares methods within matched information sets, and examines the findings under high-p* tariffs, fitting-support sensitivity, a joint negative-binomial–Weibull challenge, and physical-pipeline stress. In the monthly-maxima information set, the GEV–KDE mean-regret contrast is −3.887 thousand CNY/month in the contract-demand region and +5.470 thousand CNY/month in the capacity region.
+## Reproduce the deterministic audit
 
-Rolling forecasts from eight eligible manufacturing facilities provide an external comparison of predictive scores. Economic tariff regret is evaluated in the controlled tariff experiments.
-
-## What is included
-
-- The final main manuscript and Supporting Information LaTeX source, their review-facing PDFs, and the final Figure 1–4 and Figure S1–S8 PDF assets.
-- The final upload tables, machine-readable table sources, figure-ready data, and compact source summaries.
-- The deterministic tariff-contrast stability audit, with the saved source inputs required to rerun its numerical checks and Figure S3 outputs.
-- A filtered data index and a file-level SHA256 manifest for this release.
-
-The package is arranged so the manuscript, figures, tables, and supporting data can be checked together. The companion source-data archive distributed with the submission retains the full decision-level records for the other reported experiments.
-
-## Reproduce the deterministic stability audit
-
-Use Python 3.12 and install the dependencies in `requirements.txt`:
+From the repository root, using Python 3.12.10:
 
 ```bash
 python -m pip install -r requirements.txt
-python -m py_compile code/build_contrast_stability_package.py
-python code/build_contrast_stability_package.py --root .
+python code/build_contrast_stability_package.py
 ```
 
-The script reads saved oracle values, numerical-audit rows, and plotting inputs. It draws no random numbers, generates no histories, and fits no predictive laws. It writes the tariff radii, numerical coverage summaries, smoke checks, Expected-Shortfall identity audit, and Figure S3 files under `data/derived_publication/tariff_contrast_wasserstein/`.
+The script reads the supplied analysis records and writes audit tables and Figure S3 outputs under `data/derived_publication/tariff_contrast_wasserstein/`. It checks decision rows, computes analytic tariff radii and numerical coverage summaries, and runs deterministic smoke and Expected-Shortfall identity checks. This command reproduces the stability audit; it does not regenerate the simulation histories, refit predictive distributions, or rerun the primary tariff decisions. The solver allowance is a numerical bound, not an interval-arithmetic certificate. See [`docs/REPRODUCING.md`](docs/REPRODUCING.md) for the command's inputs and outputs.
 
-`data/derived_publication/tariff_contrast_wasserstein/source_input_hashes.csv` records the relative paths, sizes, and hashes of all 404 script inputs. The filtered `data/SOURCE_DATA_INDEX.csv` describes the data included in this repository.
+## Data and integrity
 
-## Manuscript files
-
-- Main article: `manuscript/main/Manuscript.tex`
-- Supporting Information: `manuscript/supplementary/Supporting_Information.tex`
-- Main figure PDFs: `manuscript/main/figures/`
-- Supplementary figure PDFs: `manuscript/supplementary/figures/`
-- Main upload tables: `manuscript/main/upload_tables/`
-- Supporting Information table sources: `manuscript/supplementary/tables/`
-
-See [the alignment note](docs/FINAL_ALIGNMENT.md) for the manuscript-to-data crosswalk and review criteria reflected in the final release.
+The source-data index identifies the supplied analysis records and their role. External-facility materials in this repository are predictive-score summaries and paired comparisons; the underlying facility time series are not redistributed here. Use the repository manifest and checksum file to verify the supplied files.
 
 ## Citation and license
 
-Cite the accompanying manuscript and this repository when using the materials. Code and data files are distributed under the MIT License; third-party data retain their original terms.
+Please cite the accompanying article when using these materials. The repository includes an MIT license; any third-party data remain subject to their source terms.

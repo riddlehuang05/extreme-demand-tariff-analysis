@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Deterministic post-processing for tariff-contrast Wasserstein stability.
 
-Reads only the saved primary oracle table, saved numerical-audit decision and
-competitor rows, and existing Figure S3 input tables. It generates no histories
-and fits no predictive laws. Run from an extracted Supplementary Source Data
-package with: python code/build_contrast_stability_package.py
-Dependencies: Python 3.12, numpy, pandas, pyarrow, matplotlib, Pillow.
+Reads the supplied oracle, decision-level audit, and plotting tables. It
+reproduces the deterministic tariff-contrast stability audit and Figure S3;
+it does not generate simulation histories, refit predictive laws, or rerun
+primary tariff decisions. From the repository root, run:
+    python code/build_contrast_stability_package.py
+Dependencies are pinned in requirements.txt (Python 3.12.10).
 """
 from __future__ import annotations
 

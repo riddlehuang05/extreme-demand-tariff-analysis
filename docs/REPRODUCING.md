@@ -1,26 +1,38 @@
-# Reproduction guide
+# Reproducing the deterministic tariff-contrast audit
 
-## Final paper assets
+## Environment
 
-The `manuscript/` tree contains the final LaTeX source, bibliography, Wiley class and style files, upload tables, canonical figure PDFs, and review-facing manuscript/SI PDFs. The source trees compile from their own directories using the supplied dependencies.
-
-## Deterministic tariff-contrast audit
-
-From the repository root, install the pinned environment and run:
+The supplied environment is pinned in `requirements.txt` and was prepared for Python 3.12.10. Run the commands below from the repository root.
 
 ```bash
 python -m pip install -r requirements.txt
-python code/build_contrast_stability_package.py --root .
+python code/build_contrast_stability_package.py
 ```
 
-This is deterministic post-processing of saved final analysis records. The script verifies the 450,000 primary decisions, checks both competitor-specific gaps for every decision, computes analytic tariff radii, and writes numerical coverage and smoke-audit outputs. It does not generate histories, refit predictive laws, or rerun primary tariff decisions.
+## What the command does
 
-The script consumes 404 saved files listed in `data/derived_publication/tariff_contrast_wasserstein/source_input_hashes.csv`. It also uses the final Figure S3 source tables in `data/plot/r5/` and compact source tables under `data/source/`.
+The script uses saved analysis records to reproduce the deterministic audit of tariff-contrast stability. It reads:
 
-## Figure, table, and inference sources
+- the nine-cell oracle mode-value table;
+- the saved primary decision and competitor-level numerical-audit records;
+- the saved Wasserstein, primitive-perturbation, and support-sensitivity summaries.
 
-- Main Figures 1–4 are supplied as canonical PDFs; machine-readable plot data are in `data/plot/`.
-- Supplementary Figures S1–S8 and Tables S1–S14 are supplied with their LaTeX source. Numeric and display data are in `tables/`.
-- Primary regional contrasts use history-paired Student t intervals (df = 9,999); external score comparisons use factory-level paired Student t intervals (df = 7). The separate simultaneous-correlation and threshold-fixed bootstrap procedures remain documented in the final article and Supporting Information.
+It verifies the expected primary design dimensions, calculates the analytic tariff radii and numerical sufficient-condition coverage, writes the competitor-pair summary, and runs smoke checks for contrast bounds and the constrained Expected-Shortfall identity. It also regenerates the Figure S3 plotting outputs from the supplied source tables. The inputs used and their SHA256 values are recorded in `data/derived_publication/tariff_contrast_wasserstein/source_input_hashes.csv`.
 
-The package manifest and SHA256 list make file-level integrity checks straightforward. The full source-data archive accompanying the submission provides the complete decision-level records for the reported simulation designs.
+The generated audit tables and figure files are written under:
+
+```text
+data/derived_publication/tariff_contrast_wasserstein/
+```
+
+## Scope and interpretation
+
+This is deterministic post-processing of saved records. It generates no histories, refits no predictive distributions, and reruns no primary tariff decisions. It therefore reproduces the stated stability audit, not the complete simulation and fitting pipeline for every result in the article.
+
+The solver allowance is reported as a numerical objective-suboptimality bound. Its floating-point evaluation is not certified using directed rounding or interval arithmetic; the audit must not be interpreted as a machine-certified bound.
+
+## Data and checksums
+
+`data/SOURCE_DATA_INDEX.csv` describes the supplied source and analysis files. `FINAL_REPOSITORY_MANIFEST.json` lists the release contents, and `FINAL_REPOSITORY_SHA256.csv` provides file-level checksums. The script also records hashes for its direct inputs in the generated output directory.
+
+External-facility results are supplied as predictive-score summaries and paired comparisons. The underlying facility time series are not included in this repository.
