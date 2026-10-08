@@ -2,5 +2,3 @@
 numpy==2.4.6
 pandas==2.3.3
 pyarrow==23.0.1
-matplotlib==3.10.9
-Pillow==11.3.0

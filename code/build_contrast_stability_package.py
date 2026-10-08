@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Deterministic post-processing for tariff-contrast Wasserstein stability.
 
-Reads the supplied oracle, decision-level audit, and plotting tables. It
-reproduces the deterministic tariff-contrast stability audit and Figure S3;
+Reads the supplied oracle, decision-level audit, and source tables. It
+reproduces the deterministic tariff-contrast stability audit;
 it does not generate simulation histories, refit predictive laws, or rerun
 primary tariff decisions. From the repository root, run:
     python code/build_contrast_stability_package.py
@@ -17,18 +17,11 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
-from PIL import Image
 
 MODES = ["capacity", "actual_maximum_demand", "contracted_maximum_demand"]
 SHORT = dict(zip(MODES, ["cap", "act", "con"]))
 RD, KAPPA, RC = 36.0, 2.0, 22.5
 METHODS = ["TAIL", "EVENT-EMP", "GEV", "KDE", "EMP"]
-COLORS = dict(zip(METHODS, ["#176B87", "#985D88", "#D17828", "#39836C", "#666666"]))
-MARKERS = dict(zip(METHODS, ["o", "s", "^", "D", "v"]))
 REGIONS = ["actual_maximum_demand", "contracted_maximum_demand", "capacity"]
 REGION_LABELS = dict(zip(REGIONS, ["Actual", "Contract", "Capacity"]))
 
@@ -325,100 +318,18 @@ def run_es_smoke(out: Path):
     pd.DataFrame(rows).to_csv(out / "es_atoms_boundary_audit.csv", index=False)
     return rows
 
-def save_figure_s3(root: Path, out: Path, coverage: pd.DataFrame):
+def save_audit_input_tables(root: Path, out: Path, coverage: pd.DataFrame):
+    """Write machine-readable source tables used by the stability audit."""
     src = root / "data/source"
     w = pd.read_csv(src / "r5_primitive_bounds/w1_summary_by_method.csv")
     primitive = pd.read_csv(src / "r5_primitive_bounds/primitive_summary_by_method_cell_oracle.csv")
     support = pd.read_csv(src / "dgp_external_support/support_five_policy_paired_vs_no_upper_first1000.csv")
-    oracle = pd.read_csv(src / "primary/oracle_mode_values_9_cells.csv").sort_values(["alpha", "utilization"])
-    cells = oracle.cell_id.tolist()
-    labels = [f"{a:.2f}/{u:.3f}" for a, u in zip(oracle.alpha, oracle.utilization)]
-    assert len(cells) == 9 and set(w.method_id) == set(METHODS)
     out.mkdir(parents=True, exist_ok=True)
-    # Persist plotting inputs alongside the output for transparent Figure S3 provenance.
     w.to_csv(out / "FigureS3_W1_input.csv", index=False)
     primitive.to_csv(out / "FigureS3_primitive_cell_input.csv", index=False)
     support.drop(columns=[c for c in support.columns if "maximum_abs" in c], errors="ignore").to_csv(
         out / "FigureS3_support_input.csv", index=False)
     coverage.to_csv(out / "FigureS3_coverage_input.csv", index=False)
-
-    plt.rcParams.update({
-        "font.family": "DejaVu Serif", "font.size": 8, "axes.titlesize": 9,
-        "axes.labelsize": 8, "xtick.labelsize": 7.4, "ytick.labelsize": 7.4,
-        "legend.fontsize": 7.2, "axes.spines.top": False, "axes.spines.right": False,
-        "axes.linewidth": .65, "lines.linewidth": 1.15,
-        "ps.fonttype": 42, "svg.fonttype": "path", "savefig.facecolor": "white",
-        "figure.facecolor": "white", "mathtext.fontset": "dejavuserif",
-        "axes.unicode_minus": True,
-    })
-    def panel(ax, letter, title):
-        ax.grid(axis="y", color="#dddddd", linewidth=.4)
-        ax.set_axisbelow(True)
-        ax.set_title(f"({letter})  {title}", loc="left", pad=7, fontweight="bold")
-    fig, aa = plt.subplots(2, 3, figsize=(7.01, 5.85))
-    fig.subplots_adjust(left=.13, right=.98, bottom=.22, top=.94, wspace=.50, hspace=.80)
-    a, b, c = aa[0]
-    for i, method in enumerate(METHODS):
-        row = w[w.method_id == method].iloc[0]
-        a.plot([row.cdf_lower_mean_kw / 1000, row.cdf_upper_mean_kw / 1000],
-               [4-i, 4-i], color=COLORS[method])
-        a.plot(row.w1_mean_kw / 1000, 4-i, marker=MARKERS[method], color=COLORS[method], ms=4)
-    a.set_yticks(range(5), METHODS[::-1])
-    a.set(xscale="log", xlabel="Mean $W_1$ (MW)")
-    panel(a, "a", "Numerical $W_1$ bounds")
-    for method in METHODS:
-        z = primitive[primitive.method_id == method].set_index("cell_id").loc[cells]
-        b.plot(np.arange(9) + (METHODS.index(method)-2)*.09,
-               z.numerical_certificate_coverage*100, linestyle="none",
-               marker=MARKERS[method], ms=3.1, color=COLORS[method])
-    b.set_xticks(range(9), labels, rotation=70, ha="right")
-    b.set_ylabel("Coverage (%)")
-    panel(b, "b", "Primitive bound")
-    plot_rows = coverage.set_index("condition").loc[
-        ["Primitive numerical check", "Contrast-Wasserstein numerical check",
-         "Mode-wise pairwise-Wasserstein numerical check",
-         "Uniform-Wasserstein numerical check", "Distributional envelope"]]
-    vals = plot_rows.coverage_percent.to_numpy()
-    barlabels = ["Primitive", "Contrast $W_1$", "Mode-wise $W_1$", "Uniform $W_1$", "Envelope"]
-    c.barh(range(5), vals, color="#777777", height=.55)
-    c.set_yticks([])
-    c.set_ylim(4.65, -.65)
-    for i, lab in enumerate(barlabels):
-        c.text(.01, i-.34, lab, transform=c.get_yaxis_transform(),
-               ha="left", va="bottom", fontsize=6.3)
-    c.set_xlim(0, max(7.1, 1.3*max(vals)))
-    c.set_xlabel("Decision coverage (%)")
-    for i, val in enumerate(vals):
-        c.text(val+.12, i, f"{val:.2f}%", va="center", fontsize=6.8)
-    panel(c, "c", "Coverage")
-
-    policies = ["legacy_oracle_B", "training_B_c10", "training_B_c20", "training_B_c50"]
-    pc, pm = ["#333333", "#D17828", "#39836C", "#985D88"], ["s", "^", "D", "o"]
-    for j, method in enumerate(["TAIL", "GEV", "TAIL"]):
-        ax = aa[1, j]
-        for k, policy in enumerate(policies):
-            z = support[(support.method_id == method) & (support.comparison_policy == policy)].set_index("cell_id").loc[cells]
-            metric = "mode_changed" if j == 2 else "regret_cny_per_month"
-            scale = .01 if j == 2 else 1000
-            ax.errorbar(np.arange(9)+(k-1.5)*.14,
-                        z[metric+"_paired_mean_difference"]/scale,
-                        yerr=z[metric+"_paired_se"]/scale, fmt=pm[k], color=pc[k],
-                        ms=2.8, capsize=1.3, lw=.7)
-        ax.axhline(0, lw=.7, color="#555")
-        ax.set_xticks(range(9), labels, rotation=70, ha="right")
-        ax.set_ylabel("Δ regret (10³ CNY/month)" if j == 0 else ("Changed modes (%)" if j == 2 else None))
-        panel(ax, "def"[j], f"{method}: support sensitivity" if j < 2 else "Mode switches")
-    fig.legend(handles=[Line2D([], [], color=col, marker=mr, label=lab, ms=3, lw=0)
-                        for col, mr, lab in zip(pc, pm, ["Oracle reference", "Training B × 10",
-                                                          "Training B × 20", "Training B × 50"])],
-               loc="lower center", bbox_to_anchor=(.52, .012), ncol=4, frameon=False, columnspacing=1.)
-    base = out / "FigureS3"
-    for ext in ("svg", "eps", "png"):
-        fig.savefig(base.with_suffix("."+ext), format=ext, dpi=600 if ext == "png" else 160)
-    with Image.open(base.with_suffix(".png")) as im:
-        im.convert("RGB").save(base.with_suffix(".tiff"), format="TIFF",
-                               compression="tiff_lzw", dpi=(600, 600))
-    plt.close(fig)
 
 
 def main():
@@ -432,7 +343,7 @@ def main():
     coverage, by_method_cell = numerical_audit(root, out)
     smoke_n, radius_n = run_smoke(out)
     es_rows = run_es_smoke(out)
-    save_figure_s3(root, out, coverage)
+    save_audit_input_tables(root, out, coverage)
     input_paths = [
         root / "data/source/primary/oracle_mode_values_9_cells.csv",
         root / "data/source/r5_primitive_bounds/w1_summary_by_method.csv",

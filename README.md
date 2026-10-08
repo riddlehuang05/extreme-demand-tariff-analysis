@@ -11,7 +11,7 @@ The controlled study uses 10,000 paired 24-month histories, five predictive meth
 | Path | Contents |
 |---|---|
 | `manuscript/supplementary/tables/`, `tables/` | Machine-readable numeric and plotting data for the reported tables |
-| `data/` | Analysis records, experiment summaries, and plot data; see [`data/SOURCE_DATA_INDEX.csv`](data/SOURCE_DATA_INDEX.csv) |
+| `data/` | Analysis records, experiment summaries, and machine-readable figure inputs; see [`data/SOURCE_DATA_INDEX.csv`](data/SOURCE_DATA_INDEX.csv) |
 | `code/` | Deterministic post-processing for the tariff-contrast stability audit |
 | [`docs/REPRODUCING.md`](docs/REPRODUCING.md) | Environment, command, inputs, outputs, and scope of the reproducible audit |
 | `FINAL_REPOSITORY_MANIFEST.json`, `FINAL_REPOSITORY_SHA256.csv` | File inventory and SHA256 checksums |
@@ -25,7 +25,7 @@ python -m pip install -r requirements.txt
 python code/build_contrast_stability_package.py
 ```
 
-The script reads the supplied analysis records and writes audit tables and Figure S3 outputs in PNG, SVG, EPS, and TIFF formats under `data/derived_publication/tariff_contrast_wasserstein/`. It checks decision rows, computes analytic tariff radii and numerical coverage summaries, and runs deterministic smoke and Expected Shortfall identity checks. This command reproduces the stability audit; it does not regenerate the simulation histories, refit predictive distributions, or rerun the primary tariff decisions. The solver allowance is a numerical bound, not an interval-arithmetic certificate. See [`docs/REPRODUCING.md`](docs/REPRODUCING.md) for the command's inputs and outputs.
+The script reads the supplied analysis records and writes machine-readable audit tables and summaries under `data/derived_publication/tariff_contrast_wasserstein/`. It checks decision rows, computes analytic tariff radii and numerical coverage summaries, and runs deterministic smoke and Expected Shortfall identity checks. This command reproduces the stability audit; it does not regenerate the simulation histories, refit predictive distributions, or rerun the primary tariff decisions. The solver allowance is a numerical bound, not an interval-arithmetic certificate. See [`docs/REPRODUCING.md`](docs/REPRODUCING.md) for the command's inputs and outputs.
 
 ## Data and integrity
 

@@ -1,10 +1,10 @@
 # Data included in the final repository
 
-The data tree is organized around the published figures, tables, and stability calculations.
+The data tree contains machine-readable inputs associated with the reported figures, table values, and stability calculations.
 
 | Path | Contents |
 |---|---|
-| `plot/` | Machine-readable inputs for final main and supplementary figures, including paired primary distributions, crossed-grid profiles, and Figure S3 panels |
+| `plot/` | CSV inputs associated with reported main and supplementary figures, including paired primary distributions and crossed-grid profiles |
 | `source/primary/` | Final 10,000-history oracle, paired-contrast, regret-contribution, precision, and signed-functional summaries |
 | `source/high_pstar/` | Final high-p* design, cell summaries, and same-information contrasts |
 | `source/s6_alpha120/` | Physical-pipeline tariff design, oracle grid, and method-by-region summaries |
@@ -12,7 +12,7 @@ The data tree is organized around the published figures, tables, and stability c
 | `source/dgp_external_support/` | External predictive-score sources and fitting-support sensitivity records |
 | `source/crossed_grid_no_upper_1000/` | Tariff design and cell/region summaries for the 76-cell crossed analysis |
 | `numerical_audit/` | Saved final decision and competitor-pair records used by the direct tariff-contrast numerical audit |
-| `derived_publication/tariff_contrast_wasserstein/` | Analytic radii, numerical-condition coverage, smoke checks, identity checks, final Figure S3 outputs, and exact input hashes |
+| `derived_publication/tariff_contrast_wasserstein/` | Analytic radii, numerical-condition coverage, smoke checks, identity checks, audit tables, and exact input hashes |
 | `reported_separate_experiments/` | Source records for parameter recovery, physical clipping, and threshold-fixed bootstrap coverage |
 | `../tables/` | Machine-readable final main and supplementary table values |
 
