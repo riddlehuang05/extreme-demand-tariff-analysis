@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "source_sha256": "52e4b1b0d3554cc80734034c2fdc80af7c136cadd055cf5977a91bfdf8f2afc0",
+  "rows": 150000,
+  "histories": 10000,
+  "cell_statuses": [
+    {
+      "cell_id": "STRESS_CONTRACT_CLEAR",
+      "oracle_contract_status": "interior"
+    },
+    {
+      "cell_id": "STRESS_CONTRACT_NEAR_HIGH",
+      "oracle_contract_status": "interior"
+    },
+    {
+      "cell_id": "STRESS_CONTRACT_NEAR_LOW",
+      "oracle_contract_status": "lower"
+    }
+  ],
+  "output_sha256": "dfda8f6b475a6c7d9627028e9f126252334563a37152771f11201125fe5b5c4b"
+}

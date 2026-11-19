@@ -1,4 +1,4 @@
-# Tested on Python 3.12.10
-numpy==2.4.6
-pandas==2.3.3
-pyarrow==23.0.1
+numpy==2.3.5
+pandas==3.0.1
+scipy==1.16.3
+pyarrow==26.0.1

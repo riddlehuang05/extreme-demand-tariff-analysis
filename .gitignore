@@ -3,3 +3,11 @@ __pycache__/
 .venv/
 .env
 *.pdf
+*.aux
+*.log
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.out
+*.synctex.gz

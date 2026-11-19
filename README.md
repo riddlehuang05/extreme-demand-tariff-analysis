@@ -1,40 +1,27 @@
-# Current CSSC revision
+# Extreme-demand tariff decisions: CSSC reproducibility record
 
-The current version of When Do Extreme-Demand Models Improve Tariff Decisions? A Computational Comparison is in [cssc_20261119/](cssc_20261119/README.md). It includes the revised manuscript, Supporting Information, scripts, results, and audit records. The materials below document an earlier article archive.
+This repository accompanies *When Do Extreme-Demand Models Improve Tariff Decisions? A Computational Comparison*. It contains the submitted article, the result records needed to audit its main numerical claims, and one verification command.
 
-# Data and code for *Decision-Relevant Modelling of Extreme Demand for Industrial Electricity Tariffs*
-
-This repository accompanies the article with machine-readable supplementary tables, analysis data, code, and reproducibility documentation. The manuscript and Supporting Information are supplied through the journal submission materials.
-
-## Study at a glance
-
-The controlled study uses 10,000 paired 24-month histories, five predictive methods, and nine tariff settings, for 450,000 method–history–cell decisions. The theory expresses contract-demand optimization through a constrained Expected Shortfall, separates mode-selection loss from residual contract-level loss, and derives direct Wasserstein bounds for competing tariff-cost contrasts. An external rolling-forecast analysis covers eight eligible manufacturing facilities and compares predictive scores and hypothetical charges; it does not estimate savings from observed tariff bills.
-
-## Repository contents
-
-| Path | Contents |
+| Folder | Contents |
 |---|---|
-| `manuscript/supplementary/tables/`, `tables/` | Machine-readable numeric and plotting data for the reported tables |
-| `data/` | Analysis records, experiment summaries, and machine-readable figure inputs; see [`data/SOURCE_DATA_INDEX.csv`](data/SOURCE_DATA_INDEX.csv) |
-| `code/` | Deterministic post-processing for the tariff-contrast stability audit |
-| [`docs/REPRODUCING.md`](docs/REPRODUCING.md) | Environment, command, inputs, outputs, and scope of the reproducible audit |
-| `FINAL_REPOSITORY_MANIFEST.json`, `FINAL_REPOSITORY_SHA256.csv` | File inventory and SHA256 checksums |
+| [article/main/](article/main/) | Main manuscript PDF and LaTeX source |
+| [article/supplement/](article/supplement/) | Supporting Information PDF, source, figures, and tables |
+| [results/](results/README.md) | Primary comparisons, Wasserstein checks, event-level ablation, contract diagnostics, and external charge summaries |
+| [scripts/](scripts/) | Independent checks of record integrity and reported summaries |
 
-## Reproduce the deterministic audit
+## Verify the released results
 
-From the repository root, using Python 3.12.10:
+Python 3.12 was used for the analysis. From the repository root:
 
-```bash
-python -m pip install -r requirements.txt
-python code/build_contrast_stability_package.py
-```
+    python -m pip install -r requirements.txt
+    python scripts/verify_results.py
 
-The script reads the supplied analysis records and writes machine-readable audit tables and summaries under `data/derived_publication/tariff_contrast_wasserstein/`. It checks decision rows, computes analytic tariff radii and numerical coverage summaries, and runs deterministic smoke and Expected Shortfall identity checks. This command reproduces the stability audit; it does not regenerate the simulation histories, refit predictive distributions, or rerun the primary tariff decisions. The solver allowance is a numerical bound, not an interval-arithmetic certificate. See [`docs/REPRODUCING.md`](docs/REPRODUCING.md) for the command's inputs and outputs.
+The script checks file hashes; recomputes the five-method Wasserstein means and numerical pass counts from 50,000 law records and 450,000 decision records; recomputes paired event-level ablation means and 95% intervals from 540,000 rows; and cross-checks the focal GEV–KDE contrasts, common high-p* cells, and contract-action diagnostics. It prints a JSON report with status PASS when these checks agree.
 
-## Data and integrity
+The complete Monte Carlo histories, fitted-law checkpoints, and full experiment scripts are supplied in the journal submission data archives. This compact repository supports independent verification of the released results; rerunning model fitting from the first simulated history requires those archives. The external manufacturing-load analysis uses an illustrative common tariff to calculate hypothetical charges.
 
-The source-data index identifies the supplied analysis records and their role. External-facility materials in this repository are predictive-score summaries and paired comparisons; the underlying facility time series are not redistributed here. Use the repository manifest and checksum file to verify the supplied files.
+## Article files and provenance
 
-## Citation and license
+The [main manuscript](article/main/main.pdf) contains the GitHub link in its Data and Code Availability statement. The [Supporting Information](article/supplement/supporting_information.pdf) contains the derivations and experimental specifications. SHA256SUMS.csv records hashes for the article PDFs, result records, script, and environment file. The release is linked to the CSSC submission prepared on 19 November 2026.
 
-Please cite the accompanying article when using these materials. The repository includes an MIT license; any third-party data remain subject to their source terms.
+The repository uses the MIT license for its original code. Third-party data retain their original terms.

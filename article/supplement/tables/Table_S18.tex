@@ -1,0 +1,12 @@
+\begin{table}[tbp]\centering\small
+\caption{Matched event-level excess-law ablation: TAIL minus empirical excess.}\label{tab:tail-excess-ablation}
+\begin{tabular}{@{}llrr@{}}\toprule Setting & Region & Mean & 95\% paired interval\\\midrule
+Poisson--GPD & actual & -0.338 & [-0.497, -0.179]\\
+Poisson--GPD & contract & -1.404 & [-1.651, -1.158]\\
+Poisson--GPD & capacity & -3.990 & [-4.596, -3.384]\\
+Poisson--GPD & all nine cells & -1.911 & [-2.141, -1.681]\\
+NB--Weibull & actual & +3.597 & [+3.315, +3.879]\\
+NB--Weibull & contract & -4.694 & [-5.096, -4.292]\\
+NB--Weibull & capacity & -1.132 & [-1.481, -0.783]\\
+NB--Weibull & all nine cells & -2.060 & [-2.313, -1.807]\\
+\bottomrule\end{tabular}\par\smallskip\footnotesize Units are thousand CNY/month. Each setting uses 10,000 paired 24-month histories. The comparator retains TAIL's selected threshold, count law, and subthreshold component, replacing the excess CDF. Negative differences favour TAIL. The fixed-0.95 sensitivity gives nine-cell differences of $-0.088$ [$-0.265,0.089$] and $-0.060$ [$-0.260,0.140$] in the two settings; for histories selected at another threshold, that sensitivity omits the 500-resample shape-width gate.\end{table}

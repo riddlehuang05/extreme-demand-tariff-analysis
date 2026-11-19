@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "decision_rows": 450000,
+  "source_manifest_sha256": "1750c3cbdd88cc03266c2c61323b3a20b309f02a7f994d027ec7e65187fabf12",
+  "source_summary_sha256": "91bf41af1d9cbcc3e91e0e9bae4b831ad515c3fc1fbbf710b129a484425dd19f",
+  "coverage": [
+    {
+      "condition": "Primitive numerical check",
+      "total_rows": 450000,
+      "passing_rows": 24894,
+      "coverage_percent": 5.532,
+      "observed_mode_selection_violations": 0
+    },
+    {
+      "condition": "Contrast-Wasserstein numerical check",
+      "total_rows": 450000,
+      "passing_rows": 59410,
+      "coverage_percent": 13.202222222222224,
+      "observed_mode_selection_violations": 0
+    },
+    {
+      "condition": "Mode-wise pairwise-Wasserstein numerical check",
+      "total_rows": 450000,
+      "passing_rows": 27352,
+      "coverage_percent": 6.078222222222222,
+      "observed_mode_selection_violations": 0
+    },
+    {
+      "condition": "Uniform-Wasserstein numerical check",
+      "total_rows": 450000,
+      "passing_rows": 31677,
+      "coverage_percent": 7.039333333333333,
+      "observed_mode_selection_violations": 0
+    },
+    {
+      "condition": "Distributional envelope",
+      "total_rows": 450000,
+      "passing_rows": 0,
+      "coverage_percent": 0.0,
+      "observed_mode_selection_violations": 0
+    }
+  ],
+  "figure_pdf_sha256": "c5f9f8d00efb3816e5b031e366e357eb865945e4168142420cddf0d7f3e648ee",
+  "adaptive_w1_manifest_sha256": "b4cbd6b279238610c13e917ee248b663f7c7ce560707cea193c14f869fd738de"
+}
