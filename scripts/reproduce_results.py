@@ -1,4 +1,4 @@
-"""Verify published CSSC result records and recompute main numerical summaries."""
+"""Reproduce the numerical summaries reported in the CSSC article."""
 from pathlib import Path
 import csv
 import hashlib

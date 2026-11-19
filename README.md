@@ -1,27 +1,29 @@
-# Extreme-demand tariff decisions: CSSC reproducibility record
+# Extreme-demand models and tariff decisions
 
-This repository accompanies *When Do Extreme-Demand Models Improve Tariff Decisions? A Computational Comparison*. It contains the submitted article, the result records needed to audit its main numerical claims, and one verification command.
+This repository accompanies *When Do Extreme-Demand Models Improve Tariff Decisions? A Computational Comparison*, prepared for *Communications in Statistics—Simulation and Computation*. The study compares five predictive distributions on paired demand histories and evaluates how their differences affect tariff-mode selection, contract demand, and full-action regret.
 
-| Folder | Contents |
-|---|---|
-| [article/main/](article/main/) | Main manuscript PDF and LaTeX source |
-| [article/supplement/](article/supplement/) | Supporting Information PDF, source, figures, and tables |
-| [results/](results/README.md) | Primary comparisons, Wasserstein checks, event-level ablation, contract diagnostics, and external charge summaries |
-| [scripts/](scripts/) | Independent checks of record integrity and reported summaries |
+The [main manuscript](article/main/main.pdf) and [Supporting Information](article/supplement/supporting_information.pdf) are available as PDFs. Their LaTeX sources, tables, and figures are in [article/](article/).
 
-## Verify the released results
+## Reproduce the reported summaries
 
-Python 3.12 was used for the analysis. From the repository root:
+Python 3.12 is required. From the repository root:
 
     python -m pip install -r requirements.txt
-    python scripts/verify_results.py
+    python scripts/reproduce_results.py
 
-The script checks file hashes; recomputes the five-method Wasserstein means and numerical pass counts from 50,000 law records and 450,000 decision records; recomputes paired event-level ablation means and 95% intervals from 540,000 rows; and cross-checks the focal GEV–KDE contrasts, common high-p* cells, and contract-action diagnostics. It prints a JSON report with status PASS when these checks agree.
+The command reads the released result records and reproduces the method-level Wasserstein summaries, numerical decision-check counts, paired event-level ablation estimates and intervals, and focal GEV–KDE comparisons. It also checks the released file hashes. A successful run prints a JSON report with status PASS.
 
-The complete Monte Carlo histories, fitted-law checkpoints, and full experiment scripts are supplied in the journal submission data archives. This compact repository supports independent verification of the released results; rerunning model fitting from the first simulated history requires those archives. The external manufacturing-load analysis uses an illustrative common tariff to calculate hypothetical charges.
+The [result guide](results/README.md) maps the manuscript's main tables and figures to their source files. Full simulation histories, fitted-law checkpoints, and model-fitting scripts are included in the journal submission data files. The released records here allow the reported numerical summaries to be checked without rerunning the full Monte Carlo experiment.
 
-## Article files and provenance
+## Repository contents
 
-The [main manuscript](article/main/main.pdf) contains the GitHub link in its Data and Code Availability statement. The [Supporting Information](article/supplement/supporting_information.pdf) contains the derivations and experimental specifications. SHA256SUMS.csv records hashes for the article PDFs, result records, script, and environment file. The release is linked to the CSSC submission prepared on 19 November 2026.
+| Path | Contents |
+|---|---|
+| [article/main/](article/main/) | Manuscript PDF, LaTeX source, bibliography, and figures |
+| [article/supplement/](article/supplement/) | Supporting Information PDF, source, tables, and figures |
+| [results/](results/README.md) | Analysis records organized by experiment |
+| [scripts/reproduce_results.py](scripts/reproduce_results.py) | Reproduction command |
+| [requirements.txt](requirements.txt) | Python dependencies |
+| [SHA256SUMS.csv](SHA256SUMS.csv) | File checksums |
 
-The repository uses the MIT license for its original code. Third-party data retain their original terms.
+The manufacturing-load example calculates charges under an illustrative common tariff. Code in this repository is released under the [MIT License](LICENSE). Third-party data retain their original terms.
