@@ -884,7 +884,7 @@ endpoints.
 \subsection*{S1.5 Primary comparisons and high-$p^*$ tariff stress}
 
 The main article reports the nine-cell primary summaries and the
-mode-versus-within-contract regret decomposition. Table~\ref{tab:final-si-12} gives all ten
+mode-versus-within-contract regret decomposition. Table~\ref{tab:final-si-11} gives all ten
 history-paired regional method contrasts. The high-$p^*$ stress uses
 10,000 histories, five methods, and ten utilization cells at each of
 three target levels; Figure~\ref{fig:final-figures1} and
@@ -966,11 +966,11 @@ for every non-oracle competitor, and the uniform Wasserstein check is
 The adaptive numerical Wasserstein bracket integrates the CDF
 difference on a nonuniform log-demand grid, refines the intervals with
 the largest uncertainty, and adds an analytic right-tail allowance.
-The full-action regret comparison permits the sharper uniform check
+The full-action regret comparison permits the uniform check
 \[LW_{1,\rm upper}+\zeta_{\rm full,num}<\gamma_F.\]
 The preceding $2L$ condition remains a valid mode-value comparator;
 Table~\ref{tab:numerical-sufficient-condition-audit} reports the
-sharper full-action check. Across 50,000 fitted laws, 49,936 adaptive
+full-action regret check. Across 50,000 fitted laws, 49,936 adaptive
 brackets had width at most 300 kW. The GEV median bracket width was
 260.972 kW, its 95th percentile was 296.453 kW, and its 99th
 percentile was 299.634 kW. Table~S6 reports
@@ -978,9 +978,15 @@ method-level brackets and Figure~S3 shows the revised checks.
 The primitive check passed in $24{,}894/450{,}000$ decisions
 ($5.532\%$), the direct contrast check in $59{,}410$ ($13.202\%$),
 the per-competitor mode-wise check in $27{,}352$ ($6.078\%$), and the
-sharp full-action check in $31{,}677$ ($7.039\%$). No observed mode
+full-action regret check in $31{,}677$ ($7.039\%$). No observed mode
 errors occurred among passing rows. The known generating law supplies
 these simulation diagnostics.
+For the full-action regret condition, $31{,}677$ decisions satisfy the
+condition using the numerical $W_1$ upper bound, $415{,}130$ cannot
+satisfy it even at the lower bound, and $3{,}193$ ($0.710\%$) remain
+undetermined by the integration bracket. All undetermined rows have
+bracket widths below 300 kW. These are classifications of the
+sufficient-condition calculation, separate from observed mode errors.
 
 \subsection*{S1.8 Parameter recovery and threshold-fixed bootstrap interval coverage}
 
@@ -1776,13 +1782,13 @@ rather than an interval-certified error bound.
 \FloatBarrier
 
 
+\input{tables/Table_S11.tex}
+\FloatBarrier
+
 \input{tables/Table_S12.tex}
 \FloatBarrier
 
 \input{tables/Table_S13.tex}
-\FloatBarrier
-
-\input{tables/Table_S14.tex}
 \FloatBarrier
 In the primary contract-optimal cells, the tariff-implied quantile
 level is $p^*=0.5833$. TAIL's mean absolute $q_{p^*}$ error is
@@ -1792,11 +1798,11 @@ $1.385\%$ for TAIL and $2.100\%$ for KDE; at the lower-bound cell,
 it is $0.0127\%$ and $0.1818\%$. Cell-level errors and their
 correlations with regret are in the source data.
 
-\input{tables/Table_S17.tex}
+\input{tables/Table_S14.tex}
 \FloatBarrier
-\input{tables/Table_S18.tex}
+\input{tables/Table_S15.tex}
 \FloatBarrier
-\input{tables/Table_S19.tex}
+\input{tables/Table_S16.tex}
 \FloatBarrier
 
 \FloatBarrier

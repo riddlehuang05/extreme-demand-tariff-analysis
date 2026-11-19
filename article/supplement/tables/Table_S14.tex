@@ -1,22 +1,9 @@
-\begingroup
-\small
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.15}
-\begin{table}[tbp]
-\centering
-\caption{Numerical sufficient-condition implementation checks.}
-\label{tab:numerical-sufficient-condition-audit}
-\resizebox{\linewidth}{!}{\begin{tabular}{@{}lrrr@{}}
-\toprule
-Condition & Passing rows & Coverage (\%) & Observed mode-selection violations \\
-\midrule
-Primitive numerical check & 24,894 & 5.532000 & 0 \\
-Contrast-Wasserstein numerical check & 59,410 & 13.202222 & 0 \\
-Mode-wise pairwise-Wasserstein numerical check & 27,352 & 6.078222 & 0 \\
-Uniform-Wasserstein numerical check & 31,677 & 7.039333 & 0 \\
-\bottomrule
-\end{tabular}}
-\par\smallskip
-\begin{minipage}{\linewidth}\footnotesize The primitive check is $2\varepsilon_{\rm num}+\zeta_{\rm full,num}<\gamma_F$. The contrast-Wasserstein check requires $K_{m,m_F^*}W_{1,\rm upper}+\zeta_{\rm full,num}<\gamma_{F,m}$ for every competing mode, using the direct tariff-contrast constants defined in Section S1.7. The mode-wise pairwise check replaces $K_{m,m_F^*}$ by $L_m+L_{m_F^*}$; the uniform check is $LW_{1,\rm upper}+\zeta_{\rm full,num}<\gamma_F$, where $L=r_d\max\{1,\kappa\}$. All four use the same numerical full-action solver allowance. No observed mode-selection violations occurred among rows satisfying any of these checks. These implementation checks use floating-point numerical bounds and a common numerical solver allowance; they are not interval-certified calculations.\end{minipage}
-\end{table}
-\endgroup
+\begin{table}[tbp]\centering\small
+\caption{Adaptive Wasserstein numerical checks by method.}\label{tab:adaptive-w1-method}
+\begin{tabular}{@{}lrrr@{}}\toprule Method & Contrast (\%) & Mode-wise (\%) & Full-action (\%)\\\midrule
+TAIL & 18.65 & 12.24 & 13.57\\
+EVENT-EMP & 14.40 & 5.93 & 6.99\\
+GEV & 14.68 & 7.46 & 9.07\\
+KDE & 10.61 & 4.23 & 4.88\\
+EMP & 7.67 & 0.53 & 0.69\\
+\bottomrule\end{tabular}\par\smallskip\footnotesize Each percentage uses 90,000 method-specific decisions. The known generating law supplies oracle gaps and Wasserstein values.\end{table}
