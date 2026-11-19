@@ -1,0 +1,6 @@
+condition,total_rows,passing_rows,coverage_percent,observed_mode_selection_violations
+Primitive numerical check,450000,24894,5.532,0
+Contrast-Wasserstein numerical check,450000,59410,13.202222222222224,0
+Mode-wise pairwise-Wasserstein numerical check,450000,27352,6.078222222222222,0
+Uniform-Wasserstein numerical check,450000,31677,7.039333333333333,0
+Distributional envelope,450000,0,0.0,0

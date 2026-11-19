@@ -1,3 +1,7 @@
+# Current CSSC revision
+
+The current version of When Do Extreme-Demand Models Improve Tariff Decisions? A Computational Comparison is in [cssc_20261119/](cssc_20261119/README.md). It includes the revised manuscript, Supporting Information, scripts, results, and audit records. The materials below document an earlier article archive.
+
 # Data and code for *Decision-Relevant Modelling of Extreme Demand for Industrial Electricity Tariffs*
 
 This repository accompanies the article with machine-readable supplementary tables, analysis data, code, and reproducibility documentation. The manuscript and Supporting Information are supplied through the journal submission materials.

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "sources_sha256": {
+    "fit_manifest": "f784a56053a397ae9ab596c416ddce5edc27bd9330d8457dc215e6fccdbc9eb3",
+    "archived_bounds_manifest": "1750c3cbdd88cc03266c2c61323b3a20b309f02a7f994d027ec7e65187fabf12",
+    "oracle_values": "286c959358bc6559d3d37d95c3c8987ded08b7db8d1eba9b8dfa7330aa9f7715",
+    "code": "662f9b7695387565d0fc69206baf9dd0bb555f7f1a435f13132e995323e8618a",
+    "primitives_code": "5c6671c160fcf60e78d923355fbbb9e6b007a05ad5bbc0158dfc0f2fb9d780f8",
+    "engine_code": "9f220d1b97b4865c69d40a3010407a008a26178fe00ff00b461c9799c9203261",
+    "engine_config": "88dcd2566ac6b338fd00916a1db2ff000293b432da961f6fc5740453deca40e7",
+    "fit_code": "6db132b3cd44a8677e026c8f93b84e0063fb97281939da192f6ec5e4f6d064cb"
+  },
+  "verification_code_sha256": "81d163bc1cbed9fde48f3a3baf9a3979cb2e6bb63bed89130ec71bfd2341b747",
+  "outputs_sha256": {
+    "adaptive_w1_by_law.parquet": "181e7279c8862d9404d3650c96025b4571973c1b149d03ce6885512d93ad5632",
+    "adaptive_w1_decision_checks.parquet": "9f7eeedfc4feecabdcb4800d665d9558d75e7e5e372c91949868ddb5ab611dbe",
+    "adaptive_w1_by_method.csv": "b24d214dd3d3c1db05ca4cdc075a8d654abdb98f9d57f7a5b8fdf81a64670f5f",
+    "adaptive_w1_coverage.csv": "0e0b0c936c489e36a24c6f421bd6fe4209e90fae9481b273590b6e7be47b124c",
+    "adaptive_w1_summary.json": "0210b07b9d49ba4fe46da94193a799e1c5e673366aba5479c1e71ac95ec7c31c",
+    "adaptive_w1_independent_quadrature.csv": "196e74fe0ce0b812fe0c7dcce9b236a5242f297848c0395b1e64de3d271f7710"
+  }
+}

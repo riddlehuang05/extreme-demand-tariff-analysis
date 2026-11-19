@@ -1,0 +1,65 @@
+revision:
+  seed_root: 20260915
+  workers: 8
+  training_months: 24
+  replications:
+    smoke: 4
+    full: 1000
+    frequency_per_rate: 200
+  chunk_replications:
+    smoke: 2
+    full: 10
+    frequency: 10
+  tail_selection_draws:
+    smoke: 512
+    full: 768
+    frequency: 512
+  estimator_bootstrap_replicates:
+    smoke: 10
+    full: 50
+    frequency: 30
+  validation_draws:
+    smoke: 500
+    full: 2000
+    frequency: 1000
+  inference_bootstrap_replicates: 5000
+  dgp:
+    threshold_kw: 80000.0
+    gpd_shape_xi: 0.15
+    gpd_scale_kw: 12000.0
+    poisson_tail_rate_per_month: 30.0
+    baseline_events_per_month: 200
+    baseline_lower_kw: 45000.0
+    baseline_beta_a: 8.0
+    baseline_beta_b: 2.0
+  tail:
+    threshold_quantiles: [0.90, 0.925, 0.95, 0.975]
+    minimum_exceedances_main: 100
+    minimum_exceedances_fallback: 50
+    holdout_fraction: 0.20
+    shape_ci_width_gate: 0.8
+    stability_penalty_weight: 0.10
+  tariff:
+    demand_rate: 36.0
+    capacity_rate: 22.5
+    delta: 0.40
+    contract_upper_ratio: 1.0
+    policies:
+      - id: BASE_ALPHA105
+        alpha: 1.05
+        kappa: 2.0
+        cells:
+          - {id: BASE_ACTUAL_NEAR, utilization: 0.62}
+          - {id: BASE_CAPACITY_NEAR, utilization: 0.63}
+      - id: CONTRACT_ALPHA120
+        alpha: 1.20
+        kappa: 2.0
+        cells:
+          - {id: STRESS_ACTUAL_CLEAR, utilization: 0.40}
+          - {id: STRESS_ACTUAL_NEAR, utilization: 0.45}
+          - {id: STRESS_CONTRACT_NEAR_LOW, utilization: 0.455}
+          - {id: STRESS_CONTRACT_CLEAR, utilization: 0.625}
+          - {id: STRESS_CONTRACT_NEAR_HIGH, utilization: 0.63}
+          - {id: STRESS_CAPACITY_NEAR, utilization: 0.635}
+          - {id: STRESS_CAPACITY_CLEAR, utilization: 0.70}
+  frequency_rates: [0.2, 1.0, 5.0, 30.0]
