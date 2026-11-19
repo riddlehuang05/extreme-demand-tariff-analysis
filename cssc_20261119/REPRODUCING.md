@@ -53,8 +53,8 @@ The manuscript and supplementary LaTeX source are supplied separately in `CSSC_M
 The adaptive Wasserstein audit uses the archived fitted laws and decision records. Its full run produced 50,000 law-level brackets and 450,000 decision-level checks. The matched event-level ablation uses 10,000 histories in each of the primary and negative-binomial–Weibull settings. The common-cell and contract-action analyses reuse saved decision arrays.
 
 ```text
-python exp1/code/revised/compute_adaptive_w1.py --help
-python exp1/code/revised/verify_adaptive_w1.py --help
+python exp1/code/revised/compute_adaptive_w1.py --out CSSC_REVIEW_REVISION_20261112/adaptive_w1_20261119/combined_full --workers 3 --replications 10000
+python exp1/code/revised/verify_adaptive_w1.py --result CSSC_REVIEW_REVISION_20261112/adaptive_w1_20261119/combined_full
 python exp1/code/revised/run_tail_ablation.py --histories 10000 --workers 8
 python exp1/code/revised/analyze_high_pstar_common_cells.py
 python exp1/code/revised/analyze_contract_action_errors.py
@@ -62,4 +62,4 @@ python exp1/code/revised/analyze_contract_action_errors.py
 
 The complete outputs and SHA-256 audit manifests are under `data/source/adaptive_w1/`, `data/source/tail_ablation/`, `data/source/high_pstar_cv_crps_20261115/`, and `data/source/contract_action_errors_20261119/` in the data archives. Table S12 reports the complete primary paired contrasts, Table S13 reports analytic tariff radii, Table S14 reports numerical sufficient-condition checks, and Table S15 reports simultaneous paired intervals. The interval source is `primary_cv_crps_analysis_20261115/analysis/audit/focal_maxt_intervals.csv`. Figure 4 uses `data/plot/Figure4_external_selected.csv`; panels (e,f) use the saved illustrative-charge rows in `data/source/dgp_external_support/`. These external charges are calculations under a shared illustrative tariff.
 
-Rebuild the manuscript, supplementary tables, and Figure S3 with `python exp1/code/compose_cssc_submission.py`; the portal builder then packages these source files. The package versions are pinned in `exp1/requirements_cssc.txt`. The scripts' `--help` output specifies optional input and output paths for a separate rerun.
+Rebuild the manuscript, supplementary tables, and Figure S3 with `python exp1/code/compose_cssc_submission.py`; the portal builder then packages these source files. This command writes generated tables into `CSSC_SUBMISSION_20261112/Supporting_Information/tables/`, inserts the remaining summary tables into the supplementary source, and writes the final Figure S3 into `CSSC_SUBMISSION_20261112/Supporting_Information/figures/`. The package versions are pinned in `exp1/requirements_cssc.txt`. The high-$p^*$ and contract-action scripts use their documented project-relative archived input paths. Figure 4 is distributed as a rendered figure together with its plotted source CSV and charge-analysis rows; this archive does not rerun the external model fitting from raw facility records.
