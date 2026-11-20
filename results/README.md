@@ -12,6 +12,6 @@ Run `python scripts/reproduce_results.py` from the repository root. The command 
 | Common high-p* contract cells | `high_pstar/` |
 | Contract quantile and action errors | `contract_action/` |
 | External illustrative-charge summaries for Figure 4 | `external/` |
-
-The records are organized by experiment and use the names cited in the article. Complete simulation histories and model-fitting checkpoints are included in the journal submission data files. The external charge records are calculations under a shared illustrative tariff applied to observed loads.
 | Full solver-allowance recomputation for Table S13 | `solver_allowance/` |
+
+The records are organized by experiment and use the names cited in the article. Complete simulation histories and model-fitting checkpoints are in the repository's [CSSC submission release](https://github.com/riddlehuang05/extreme-demand-tariff-analysis/releases/tag/cssc-submission-v1). The external charge records are calculations under a shared illustrative tariff applied to observed loads.

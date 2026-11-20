@@ -1,0 +1,52 @@
+{
+  "anomaly_flag_rows": 43,
+  "boundaries": [
+    "External Korean real-load stress test only; not Chinese policy or EAF validation.",
+    "IQR upper-fence records are retained exploratory flags and never automatic deletions.",
+    "Natural-tail main removes documented DR intervals plus a 60-minute rebound buffer."
+  ],
+  "config_sha256": "bae54016851174799170004a695fc3909950f625d1d043549546d2268d7dacb4",
+  "dr_interval_rows_all_factories": 11,
+  "duration_seconds": 40.06084670033306,
+  "eligible_95_factory_months_fixed_natural": 68,
+  "environment": {
+    "executable": "C:\\Users\\14210\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "implementation": "CPython",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "factory_count": 10,
+  "factory_ids": [
+    "Cement_1",
+    "Cement_2",
+    "Forge_1",
+    "Forge_2",
+    "Metal_1",
+    "Metal_2",
+    "Metal_3",
+    "Paper",
+    "Steel_1",
+    "Steel_2"
+  ],
+  "finished_at_utc": "2026-08-01T16:21:09.705601+00:00",
+  "fixed_window_rows": 410880,
+  "gate": "Gate 6A - Korean raw reconstruction",
+  "input_manifest_sha256": {
+    "Cement_1": "384033d4d360aa9fe0a7fc8d08b2927ad6fcc8cfc2046a1b191d0a067b521d8b",
+    "Cement_2": "634b50501c81aa865390177409ca86d4b9ad1060c0688ba1e136c82ab275df44",
+    "DR_WORKBOOK": "800adb7bb01b209b714a6b4614c955381e0109bfb531c54989bf5004414fc4fe",
+    "Forge_1": "4f010e963b8490d63b86dcd5e83bdcb67c6d5aae7237c0ecd353e1ec1550adbd",
+    "Forge_2": "405bcfba8d7111d2babe4f2b205e1121e3b2bb06f89110014f896120fc8a17b9",
+    "Metal_1": "949afae98b9b9485d0944b02d395cf893e44ce32f0cf24c7501179c2b7c3fceb",
+    "Metal_2": "05d04f3be09d30d15a643451ef0505ab1709e091ba51fac7f4f03252b469aebe",
+    "Metal_3": "9e603700ba3fd271e7d149370567d9857e7718f7728cac3411f531bf7f13b796",
+    "Paper": "90debdf6c675c12a3eb20aab698dc884cec4d5bbd1754d5abd01beb5e295912b",
+    "Steel_1": "f3eb487d577bed413f02e9b3ca7ac8cca24375f0861084809a3bdb0ee1f618bf",
+    "Steel_2": "43b0043c84d942d31268d42a2791abb323466bd45bbaf2e687d80744d00ec834"
+  },
+  "run_mode": "full",
+  "run_signature": "9c850b54709b4c4bbd6fc14fea754c75c17d0333d5faa55910e4d89891964c53",
+  "sliding_window_rows": 6163200,
+  "started_at_utc": "2026-08-01T16:20:29.644724+00:00",
+  "status": "PASS"
+}

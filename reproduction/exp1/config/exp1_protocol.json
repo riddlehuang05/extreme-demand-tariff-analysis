@@ -1,0 +1,111 @@
+{
+  "experiment_id": "EXP1_DECISION_TARGETED_POT_PILOT_V1",
+  "protocol_status": "FROZEN_BEFORE_PILOT",
+  "freeze_date_local": "2026-11-07",
+  "scope": "simulation and machine-readable summaries only; no figures and no manuscript text",
+  "source_manuscript": "V1.2 submitted Manuscript.tex and Supporting_Information.tex",
+  "source_data_root": "C:\\Users\\14210\\Desktop\\大创材料\\！初稿V1.0\\修改V1.2\\修改代码+数据",
+  "seed_root": 20261107,
+  "replications_per_dgp": 100,
+  "max_replications_per_dgp": 200,
+  "paired_sample_lengths_months": [24, 60],
+  "pairing_rule": "For each DGP and replication, generate one 60-month path; the 24-month history is its first 24 months.",
+  "training_validation_rule": "Chronological split: first floor(0.8*n) months for candidate fitting, remaining months for validation; refit the selected numerical threshold on all n months.",
+  "scenarios": {
+    "poisson_gpd": {
+      "baseline_events_per_month": 200,
+      "baseline_lower_kw": 45000.0,
+      "threshold_kw": 80000.0,
+      "baseline_beta_a": 8.0,
+      "baseline_beta_b": 2.0,
+      "tail_count": "Poisson(mean=30)",
+      "tail_excess": "GPD(xi=0.15, scale=12000 kW)"
+    },
+    "negative_binomial_weibull": {
+      "baseline_events_per_month": 200,
+      "baseline_lower_kw": 45000.0,
+      "threshold_kw": 80000.0,
+      "baseline_beta_a": 8.0,
+      "baseline_beta_b": 2.0,
+      "tail_count": "NegativeBinomial(size=1, mean=30)",
+      "tail_excess": "Weibull(shape=1.5, scale=30000 kW)"
+    }
+  },
+  "pot": {
+    "threshold_quantiles": [0.9, 0.925, 0.95, 0.975],
+    "strict_exceedances": true,
+    "minimum_main_exceedances": 100,
+    "minimum_fallback_exceedances": 50,
+    "bootstrap_replicates": 50,
+    "minimum_successful_bootstraps": 40,
+    "shape_ci_level": 0.95,
+    "maximum_shape_ci_width": 0.8,
+    "uniform_transform_ks_pvalue_minimum": 0.01,
+    "negative_shape_endpoint_must_cover_training_events": true,
+    "finite_mean_gate": "xi < 1",
+    "fallback_order": ["exponential_tail_if_at_least_50_exceedances", "empirical_monthly_maxima"]
+  },
+  "selection_methods": {
+    "TAIL_LEGACY_LOG": "V1.2 no-upper TAIL selection: 2,000 simulated monthly maxima, Scott Gaussian KDE log score, raw 0.10*abs(xi-median_xi) penalty, original tie rule.",
+    "CV_LOG_ZPEN": "Same candidate set, folds, hard gates and log score; standardize oriented candidate scores within history, then subtract the common dimensionless xi-stability penalty.",
+    "CV_FZ0_ZPEN": "Average upper-tail FZ0 score across p* in {0.5238095238, 0.5833333333, 0.95}; standardize and apply the common xi-stability penalty.",
+    "CV_TQCRPS_ZPEN": "Average normalized upper-tail quantile score across the same three p* values, integrating tau from each p* to 0.99 on a fixed 41-point grid; standardize and apply the common xi-stability penalty. This is a prespecified tail-quantile-score adaptation, not a claim of exact reproduction of Hoga et al.'s implementation.",
+    "CV_COST_ZPEN": "For each candidate, derive its tariff action from the training-fit law; score realized validation bills, average within each tariff family over its fixed cells, then equally average the three families; standardize and apply the common xi-stability penalty.",
+    "EVENT_EMP": "V1.2 event-level empirical monthly-maximum construction, fitted on all n months.",
+    "EMP": "Empirical distribution of the n monthly maxima."
+  },
+  "common_standardized_stability_penalty": {
+    "weight": 0.1,
+    "shape_scale": "max(1.4826*MAD(candidate xi), 0.05)",
+    "selection_score": "oriented within-history z-score - weight*abs(xi-median_xi)/shape_scale",
+    "tie_rule": "lower threshold quantile"
+  },
+  "tariff_families": [
+    {
+      "id": "MAIN_ALPHA105",
+      "alpha": 1.05,
+      "kappa": 2.0,
+      "delta": 0.4,
+      "demand_rate_cny_kw_month": 36.0,
+      "capacity_rate_cny_kva_month": 22.5,
+      "utilizations": [0.62, 0.63],
+      "p_star": 0.5238095238095238
+    },
+    {
+      "id": "MAIN_ALPHA120",
+      "alpha": 1.2,
+      "kappa": 2.0,
+      "delta": 0.4,
+      "demand_rate_cny_kw_month": 36.0,
+      "capacity_rate_cny_kva_month": 22.5,
+      "utilizations": [0.4, 0.45, 0.455, 0.625, 0.63, 0.635, 0.7],
+      "p_star": 0.5833333333333333
+    },
+    {
+      "id": "HIGH_PSTAR_095",
+      "alpha": 2.2,
+      "kappa": 9.090909090909092,
+      "delta": 0.4,
+      "demand_rate_cny_kw_month": 36.0,
+      "capacity_rate_cny_kva_month": 22.5,
+      "utilizations": [0.39, 0.405, 0.7, 0.8, 0.84],
+      "p_star": 0.95,
+      "cell_source": "V1.2 saved high-pstar design grid; fixed here before EXP1 outcomes"
+    }
+  ],
+  "decision_and_inference": {
+    "capacity_reference": "S = exact DGP mean / prespecified utilization; this defines the simulation tariff only and is not supplied to fitted estimators except as a tariff input.",
+    "primary_loss": "oracle expected monthly bill of the fitted procedure's action minus oracle-optimal expected monthly bill, evaluated under the known DGP",
+    "mode_error": "indicator that fitted procedure tariff mode differs from the unique DGP oracle mode",
+    "paired_unit": "replication history; 24- and 60-month estimates are paired within DGP by shared first-24-month path",
+    "contrast_sign": "mean regret(method) - mean regret(baseline); negative favors method",
+    "selection_error_decomposition": "best full-refit risk among gate-admissible threshold candidates minus full oracle risk; selected candidate risk minus best candidate risk",
+    "mcse": "paired replication-level standard error; do not treat tariff cells as independent units"
+  },
+  "pilot_gate": {
+    "complete_all_100_per_scenario": true,
+    "report_fallback_and_candidate_gate_rates": true,
+    "report_method_contrasts_with_paired_mcse_and_95pct_t_intervals": true,
+    "extension_rule": "Estimate paired contrast SD from the first 100 replications; before viewing direction/significance, compute the fixed total R needed for MCSE <= 0.10 times the prespecified reference scale (median oracle monthly bill across cells). If R<=200, extend to that fixed R; if R>200, stop the pilot and redesign precision plan. Never select cells or claims by significance."
+  }
+}

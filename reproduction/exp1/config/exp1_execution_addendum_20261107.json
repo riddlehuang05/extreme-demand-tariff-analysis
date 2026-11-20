@@ -1,0 +1,40 @@
+{
+  "addendum_id": "EXP1_EXECUTION_ADDENDUM_20261107",
+  "created_before_formal_pilot_outcomes": true,
+  "original_protocol": "exp1_protocol.json",
+  "original_protocol_sha256_at_addendum": "9bb22809d7036742c98dbb451383bb2ae6147700d316b38cf7f96cd481366d1b",
+  "scope_change": "Add a provenance and data-quality audit of the V1.0 public Korean industrial-load source. The simulation DGPs, methods, candidate set, tariff cells, seeds, replications, and primary endpoints in exp1_protocol.json are unchanged.",
+  "korea_public_load_source": {
+    "dataset": "Datasets on South Korean manufacturing factories' electricity consumption and demand response participation",
+    "authors": ["Eunjung Lee", "Keon Baek", "Jinho Kim"],
+    "journal_doi": "10.1038/s41597-022-01357-8",
+    "data_doi": "10.6084/m9.figshare.14822256.v9",
+    "license": "CC BY 4.0",
+    "source_archive_root": "C:\\Users\\14210\\Desktop\\大创材料\\！初稿V1.0\\修改文件夹\\V1.0稿件_完整实验数据代码MD_原始归档\\02_SCI论文整合包_20260823\\Korea_External_Validation\\data_raw\\Data_list",
+    "factory_count": 10,
+    "recording_period": "2019-03-01 through 2019-09-30",
+    "source_frequency": "1 minute",
+    "unit": "kW",
+    "limitations": [
+      "No customer-specific tariff contracts, billing records, actual tariff choices, or realized tariff savings are included.",
+      "The seven-month observation period does not cover a full annual seasonal cycle.",
+      "The dataset is one public data resource and the factory records are not independent external cohorts."
+    ],
+    "processing_audit": {
+      "primary_window": "fixed non-overlapping 15-minute mean; require all 15 minute values; no imputation",
+      "natural_tail_variant": "remove documented demand-response intervals plus the frozen 60-minute rebound buffer",
+      "eligibility": "factory-month with at least 95% complete windows; retain 90% sensitivity in the archived source pipeline",
+      "verification": "raw-file SHA-256 against archived V1.0 files and input manifest; monthly maxima reconciled against archived eligibility table"
+    },
+    "relationship_to_v2_submission": "The current V2.0 submission already contains an 8-factory, 4-origin rolling external analysis with counterfactual tariff charges. EXP1 audits the raw and derived inputs; this audit is not a new bill-validation study and does not replace the simulated oracle pilot."
+  },
+  "extension_rule_operationalization": {
+    "target_mcse_fraction": 0.1,
+    "reference_scale": "median oracle expected monthly bill across distinct tariff cells, computed separately by DGP",
+    "comparison_set": "all non-self method-versus-baseline contrasts against TAIL_LEGACY_LOG, CV_COST_ZPEN, and EMP at both 24 and 60 months",
+    "required_total_replications": "max(100, ceil((paired contrast SD / target MCSE)^2)) across the comparison set within each DGP",
+    "cap": 200,
+    "decision": "if required total R is between 101 and 200, extend to that fixed R; if greater than 200, stop and redesign precision; otherwise retain R=100",
+    "prohibited_selection": "Do not use contrast direction, p-values, or significance to choose the extension."
+  }
+}

@@ -13,7 +13,7 @@ Python 3.12 is required. From the repository root:
 
 The command reads the released result records and reproduces the method-level Wasserstein summaries, numerical decision-check counts, paired event-level ablation estimates and intervals, and focal GEV–KDE comparisons. It also checks the released file hashes. A successful run prints a JSON report with status PASS.
 
-The [result guide](results/README.md) maps the manuscript's main tables and figures to their source files. Full simulation histories, fitted-law checkpoints, and model-fitting scripts are included in the journal submission data files. The released records here allow the reported numerical summaries to be checked without rerunning the full Monte Carlo experiment.
+The [result guide](results/README.md) maps the manuscript's main tables and figures to their source files. The [reproduction directory](reproduction/README.md) contains the estimators, simulation runners, fixed-seed history generator, external validation runner, and audit scripts. A [versioned release](https://github.com/riddlehuang05/extreme-demand-tariff-analysis/releases/tag/cssc-submission-v1) provides the analysis archive. The released result records allow the reported numerical summaries to be checked directly; the full Monte Carlo run can be regenerated when the history generator and primary runner are used together.
 
 ## Repository contents
 
@@ -23,6 +23,7 @@ The [result guide](results/README.md) maps the manuscript's main tables and figu
 | [article/supplement/](article/supplement/) | Supporting Information PDF, source, tables, and figures |
 | [results/](results/README.md) | Analysis records organized by experiment |
 | [scripts/reproduce_results.py](scripts/reproduce_results.py) | Reproduction command |
+| [reproduction/](reproduction/) | Fixed-seed simulation and audit code |
 | [requirements.txt](requirements.txt) | Python dependencies |
 | [SHA256SUMS.csv](SHA256SUMS.csv) | File checksums |
 

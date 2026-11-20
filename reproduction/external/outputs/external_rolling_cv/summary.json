@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "task_id": "EXTERNAL_ROLLING_NATURAL_TAIL_V1",
+  "variant": "natural_tail",
+  "measurement": "fixed_nonoverlapping_15min",
+  "signature": "68311a25bc3e05939e316a9450684d59a6096a8beecd594c4eaef058fbb2e0b6",
+  "eligible_units": 32,
+  "excluded_units": 8,
+  "score_rows": 224,
+  "fit_rows": 224,
+  "candidate_fold_rows": 3456,
+  "methods": [
+    "K-BLOCK",
+    "K-EMP",
+    "K-GEV",
+    "K-GTAIL",
+    "K-KDE",
+    "K-POINT",
+    "K-UGPD"
+  ],
+  "checks": {
+    "eligible_units_present": true,
+    "expected_score_rows": true,
+    "unique_score_keys": true,
+    "all_scores_finite": true,
+    "no_test_month_used_for_candidate_validation": true,
+    "rolling_validation_has_all_training_months": true,
+    "same_information_non_evt_comparator_present": true,
+    "tail_weighted_score_present": true
+  },
+  "duration_seconds": 534.95962219988,
+  "scores_sha256": "884e8de5df1cb52d7bd2cf45a5907e710ed63ef4d368079963508c833f5718ee",
+  "fits_sha256": "20fb45a86f94d1a5f2eb990ffe88b6774d69506a16bf1d1ed8cf612c98ac1bfa",
+  "candidates_sha256": "d7eefef5bb0dc0cf0fd1d676d6b932e47f7b18b9357894e2306984d4ad441f36",
+  "contrasts_sha256": "e3aa2311edba9e90325fcb8e5638d537247234e68106ad69893b05349a19adc6",
+  "validation_month_values": [
+    "2019-03",
+    "2019-04",
+    "2019-05",
+    "2019-06",
+    "2019-07",
+    "2019-08"
+  ],
+  "test_month_values": [
+    "2019-06",
+    "2019-07",
+    "2019-08",
+    "2019-09"
+  ]
+}

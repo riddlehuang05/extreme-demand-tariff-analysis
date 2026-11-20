@@ -1,0 +1,25 @@
+{
+  "amendment_date": "2026-11-15",
+  "motivation": "CSSC statistical review requested month-level cross-validation for primary TAIL threshold selection and removal of the uncalibrated same-sample KS gate.",
+  "primary_histories": 10000,
+  "months_per_history": 24,
+  "fold_design": "Four disjoint chronological month folds, six held-out months per fold; fit on the other 18 months.",
+  "candidate_threshold_quantiles": [0.9, 0.925, 0.95, 0.975],
+  "selection_score": "Mean deterministic CRPS over 24 held-out monthly maxima, averaged across the four folds.",
+  "tie_rule": "Choose the lower threshold quantile.",
+  "gpd_fit": "Maximum likelihood with location fixed at zero.",
+  "count_model": "Select Poisson versus negative binomial by the registered variance-to-mean rule, independently within each fitting fold and again on the complete history.",
+  "subthreshold_component": "Empirical monthly maxima of declustered cluster peaks not exceeding the candidate threshold.",
+  "fit_diagnostic": "Shape-parameter percentile-bootstrap interval width evaluated on the selected full-history fit with 500 resamples; negative endpoint must cover the observed cluster peaks.",
+  "nominal_same_sample_ks_gate": "Removed; retained only as an uncalibrated descriptive diagnostic in archived source outputs.",
+  "stability_penalty": "Removed from threshold selection.",
+  "randomness": "Threshold-selection CRPS is deterministic conditional on each fold fit. The 500-resample full-fit shape interval uses the replication-indexed registered RNG stream.",
+  "code": "exp1/code/revised/primary_cv_crps.py and exp1/code/revised/run_primary_no_nominal_ks.py",
+  "input_history_manifest_sha256": "verified at runtime against offline_history_manifest.json",
+  "outputs": [
+    "per-history selected threshold",
+    "all candidate-by-fold CRPS and fit diagnostics",
+    "10,000-history corrected decision table",
+    "updated tables, figures, and numerical-audit outputs"
+  ]
+}
