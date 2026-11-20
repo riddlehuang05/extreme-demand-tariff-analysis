@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "decision_rows": 450000,
+  "interval_arithmetic": false,
+  "audit_code_sha256": "82356a740fc0c303505ed42462e8b39dc258b5085670526aba58d08c1d7b2a3e",
+  "source_adaptive_manifest_sha256": "b4cbd6b279238610c13e917ee248b663f7c7ce560707cea193c14f869fd738de",
+  "source_primitive_manifest_sha256": "1750c3cbdd88cc03266c2c61323b3a20b309f02a7f994d027ec7e65187fabf12",
+  "source_primary_decisions_sha256": "e99f37a273e11d7c3c4b4d9188bff2b94b2bb2dd9c35836a77ea455e78270428",
+  "source_oracle_values_sha256": "286c959358bc6559d3d37d95c3c8987ded08b7db8d1eba9b8dfa7330aa9f7715",
+  "contract_objective_scale": "upper magnitude using archived absolute reconstruction discrepancy",
+  "positive_saved_selection_gaps": 0,
+  "observed_regret_bound_violations": 0,
+  "zeta_contract_max_cny": 782893.8120264268,
+  "zeta_full_max_cny": 782893.8120280794,
+  "eta_sel_max_cny": 0.0012791905971647841,
+  "eta_max_max_cny": 0.0021277168147188583,
+  "added_solver_allowance_max_cny": 0.0025583811943295683,
+  "publication_coverage": [
+    {
+      "condition": "combined_direct_pair_contrast",
+      "rows": 450000,
+      "passing_rows": 59410,
+      "coverage_percent": 13.202222222222224,
+      "observed_mode_selection_violations": 0,
+      "contract_only_passing_rows": 59410,
+      "removed_passes": 0
+    },
+    {
+      "condition": "combined_modewise_per_competitor",
+      "rows": 450000,
+      "passing_rows": 27352,
+      "coverage_percent": 6.078222222222222,
+      "observed_mode_selection_violations": 0,
+      "contract_only_passing_rows": 27352,
+      "removed_passes": 0
+    },
+    {
+      "condition": "combined_uniform_L_full_action",
+      "rows": 450000,
+      "passing_rows": 31677,
+      "coverage_percent": 7.039333333333333,
+      "observed_mode_selection_violations": 0,
+      "contract_only_passing_rows": 31677,
+      "removed_passes": 0
+    },
+    {
+      "condition": "primitive",
+      "rows": 450000,
+      "passing_rows": 24894,
+      "coverage_percent": 5.532,
+      "observed_mode_selection_violations": 0,
+      "contract_only_passing_rows": 24894,
+      "removed_passes": 0
+    }
+  ],
+  "outputs_sha256": {
+    "full_allowance_rows.parquet": "8ca1dafb4c467d3ae57c6b7cef69ee63a3d6f566e699e172f31e1fda756b0706",
+    "coverage.csv": "0da0b7c839dfea61a119ee9ca365a9cb820dd54f6a454df3a7d83ae90c1eee4b",
+    "by_method.csv": "0827d9ada5b2d16bfa16ade3f24eaf90210841aead9adc75722a69a510184862",
+    "by_method_cell.csv": "781f83803ce3783c95a93865a8a12c76523850864841e554e773fc155516b76f"
+  }
+}

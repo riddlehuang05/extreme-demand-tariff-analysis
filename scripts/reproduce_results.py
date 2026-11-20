@@ -112,9 +112,31 @@ def other():
     assert (R / "external/Figure4_external_selected.csv").is_file()
     return {"high_pstar_pairs": len(common), "contract_diagnostics": len(contract), "focal_contrasts": len(focal)}
 
+def solver_allowance():
+    path = R / "solver_allowance/full_allowance_rows.parquet"
+    summary = json.loads((R / "solver_allowance/summary.json").read_text(encoding="utf-8"))
+    frame = pd.read_parquet(path, columns=[
+        "solver_zeta_contract_only_cny", "solver_zeta_full_numerical_cny",
+        "objective_evaluation_allowance_selected_cny",
+        "objective_evaluation_allowance_max_cny",
+        "saved_candidate_selection_gap_cny",
+        "combined_direct_pair_contrast", "combined_modewise_per_competitor",
+        "combined_uniform_L_full_action"])
+    assert len(frame) == 450000 and summary["decision_rows"] == len(frame)
+    expected = (frame.solver_zeta_contract_only_cny
+                + frame.objective_evaluation_allowance_selected_cny
+                + frame.objective_evaluation_allowance_max_cny
+                + frame.saved_candidate_selection_gap_cny)
+    assert np.allclose(frame.solver_zeta_full_numerical_cny, expected, rtol=0, atol=1e-9)
+    assert int(frame.combined_direct_pair_contrast.sum()) == 59410
+    assert int(frame.combined_modewise_per_competitor.sum()) == 27352
+    assert int(frame.combined_uniform_L_full_action.sum()) == 31677
+    return {"rows": len(frame), "full_allowance_max_cny": round(float(frame.solver_zeta_full_numerical_cny.max()), 6),
+            "added_allowance_max_cny": round(float((frame.solver_zeta_full_numerical_cny - frame.solver_zeta_contract_only_cny).max()), 9)}
+
 def main():
     report = {"status":"PASS","checksum_files":integrity(),"wasserstein":wasserstein(),
-              "ablation":ablation(),"other":other()}
+              "ablation":ablation(),"other":other(),"solver_allowance":solver_allowance()}
     print(json.dumps(report, indent=2))
 
 if __name__ == "__main__":

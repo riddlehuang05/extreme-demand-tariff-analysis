@@ -612,16 +612,16 @@ its endpoint $u-\widehat\sigma/\widehat\xi$ must cover all observed
 event maxima. No same-sample nominal KS $p$-value or shape penalty is
 used to select a threshold.
 
-If no admissible finite-mean primary candidate is available but an
-eligible threshold has at least 50 exceedances, the procedure uses an
-exponential-tail fallback with
-\[
-\xi=0
-\]
-and scale equal to the corresponding mean excess. If no such threshold
-is available, the monthly-maxima empirical distribution is used.
-An invalid all-history GPD refit likewise invokes the prescribed
-fallback branch.
+The four-fold selector requires at least one complete finite-mean
+candidate across the four folds. After a threshold has been selected,
+the full-history fit is checked for finite mean, observed-support
+compatibility, and the prespecified shape-width gate. If the selected
+full-history fit fails a final gate and at least 50 exceedances are
+available, the procedure uses an exponential-tail fallback with
+\\(\\xi=0\\) and scale equal to the corresponding mean excess; if that
+fallback is unavailable, it uses the empirical monthly-maxima
+distribution. Every primary history in the reported run had a complete
+finite-mean candidate and a valid final fit.
 
 For a final primary TAIL fit, let \(F_0\) denote the empirical CDF of
 the subthreshold monthly-maximum component, let \(G_u\) denote the
@@ -966,6 +966,9 @@ for every non-oracle competitor, and the uniform Wasserstein check is
 The adaptive numerical Wasserstein bracket integrates the CDF
 difference on a nonuniform log-demand grid, refines the intervals with
 the largest uncertainty, and adds an analytic right-tail allowance.
+We intersected the adaptive bracket with the archived monotone-CDF
+bracket. The reported checks use the upper endpoint of this
+intersection. The 300 kW width target applies to the adaptive bracket.
 The full-action regret comparison permits the uniform check
 \[LW_{1,\rm upper}+\zeta_{\rm full,num}<\gamma_F.\]
 The preceding $2L$ condition remains a valid mode-value comparator;
@@ -1274,7 +1277,7 @@ cell-aggregated results.
 
 \subsection*{S1.11 Joint negative-binomial--Weibull challenge}
 
-The joint misspecification challenge uses 10,000 independent
+The negative-binomial--Weibull challenge uses 10,000 independent
 24-month histories and the same nine primary tariff cells. Monthly
 threshold-event counts follow a negative-binomial law with size 1 and
 mean 30. Each month also contains 200 bulk events drawn from a
@@ -1285,8 +1288,8 @@ and severity mechanism. Figure~\ref{fig:final-figures7} shows the
 cellwise distribution of regret across the actual, contract, and
 capacity oracle regions. Table~\ref{tab:final-si-4} gives the complete
 cell-by-method results, and Table~\ref{tab:final-si-5} gives the full
-regional paired contrasts. The design evaluates joint misspecification across these event-count
-and exceedance-severity components.
+regional paired contrasts. The design jointly changes count dispersion and
+the excess-severity family relative to the primary mechanism.
 
 % ==================================================================
 % S1.12
@@ -1700,8 +1703,10 @@ term,
 =B_s(\widetilde D)
 +512\,\epsilon_{\rm mach}
 \max\!\left\{1,
- r_d(\widetilde D+\kappa\alpha\widetilde D)\right\}.
+ r_d(\widetilde D+\kappa\alpha\widetilde D),r_d S\right\}.
 \]
+The archived implementation uses a feasible-direction subgradient
+bound that can be looser than the nearest-zero choice above.
 
 Actual-demand and capacity modes are singleton actions. The full-action
 numerical allowance therefore combines the contract gap, saved-versus-
@@ -1732,7 +1737,8 @@ The saved candidate-selection gap is
 \widehat V_{\widehat m,\mathrm{saved}}
 -\min_{j\in\mathcal M}\widehat V_{j,\mathrm{saved}}
 \right\}.
-\]These terms use saved-versus-recomputed objective differences with a
+\]
+These terms use saved-versus-recomputed objective differences with a
 scale-based round-off term; they are numerical allowances, not proven
 floating-point error bounds. A 307-case implementation cross-check
 compared contract-objective excess with the fitted quantile-reference
@@ -1744,7 +1750,12 @@ contract objective-gap bound to a full-action allowance are exact. The
 floating-point evaluations used in the numerical implementation do not
 use directed rounding or interval arithmetic. Accordingly,
 $\zeta_{\rm full,num}$ is treated as a numerical solver allowance
-rather than an interval-certified error bound.
+rather than an interval-certified error bound. The complete allowance
+was recomputed from the archived contract component and saved-versus-
+recomputed mode costs for all 450,000 decisions. All four reported
+numerical-check counts in Table~S13 remained unchanged; no row changed
+classification. The corresponding row-level values and source hashes
+are supplied with the reproducibility materials.
 
 \clearpage
 \input{FIGURES.tex}
@@ -1807,8 +1818,7 @@ correlations with regret are in the source data.
 
 \FloatBarrier
 
-\noindent\textit{AI use.} OpenAI Codex assisted with computational scripts and manuscript
-revision. The authors are responsible for the final content.
+\noindent\textit{AI use.} OpenAI Codex (desktop build f71a721e0e6193a9) assisted with computational-script review, manuscript language revision, and submission-package consistency checks to support reproducibility and clear presentation. The authors reviewed all outputs and remain responsible for the final content.
 
 
 \section*{Appendix S2. Empirical-quantile agreement and action separation}

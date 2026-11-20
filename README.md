@@ -27,3 +27,4 @@ The [result guide](results/README.md) maps the manuscript's main tables and figu
 | [SHA256SUMS.csv](SHA256SUMS.csv) | File checksums |
 
 The manufacturing-load example calculates charges under an illustrative common tariff. Code in this repository is released under the [MIT License](LICENSE). Third-party data retain their original terms.
+The full solver-allowance recomputation and its source hashes are in [results/solver_allowance/](results/solver_allowance/).

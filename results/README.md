@@ -14,3 +14,4 @@ Run `python scripts/reproduce_results.py` from the repository root. The command 
 | External illustrative-charge summaries for Figure 4 | `external/` |
 
 The records are organized by experiment and use the names cited in the article. Complete simulation histories and model-fitting checkpoints are included in the journal submission data files. The external charge records are calculations under a shared illustrative tariff applied to observed loads.
+| Full solver-allowance recomputation for Table S13 | `solver_allowance/` |
